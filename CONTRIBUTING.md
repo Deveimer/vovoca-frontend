@@ -26,11 +26,12 @@ feel free to propose changes to this document in a pull request.
 - Wait for the maintainer to review or merge it
 
 ## Issues and Pull Requests
-- Issue Title should be : `VOVOCA - Issue Number`
+- Issue Title should be : `VVCA | Issue name or title`
 - Make sure to add description about issue in the section below the issue to get more clear picture, try adding screenshots/gifs for better clearance
 - If you're not sure about adding something, [open an issue](https://github.com/varun-singhh/vovoca/issues/new) to discuss it.
 - Feel free to open a Pull Request early so that a discussion can be had as changes are developed.
 - Include screenshots and animated gifs of your changes whenever possible.
+
 
 ### Commit Messages
 
@@ -63,3 +64,5 @@ Following are the mentioned labels with their usecase
 - Ready for Review
 - In Review
 - Done
+
+### Note: Branch name will always be `VOVOCA - Issue Number`.
