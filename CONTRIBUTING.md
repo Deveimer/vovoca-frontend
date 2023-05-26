@@ -31,6 +31,7 @@ feel free to propose changes to this document in a pull request.
 - If you're not sure about adding something, [open an issue](https://github.com/varun-singhh/vovoca/issues/new) to discuss it.
 - Feel free to open a Pull Request early so that a discussion can be had as changes are developed.
 - Include screenshots and animated gifs of your changes whenever possible.
+- #### Add the Pull Request Template from [PULL_REQUEST_CONTRIBUTING_GUIDELINES](https://github.com/Deveimer/vovoca-frontend/blob/Development/.github/PULL_REQUEST_TEMPLATE/pull_request_template.md)
 
 
 ### Commit Messages
