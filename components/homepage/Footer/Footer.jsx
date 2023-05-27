@@ -90,7 +90,7 @@ const Footer = () => {
                     Devbucket
                   </span>
                   {/* </Link>  */}
-                  2021. All rights reserved
+                  <span> {new Date().getFullYear()}. All rights reserved</span>
                 </p>
               </div>
             </div>
