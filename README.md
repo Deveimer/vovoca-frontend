@@ -88,3 +88,5 @@ If you made up you mind to contribute the fork the repository and star it, and t
 - Once Assigned work on it, and then Create the Pull Request.
 - After PR wait until Project Coordinator Accepts/Reverts the Changes.
 - Once Accepted Issue will be closed
+
+### Varun Singh | Maintainer | discord: username: v-varun#4539  
