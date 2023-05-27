@@ -7,6 +7,7 @@ import Header from "../components/homepage/Header/Header";
 
 import { useDispatch, useSelector } from "react-redux";
 import { getAllMusic } from "../actions/musicActions";
+import Contact from "../components/homepage/Contact/Contact";
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -94,6 +95,7 @@ const HomePage = () => {
       <Header />
       <About />
       <Guest />
+      <Contact />
       <Footer />
     </div>
   );

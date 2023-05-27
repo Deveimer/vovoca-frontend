@@ -19,7 +19,7 @@
     "react-dom": "^18.2.0",
     "react-h5-audio-player": "^3.8.6",
     "react-icons": "^4.8.0",
-    "react-js-pagination": "^3.0.3",
+    "react-js-pagination": "^3.0.2",
     "react-modal": "^3.16.1",
     "react-paginate": "^8.2.0",
     "react-redux": "^8.0.5",
