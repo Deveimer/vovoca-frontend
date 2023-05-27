@@ -42,9 +42,9 @@ const index = () => {
   };
   const downloadMusic = async (id) => {
     // const res = await axios.patch(
-    //   `https://vovoca.herokuapp.com/api/music/download/${id}`
+    //   `https://vovoca-backend-deploy.vercel.app/api/music/download/${id}`
     // );
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.download = music.name;
     link.href = `data:audio/mp3;base64,${Buffer.from(
       music.audiobuffer.data
@@ -86,10 +86,7 @@ const index = () => {
               <HiCloudDownload />
             </button>
 
-            <button
-              className={style.single_music_button}
-              onClick={copyLink}
-            >
+            <button className={style.single_music_button} onClick={copyLink}>
               <HiShare />
             </button>
           </div>
