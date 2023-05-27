@@ -19,7 +19,7 @@ export const loginUser = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: LOADING });
     const res = await axios.post(
-      "https://vovoca.herokuapp.com/api/admin/login",
+      "https://vovoca-backend-deploy.vercel.app/api/admin/login",
       body,
       config
     );
@@ -47,7 +47,7 @@ export const registerUser = async (username, email, password) => {
   const body = JSON.stringify({ username, email, password });
   try {
     const res = await axios.post(
-      "https://vovoca.herokuapp.com/api/admin/register",
+      "https://vovoca-backend-deploy.vercel.app/api/admin/register",
       body,
       config
     );
@@ -61,7 +61,9 @@ export const registerUser = async (username, email, password) => {
 export const getUserDetails = () => async (dispatch) => {
   if (cookie.get("token")) {
     setAuthToken(cookie.get("token"));
-    const res = await axios.get("https://vovoca.herokuapp.com/api/admin");
+    const res = await axios.get(
+      "https://vovoca-backend-deploy.vercel.app/api/admin"
+    );
     dispatch({
       type: FETCH_USER,
       payload: res.data,
