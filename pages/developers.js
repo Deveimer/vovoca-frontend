@@ -31,7 +31,7 @@ console.log(data);
             <h1 className={styles.testimonial__heading}>Developers</h1>
             <div className={styles.testimonial__row__1}>
               <div className={styles.testimonial}>
-                <article className={styles.testimonial__article}>
+                <article className={`${styles.testimonial__article} ${styles.developers_article}`}>
                   <div className={styles.testimonial__content}>
                     <p>
                       Though this is a simple music streaming and downloading
@@ -67,7 +67,7 @@ console.log(data);
                 </Link>
               </div>
               <div className={styles.testimonial}>
-                <article className={styles.testimonial__article}>
+                <article className={`${styles.testimonial__article} ${styles.developers_article}`}>
                   <div className={styles.testimonial__content}>
                     <p>
                       The concept was farely new and it was challenging to
@@ -109,7 +109,7 @@ console.log(data);
                 </Link>
               </div>
               <div className={styles.testimonial}>
-                <article className={styles.testimonial__article}>
+                <article className={`${styles.testimonial__article} ${styles.developers_article}`}>
                   <div className={styles.testimonial__content}>
                     <p>
                       We all have learnt a lot while completing vovoca. I think
@@ -155,7 +155,7 @@ console.log(data);
             {data ? (
               data.users.map((user, index) => (
               <div className={styles.testimonial} key={index}>
-                <article className={styles.testimonial__article}><a target="_blank" rel="" href={user.url}>
+                <article className={`${styles.testimonial__article} ${styles.contributors_article}`}><a target="_blank" rel="" href={user.url}>
                   <div
                     className={styles.contributor__img}
                     style={{
