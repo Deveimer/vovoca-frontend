@@ -268,11 +268,14 @@ const Navbar = () => {
             </Link>
             <p
               className={style.navtext}
-              onClick={(r) => setNav('logout')}
+              onClick={(r) =>{
+                 setNav('logout');
+                 logout();
+              }}
               style={{
                 color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`,
               }}
-              onClick={() => logout()}
+              // onClick={() => logout()}
             >
               <FaPowerOff />
               <span className={style.text_mobile}>Logout</span>
@@ -337,11 +340,14 @@ const Navbar = () => {
 
             <p
               className={style.navtext}
-              onClick={(r) => setNav('logout')}
+              onClick={(r) =>{
+               setNav('logout');
+               onOpenModal();
+              }}
               style={{
                 color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`,
               }}
-              onClick={onOpenModal}
+              // onClick={onOpenModal}
             >
               {' '}
               &nbsp;
