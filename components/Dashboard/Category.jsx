@@ -149,8 +149,9 @@ const Category = () => {
           <div className={style.container}>
             {/* return categorycard components for each category */}
             <div className={style.row}>
-              {categoryList.map( categoryObj => 
+              {categoryList.map( ( categoryObj, index )=> 
                 <CategoryCard
+                  id={index}
                   musicCategory={categoryObj.category}
                   imageURL={categoryObj.imageURL}
                   handleClick={handleClick}
