@@ -7,7 +7,7 @@ import Header from "../components/homepage/Header/Header";
 
 import { useDispatch, useSelector } from "react-redux";
 import { getAllMusic } from "../actions/musicActions";
-import links from "../utils/links";
+import {links} from "../utils/links";
 
 const HomePage = () => {
     const linkEls = links.map((link, id) => (
