@@ -275,7 +275,6 @@ const Navbar = () => {
               style={{
                 color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`,
               }}
-              // onClick={() => logout()}
             >
               <FaPowerOff />
               <span className={style.text_mobile}>Logout</span>
@@ -347,9 +346,7 @@ const Navbar = () => {
               style={{
                 color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`,
               }}
-              // onClick={onOpenModal}
             >
-              {' '}
               &nbsp;
               <IoMdLogIn />
               <span className={style.text_mobile}>Login</span>
