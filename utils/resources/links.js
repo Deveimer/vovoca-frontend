@@ -1,4 +1,4 @@
-const links = [
+export const links = [
     { sizes: "57x57", href: "/apple-icon-57x57.png" },
     { sizes: "60x60", href: "/apple-icon-60x60.png" },
     { sizes: "72x72", href: "/apple-icon-72x72.png" },
@@ -13,5 +13,3 @@ const links = [
     { sizes: "96x96", href: "/favicon-96x96.png" },
     { sizes: "16x16", href: "/favicon-16x16.png" },
 ];
-
-export {links};
