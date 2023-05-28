@@ -3,8 +3,6 @@ import style from './Footer.module.css'
 import Link from 'next/link'
 import {AiFillGithub ,AiFillTwitterCircle ,AiFillLinkedin ,AiFillInstagram,AiFillFacebook} from "react-icons/ai"
 
-
-
 const Footer = () => {
     const currentYear = new Date().getFullYear();
 
