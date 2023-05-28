@@ -28,7 +28,6 @@ const Category = () => {
   async function getCategories() {
     setCategory_search(1);
     setSelected(selected_category);
-
     dispatch(getCategorisedMusic(selected_category));
   }
 

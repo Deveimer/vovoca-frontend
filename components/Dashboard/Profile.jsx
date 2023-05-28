@@ -36,7 +36,7 @@ const Profile = () => {
         <UploadModal file={file} user={authenticated.data?.username} />
       </Modal>
       <h3>
-        Hi,{" "}
+        Hi,&nbsp;
         {authenticated.data?.username.charAt(0).toUpperCase() +
           authenticated.data?.username.slice(1)}
       </h3>

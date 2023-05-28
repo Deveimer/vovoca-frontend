@@ -149,7 +149,7 @@ const Navbar = () => {
         }}
         closeIcon={closeIcon}
       >
-        <AuthModal />{" "}
+        <AuthModal />
       </Modal>
       <div
         className={

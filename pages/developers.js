@@ -13,7 +13,6 @@ async function fetcher(...args) {
 
 const developers = () => {
   const { data } = useSWR("/api/github", fetcher);
-  console.log(data);
   return (
     <>
       <div>
