@@ -34,10 +34,10 @@ console.log(data);
                 <article className={styles.testimonial__article}>
                   <div className={styles.testimonial__content}>
                     <p>
-                      Though this is a simple music streaming and downloading
+                    Though this is a simple music streaming and downloading
                       website, but BTS it was a roller coaster ride while
                       resolving the bugs and adding features to it, but teamwork
-                      and decidation helped us overcome these problems , and
+                      and dedication helped us overcome these problems, and
                       here we are with all of our hard Work
                     </p>
                     <span>Varun Singh</span>
@@ -70,7 +70,7 @@ console.log(data);
                 <article className={styles.testimonial__article}>
                   <div className={styles.testimonial__content}>
                     <p>
-                      The concept was farely new and it was challenging to
+                      The concept was fairly new and it was challenging to
                       forsee the design of our website as such websites are not
                       in huge quantities on the web, however, we worked hard as
                       a team and coded vovoca as beautiful as we can. I hope you
@@ -112,9 +112,9 @@ console.log(data);
                 <article className={styles.testimonial__article}>
                   <div className={styles.testimonial__content}>
                     <p>
-                      We all have learnt a lot while completing vovoca. I think
-                      hardest part for all of us was shifting from react to next
-                      as it is fairly new and none of us had used before.
+                      We all have learned a lot while completing Vovoca. I think
+                      the hardest part for all of us was shifting from react to next
+                      as it is fairly new and none of us had used it before.
                       Overall, voovca came out to be of great success
                     </p>
                     <span>Kaustubh Mishra</span>

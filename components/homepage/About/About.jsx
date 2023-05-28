@@ -14,7 +14,7 @@ const About=()=>{
                             <div className={[style.feature__heading, style.left].join(' ')}>
                                 <h2>Royalty Free</h2>
                                 <p>Enjoy Royalty Free awesome music for free
-                                We provide all of our services free
+                                We provide all of our services for free
                                 Login and use vovoca for free forever</p>
                             </div>
                         </div>
@@ -22,9 +22,9 @@ const About=()=>{
                         <div className={style.feature}>
                         <div className={[style.feature__heading, style.left].join(' ')}>
                                 <h2>No Credits Required</h2>
-                                <p>You dont even have to pay us or give us credit
+                                <p>You don't even have to pay us or give us credit
                                 for using our music anywhere, in your songs,
-                                vidoes or office presentation</p>
+                                videos or an office presentation</p>
                             </div>
                         </div>
                     </div>
@@ -35,8 +35,8 @@ const About=()=>{
                     <div className={style.feature}>
                     <div className={[style.feature__heading, style.right].join(' ')}>
                                 <h2>Filter Music</h2>
-                                <p>Login to utilise complete set of features
-                                of vovoca. You can then easily filter
+                                <p>Login to utilize a complete set of features
+                                of Vovoca. You can then easily filter
                                 our music category wise</p>
                             </div>
                         </div>
@@ -44,7 +44,7 @@ const About=()=>{
                         <div className={style.feature}>
                         <div className={[style.feature__heading, style.right].join(' ')}>
                                 <h2>Upload Music</h2>
-                                <p>You can also share your work and talent to whole
+                                <p>You can also share your work and talent with the whole
                                 world for free. Sign in and upload your
                                 created music with the world</p>
                             </div>

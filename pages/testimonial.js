@@ -40,8 +40,8 @@ const testimonial = () => {
               <div className={styles.testimonial__content}>
                 <span>My Reels got more sexy</span>
                 <p>
-                  After recording and editing my IG's reels, hardest part was to 
-                  get throught the audio part. Good music wasn't available 
+                After recording and editing my IG's reels, the hardest part was to 
+                  get through the audio part. Good music wasn't available 
                   anywhere. Vovoca solved both of my problems
                 </p>
                 <span>Sheril Sonkar, </span><br/>
@@ -57,7 +57,7 @@ const testimonial = () => {
               <div className={styles.testimonial__content}>
                 <span>Nice Music for free</span>
                 <p>
-                  Searching music was always a hard job but not anymore
+                  Searching for music was always a hard job but not anymore
                   I am more than happy with the filter and sorting feature of
                   vovoca. It is awesome
                 </p>
@@ -75,8 +75,8 @@ const testimonial = () => {
                 <span>Better than Youtube</span>
                 <p>
                   I'm an artist and I know how hard it is to find a platform
-                  like vovoca where your music finds its right destination
-                  Wishing vovoca more success
+                  like Vovoca where your music finds its right destination
+                  Wishing Vovoca more success
                 </p>
                 <span>DJ John</span><br/>
                 <span>Ahuja Music</span>
@@ -91,7 +91,7 @@ const testimonial = () => {
               <div className={styles.testimonial__content}>
                 <span>Literal Chills</span>
                 <p>
-                  All my hard time all these years could have been less hard only 
+                  All my hard times all these years could have been less hard only 
                   if I would have founded vovoca earlier. It is an
                   amazing website with just everything I need
                 </p>
@@ -108,7 +108,7 @@ const testimonial = () => {
               <div className={styles.testimonial__content}>
                 <span>Searching music just got fun</span>
                 <p>
-                  I design music for my company and its always great to find some
+                  I design music for my company and it's always great to find some
                   motivation. Vovoca gave it to me, that to free. I owe them 
                   a lot for all my music
                 </p>
