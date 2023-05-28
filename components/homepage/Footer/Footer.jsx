@@ -1,6 +1,6 @@
-import React from "react";
-import style from "./Footer.module.css";
-import Link from "next/link";
+import React from 'react';
+import style from './Footer.module.css';
+import Link from 'next/link';
 const Footer = () => {
   return (
     <div className={style.footer}>
@@ -85,7 +85,7 @@ const Footer = () => {
                 <p>
                   ©{/* <Link scroll={true} href="https://devbucket.tech/"> */}
                   <span
-                    style={{ color: "rgb(163, 151, 130)", cursor: "pointer" }}
+                    style={{ color: 'rgb(163, 151, 130)', cursor: 'pointer' }}
                   >
                     Devbucket
                   </span>

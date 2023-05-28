@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getTrendingMusic } from "../../actions/musicActions";
-import Music from "../../components/music/music";
-import Loader from "../Loader/Loader";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getTrendingMusic } from '../../actions/musicActions';
+import Music from '../../components/music/music';
+import Loader from '../Loader/Loader';
 
 const Trending = () => {
   const dispatch = useDispatch();

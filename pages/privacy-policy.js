@@ -1,7 +1,7 @@
-import React from "react";
-import Head from "next/head";
-import Footer from "../components/homepage/Footer/Footer";
-import style from "../styles/PrivacyPolicy.module.css";
+import React from 'react';
+import Head from 'next/head';
+import Footer from '../components/homepage/Footer/Footer';
+import style from '../styles/PrivacyPolicy.module.css';
 
 const privacyPolicy = () => {
   const maximiseInfo = (num) => {
@@ -10,10 +10,10 @@ const privacyPolicy = () => {
       const paraNum1 = document.getElementById(1);
       const paraNum2 = document.getElementById(2);
       const paraNum3 = document.getElementById(3);
-      paraNum1.classList.add("PrivacyPolicy_none__2C-dW");
-      paraNum2.classList.add("PrivacyPolicy_none__2C-dW");
-      paraNum3.classList.add("PrivacyPolicy_none__2C-dW");
-      paraNum.classList.remove("PrivacyPolicy_none__2C-dW");
+      paraNum1.classList.add('PrivacyPolicy_none__2C-dW');
+      paraNum2.classList.add('PrivacyPolicy_none__2C-dW');
+      paraNum3.classList.add('PrivacyPolicy_none__2C-dW');
+      paraNum.classList.remove('PrivacyPolicy_none__2C-dW');
     }
   };
 
@@ -36,7 +36,7 @@ const privacyPolicy = () => {
               <h4>General Information</h4>
               <div
                 onClick={() => {
-                  maximiseInfo("1");
+                  maximiseInfo('1');
                 }}
                 className={style.toggle__button}
               >
@@ -59,7 +59,7 @@ const privacyPolicy = () => {
               <div
                 id="2b"
                 onClick={() => {
-                  maximiseInfo("2");
+                  maximiseInfo('2');
                 }}
                 className={style.toggle__button}
               >
@@ -68,7 +68,7 @@ const privacyPolicy = () => {
             </div>
             <p
               id="2"
-              className={[style.modal__button__para, style.none].join(" ")}
+              className={[style.modal__button__para, style.none].join(' ')}
             >
               We are more than aware of your private data. We have taken care of
               end to end encryption as much as we could have. All your passwords
@@ -86,7 +86,7 @@ const privacyPolicy = () => {
               <div
                 id="3b"
                 onClick={() => {
-                  maximiseInfo("3");
+                  maximiseInfo('3');
                 }}
                 className={style.toggle__button}
               >
@@ -95,7 +95,7 @@ const privacyPolicy = () => {
             </div>
             <p
               id="3"
-              className={[style.modal__button__para, style.none].join(" ")}
+              className={[style.modal__button__para, style.none].join(' ')}
             >
               We have used most secured and open sourced programs to host our
               web app currently. We are using heroku and node and postgreSQL for

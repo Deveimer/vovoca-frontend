@@ -1,11 +1,11 @@
-import React from "react";
-import cookie from "js-cookie";
+import React from 'react';
+import cookie from 'js-cookie';
 
 const Logout = () => {
   const logout = () => {
-    cookie.remove("token");
+    cookie.remove('token');
     if (process.browser) {
-      window.location.href = "/";
+      window.location.href = '/';
     }
   };
   return (

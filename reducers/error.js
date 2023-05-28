@@ -1,4 +1,4 @@
-import { USER_LOGIN_FAILED, LOADING } from "../actions/type";
+import { USER_LOGIN_FAILED, LOADING } from '../actions/type';
 
 const initialState = {
   loading: true,

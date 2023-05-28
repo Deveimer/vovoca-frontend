@@ -1,15 +1,15 @@
-const { Octokit } = require("@octokit/rest");
+const { Octokit } = require('@octokit/rest');
 
 export default async (req, res) => {
   try {
     const octokit = new Octokit({
-      baseUrl: "https://api.github.com",
+      baseUrl: 'https://api.github.com',
     });
 
     octokit.rest.repos
       .listContributors({
-        owner: "varun-singhh",
-        repo: "vovoca",
+        owner: 'varun-singhh',
+        repo: 'vovoca',
       })
       .then(({ data }) => {
         const usersList = data.map((src) => {

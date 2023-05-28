@@ -1,6 +1,6 @@
-import axios from "axios";
-import cookie from "js-cookie";
-import { toast } from "react-toastify";
+import axios from 'axios';
+import cookie from 'js-cookie';
+import { toast } from 'react-toastify';
 import {
   GET_MUSIC,
   LOADING,
@@ -11,8 +11,8 @@ import {
   CATEGORISED_MUSIC,
   RESET_CATEGORISED_MUSIC,
   SET_ERROR,
-} from "./type";
-import setAuthToken from "./utils/setAuthToken";
+} from './type';
+import setAuthToken from './utils/setAuthToken';
 
 export const getAllMusic = (page) => async (dispatch) => {
   try {
@@ -79,7 +79,7 @@ export const getUploadedMusic =
   (page = 1) =>
   async (dispatch) => {
     try {
-      setAuthToken(cookie.get("token"));
+      setAuthToken(cookie.get('token'));
       const res = await axios.get(
         `https://vovoca-backend-deploy.vercel.app/api/admin/uploaded?page=${page}`
       );
@@ -99,7 +99,7 @@ export const getCategorisedMusic =
     try {
       const res = await axios.get(
         `https://vovoca-backend-deploy.vercel.app/api/music/?category=${selected_category.join(
-          "+"
+          '+'
         )}&page=${page}`
       );
       dispatch({

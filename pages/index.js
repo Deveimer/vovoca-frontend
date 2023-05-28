@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import Head from "next/head";
-import About from "../components/homepage/About/About";
-import Footer from "../components/homepage/Footer/Footer";
-import Guest from "../components/homepage/Guest/Guest";
-import Header from "../components/homepage/Header/Header";
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+import About from '../components/homepage/About/About';
+import Footer from '../components/homepage/Footer/Footer';
+import Guest from '../components/homepage/Guest/Guest';
+import Header from '../components/homepage/Header/Header';
 
-import { useDispatch, useSelector } from "react-redux";
-import { getAllMusic } from "../actions/musicActions";
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllMusic } from '../actions/musicActions';
 
 const HomePage = () => {
   const dispatch = useDispatch();

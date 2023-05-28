@@ -1,6 +1,6 @@
-import styles from "../styles/Testimonial.module.css";
-import Head from "next/head";
-import Footer from "../components/homepage/Footer/Footer";
+import styles from '../styles/Testimonial.module.css';
+import Head from 'next/head';
+import Footer from '../components/homepage/Footer/Footer';
 
 const testimonial = () => {
   return (
