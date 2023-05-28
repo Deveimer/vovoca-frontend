@@ -5,7 +5,7 @@ import {
   LOAD_USER,
   FETCH_USER,
 } from "../actions/type";
-import cookie from 'js-cookie'
+import cookie from "js-cookie";
 
 const initialState = {
   isAuthenticated: false,
@@ -48,4 +48,4 @@ export default function AuthReducer(state = initialState, action) {
     default:
       return state;
   }
-};
+}

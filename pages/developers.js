@@ -4,16 +4,16 @@ import { AiFillLinkedin } from "react-icons/ai";
 import Link from "next/link";
 import Footer from "../components/homepage/Footer/Footer";
 import Loader from "../components/Loader/Loader";
-import useSWR from "swr"
+import useSWR from "swr";
 
 async function fetcher(...args) {
-  const res = await fetch(...args)
-  return res.json()
+  const res = await fetch(...args);
+  return res.json();
 }
 
 const developers = () => {
-  const { data } = useSWR('/api/github', fetcher)
-console.log(data);
+  const { data } = useSWR("/api/github", fetcher);
+  console.log(data);
   return (
     <>
       <div>
@@ -150,28 +150,35 @@ console.log(data);
                 </Link>
               </div>
             </div>
-            <h1 className={styles.testimonial__heading} style={{ paddingTop: "3rem", }}>Contributors</h1>
+            <h1
+              className={styles.testimonial__heading}
+              style={{ paddingTop: "3rem" }}
+            >
+              Contributors
+            </h1>
             <div className={styles.testimonial__row__2}>
-            {data ? (
-              data.users.map((user, index) => (
-              <div className={styles.testimonial} key={index}>
-                <article className={styles.testimonial__article}><a target="_blank" rel="" href={user.url}>
-                  <div
-                    className={styles.contributor__img}
-                    style={{
-                      backgroundImage: `url(${user.avatar_url})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat",
-                      backgroundSize: "90px 90px",
-                    }}>
-                  </div></a>
-                </article>
-              </div>
-              ))
+              {data ? (
+                data.users.map((user, index) => (
+                  <div className={styles.testimonial} key={index}>
+                    <article className={styles.testimonial__article}>
+                      <a target="_blank" rel="" href={user.url}>
+                        <div
+                          className={styles.contributor__img}
+                          style={{
+                            backgroundImage: `url(${user.avatar_url})`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "90px 90px",
+                          }}
+                        ></div>
+                      </a>
+                    </article>
+                  </div>
+                ))
               ) : (
-              <Loader loading={true} />
-            )}
+                <Loader loading={true} />
+              )}
             </div>
           </div>
         </div>

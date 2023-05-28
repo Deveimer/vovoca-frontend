@@ -13,7 +13,7 @@ import styles from "../../styles/AllMusic.module.css";
 const Category = () => {
   const selected_category = [];
   const [category_search, setCategory_search] = useState(0);
-  const [selected, setSelected] = useState([])
+  const [selected, setSelected] = useState([]);
 
   const dispatch = useDispatch();
   const categorised_music = useSelector(
@@ -27,8 +27,8 @@ const Category = () => {
 
   async function getCategories() {
     setCategory_search(1);
-    setSelected(selected_category)
-    
+    setSelected(selected_category);
+
     dispatch(getCategorisedMusic(selected_category));
   }
 
@@ -52,11 +52,10 @@ const Category = () => {
       const classes = param.classList;
 
       if (classes.length === 1) {
-        param.classList.add('Category_selected__k-mej');
+        param.classList.add("Category_selected__k-mej");
       } else {
-        param.classList.remove('Category_selected__k-mej');
+        param.classList.remove("Category_selected__k-mej");
       }
-
     }
   }
 
@@ -88,7 +87,7 @@ const Category = () => {
                 pageRangeDisplayed={0}
                 previousLabel={"<"}
                 nextLabel={">"}
-                onPageChange={(e) => handleChange( e)}
+                onPageChange={(e) => handleChange(e)}
               />
             </div>
           )}
@@ -97,156 +96,156 @@ const Category = () => {
           </button>
         </div>
       ) : (
-          <>
-      <h1>Select Categories</h1>
-        <div className={style.category}>
-          <div className={style.container}>
-            <div className={style.row}>
-              <div className={style.category__card}>
-                <div
-                  id="1"
-                  className={style.category__card__icon}
-                  style={{
-                    backgroundImage: `url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F07%2Fapple-music-rap-life.jpeg%3Fresize%3D1024%2C576&f=1&nofb=1)`,
-                  }}
-                  onClick={(e) => handleClick(e.target.id, 'Hip-Hop')}
-                >
-                  <div className={style.heading}>
-                    <h3>Hip-Hop</h3>
+        <>
+          <h1>Select Categories</h1>
+          <div className={style.category}>
+            <div className={style.container}>
+              <div className={style.row}>
+                <div className={style.category__card}>
+                  <div
+                    id="1"
+                    className={style.category__card__icon}
+                    style={{
+                      backgroundImage: `url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F07%2Fapple-music-rap-life.jpeg%3Fresize%3D1024%2C576&f=1&nofb=1)`,
+                    }}
+                    onClick={(e) => handleClick(e.target.id, "Hip-Hop")}
+                  >
+                    <div className={style.heading}>
+                      <h3>Hip-Hop</h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className={style.category__card}>
-                <div
-                  id="2"
-                  className={style.category__card__icon}
-                  style={{
-                    backgroundImage: `url(https://images.pexels.com/photos/2651794/pexels-photo-2651794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)`,
-                  }}
-                  onClick={(e) => handleClick(e.target.id, 'Bass')}
-                >
-                  <div className={style.heading}>
-                    <h3>Bass</h3>
+                <div className={style.category__card}>
+                  <div
+                    id="2"
+                    className={style.category__card__icon}
+                    style={{
+                      backgroundImage: `url(https://images.pexels.com/photos/2651794/pexels-photo-2651794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)`,
+                    }}
+                    onClick={(e) => handleClick(e.target.id, "Bass")}
+                  >
+                    <div className={style.heading}>
+                      <h3>Bass</h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className={style.category__card}>
-                <div
-                  id="3"
-                  className={style.category__card__icon}
-                  style={{
-                    backgroundImage: `url(https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)`,
-                  }}
-                  onClick={(e) => handleClick(e.target.id, 'Chill')}
-                >
-                  <div className={style.heading}>
-                    <h3>Chill</h3>
+                <div className={style.category__card}>
+                  <div
+                    id="3"
+                    className={style.category__card__icon}
+                    style={{
+                      backgroundImage: `url(https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)`,
+                    }}
+                    onClick={(e) => handleClick(e.target.id, "Chill")}
+                  >
+                    <div className={style.heading}>
+                      <h3>Chill</h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className={style.category__card}>
-                <div
-                  id="4"
-                  className={style.category__card__icon}
-                  style={{
-                    backgroundImage: `url(https://www.icmp.ac.uk/sites/default/files/styles/page_background/public/music-production-studio-process-explained-mixing-mastering-songwriting-editing-promoting.jpg?itok=eC1jlQ1J)`,
-                  }}
-                  onClick={(e) => handleClick(e.target.id, 'Beats')}
-                >
-                  <div className={style.heading}>
-                    <h3>Beats</h3>
+                <div className={style.category__card}>
+                  <div
+                    id="4"
+                    className={style.category__card__icon}
+                    style={{
+                      backgroundImage: `url(https://www.icmp.ac.uk/sites/default/files/styles/page_background/public/music-production-studio-process-explained-mixing-mastering-songwriting-editing-promoting.jpg?itok=eC1jlQ1J)`,
+                    }}
+                    onClick={(e) => handleClick(e.target.id, "Beats")}
+                  >
+                    <div className={style.heading}>
+                      <h3>Beats</h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className={style.category__card}>
-                <div
-                  id="5"
-                  className={style.category__card__icon}
-                  style={{
-                    backgroundImage: `url(https://www.incimages.com/uploaded_files/image/1920x1080/getty_491119158_283701.jpg)`,
-                  }}
-                  onClick={(e) => handleClick(e.target.id, 'Musical')}
-                >
-                  <div className={style.heading}>
-                    <h3>Musical</h3>
+                <div className={style.category__card}>
+                  <div
+                    id="5"
+                    className={style.category__card__icon}
+                    style={{
+                      backgroundImage: `url(https://www.incimages.com/uploaded_files/image/1920x1080/getty_491119158_283701.jpg)`,
+                    }}
+                    onClick={(e) => handleClick(e.target.id, "Musical")}
+                  >
+                    <div className={style.heading}>
+                      <h3>Musical</h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className={style.category__card}>
-                <div
-                  id="6"
-                  className={style.category__card__icon}
-                  style={{
-                    backgroundImage: `url(https://cdn.shopify.com/s/files/1/1728/2157/articles/37.jpg?v=1552935505)`,
-                  }}
-                  onClick={(e) => handleClick(e.target.id, 'Slow')}
-                >
-                  <div className={style.heading}>
-                    <h3>Slow</h3>
+                <div className={style.category__card}>
+                  <div
+                    id="6"
+                    className={style.category__card__icon}
+                    style={{
+                      backgroundImage: `url(https://cdn.shopify.com/s/files/1/1728/2157/articles/37.jpg?v=1552935505)`,
+                    }}
+                    onClick={(e) => handleClick(e.target.id, "Slow")}
+                  >
+                    <div className={style.heading}>
+                      <h3>Slow</h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className={style.category__card}>
-                <div
-                  id="7"
-                  className={style.category__card__icon}
-                  style={{
-                    backgroundImage: `url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpodcasts.nickware.ru%2Fedm%2Flogo.jpeg&f=1&nofb=1")`,
-                  }}
-                  onClick={(e) => handleClick(e.target.id, 'EDM')}
-                >
-                  <div className={style.heading}>
-                    <h3>EDM</h3>
+                <div className={style.category__card}>
+                  <div
+                    id="7"
+                    className={style.category__card__icon}
+                    style={{
+                      backgroundImage: `url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpodcasts.nickware.ru%2Fedm%2Flogo.jpeg&f=1&nofb=1")`,
+                    }}
+                    onClick={(e) => handleClick(e.target.id, "EDM")}
+                  >
+                    <div className={style.heading}>
+                      <h3>EDM</h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className={style.category__card}>
-                <div
-                  id="8"
-                  className={style.category__card__icon}
-                  style={{
-                    backgroundImage: `url(https://images.pexels.com/photos/144428/pexels-photo-144428.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)`,
-                  }}
-                  onClick={(e) => handleClick(e.target.id, 'Electric')}
-                >
-                  <div className={style.heading}>
-                    <h3>Electric</h3>
+                <div className={style.category__card}>
+                  <div
+                    id="8"
+                    className={style.category__card__icon}
+                    style={{
+                      backgroundImage: `url(https://images.pexels.com/photos/144428/pexels-photo-144428.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)`,
+                    }}
+                    onClick={(e) => handleClick(e.target.id, "Electric")}
+                  >
+                    <div className={style.heading}>
+                      <h3>Electric</h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className={style.category__card}>
-                <div
-                  id="9"
-                  className={style.category__card__icon}
-                  style={{
-                    backgroundImage: `url(https://www.theeapts.com/blog/wp-content/uploads/sites/3997/2019/10/wpid-microphone2.jpg)`,
-                  }}
-                  onClick={(e) => handleClick(e.target.id, 'Vocal')}
-                >
-                  <div className={style.heading}>
-                    <h3>Vocal</h3>
+                <div className={style.category__card}>
+                  <div
+                    id="9"
+                    className={style.category__card__icon}
+                    style={{
+                      backgroundImage: `url(https://www.theeapts.com/blog/wp-content/uploads/sites/3997/2019/10/wpid-microphone2.jpg)`,
+                    }}
+                    onClick={(e) => handleClick(e.target.id, "Vocal")}
+                  >
+                    <div className={style.heading}>
+                      <h3>Vocal</h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className={style.category__card}>
-                <div
-                  id="10"
-                  className={style.category__card__icon}
-                  style={{
-                    backgroundImage: `url(https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)`,
-                  }}
-                  onClick={(e) => handleClick(e.target.id, 'House')}
-                >
-                  <h3>House</h3>
+                <div className={style.category__card}>
+                  <div
+                    id="10"
+                    className={style.category__card__icon}
+                    style={{
+                      backgroundImage: `url(https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)`,
+                    }}
+                    onClick={(e) => handleClick(e.target.id, "House")}
+                  >
+                    <h3>House</h3>
+                  </div>
                 </div>
               </div>
             </div>
+            <div className={style.search_btn}>
+              <button onClick={() => getCategories()}>Search</button>
+            </div>
           </div>
-          <div className={style.search_btn}>
-            <button onClick={() => getCategories()}>Search</button>
-          </div>
-        </div>
-      </>
+        </>
       )}
     </>
   );

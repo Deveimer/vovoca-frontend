@@ -1,19 +1,19 @@
-import React,{useState} from 'react'
-import {FaTimes} from "react-icons/fa";
-import { Modal } from 'react-responsive-modal';
-import Login from './Login';
-import style_modal from '../../../styles/Modal.module.css';
-import Signup from './Signup';
-import Link from 'next/link'
-const AuthPopup = ({isopen}) => {
-    const [open, setOpen] = useState(isopen);
+import React, { useState } from "react";
+import { FaTimes } from "react-icons/fa";
+import { Modal } from "react-responsive-modal";
+import Login from "./Login";
+import style_modal from "../../../styles/Modal.module.css";
+import Signup from "./Signup";
+import Link from "next/link";
+const AuthPopup = ({ isopen }) => {
+  const [open, setOpen] = useState(isopen);
 
-    const onCloseModal = () => setOpen(false);
-    const closeIcon = <svg style={{ display: 'none' }}></svg>;
-    const [method, setMethod] = useState('login');
-    return (
-        <div>
-            <Modal
+  const onCloseModal = () => setOpen(false);
+  const closeIcon = <svg style={{ display: "none" }}></svg>;
+  const [method, setMethod] = useState("login");
+  return (
+    <div>
+      <Modal
         open={open}
         onClose={onCloseModal}
         center
@@ -25,26 +25,31 @@ const AuthPopup = ({isopen}) => {
       >
         {/* <Login /> */}
         <>
-        <i style={{color:"gray",cursor:"pointer"}} onClick={onCloseModal}><FaTimes/></i>
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          <i
+            style={{ color: "gray", cursor: "pointer" }}
+            onClick={onCloseModal}
+          >
+            <FaTimes />
+          </i>
+          <div style={{ display: "flex", justifyContent: "space-around" }}>
             <p
               style={{
-                cursor: 'pointer',
-                color: `${method === 'login' ? 'wheat' : 'gray'}`,
+                cursor: "pointer",
+                color: `${method === "login" ? "wheat" : "gray"}`,
               }}
               onClick={(res) => {
-                setMethod('login');
+                setMethod("login");
               }}
             >
               Login
             </p>
             <p
               style={{
-                cursor: 'pointer',
-                color: `${method === 'signup' ? 'wheat' : 'gray'}`,
+                cursor: "pointer",
+                color: `${method === "signup" ? "wheat" : "gray"}`,
               }}
               onClick={(res) => {
-                setMethod('signup');
+                setMethod("signup");
               }}
             >
               Signup
@@ -52,52 +57,56 @@ const AuthPopup = ({isopen}) => {
           </div>
           <hr className="divider"></hr>
 
-          {method === 'login' ? <Login closeModal={onCloseModal} hello={"hello"}/> : <Signup />}
+          {method === "login" ? (
+            <Login closeModal={onCloseModal} hello={"hello"} />
+          ) : (
+            <Signup />
+          )}
           <br />
           <hr className="divider"></hr>
           {/* By submitting this form, you confirm that you agree to our Terms of Service and Privacy Policy. */}
-          <div style={{ textAlign: 'center' }}>
-            {method === 'login' ? (
-              <p style={{ color: 'gray', fontSize: 'x-small' }}>
-              Don’t have an account?{' '}
-              <span
-                style={{ color: 'wheat', cursor: 'pointer' }}
-                onClick={(res) => {
-                  setMethod('signup');
-                }}
-              >
-                Signup Here
-              </span>
-            </p>
+          <div style={{ textAlign: "center" }}>
+            {method === "login" ? (
+              <p style={{ color: "gray", fontSize: "x-small" }}>
+                Don’t have an account?{" "}
+                <span
+                  style={{ color: "wheat", cursor: "pointer" }}
+                  onClick={(res) => {
+                    setMethod("signup");
+                  }}
+                >
+                  Signup Here
+                </span>
+              </p>
             ) : (
               <>
-              <p style={{ color: 'gray', fontSize: 'x-small' }}>
-                  Already have an account?{' '}
+                <p style={{ color: "gray", fontSize: "x-small" }}>
+                  Already have an account?{" "}
                   <span
-                    style={{ color: 'wheat', cursor: 'pointer' }}
+                    style={{ color: "wheat", cursor: "pointer" }}
                     onClick={(res) => {
-                      setMethod('login');
+                      setMethod("login");
                     }}
                   >
                     Login Here
                   </span>
                 </p>
-                
-              <p style={{ color: 'gray', fontSize: 'x-small' }}>
-                By submitting this form, you confirm that you agree to our{' '}
-                <a href="/privacy-policy">
-                  <span style={{ color: 'wheat', cursor: 'pointer' }}>
-                    Terms of Service and Privacy Policy
-                  </span>
-                </a>
-              </p>
+
+                <p style={{ color: "gray", fontSize: "x-small" }}>
+                  By submitting this form, you confirm that you agree to our{" "}
+                  <a href="/privacy-policy">
+                    <span style={{ color: "wheat", cursor: "pointer" }}>
+                      Terms of Service and Privacy Policy
+                    </span>
+                  </a>
+                </p>
               </>
             )}
           </div>
         </>
       </Modal>
-        </div>
-    )
-}
+    </div>
+  );
+};
 
-export default AuthPopup
+export default AuthPopup;

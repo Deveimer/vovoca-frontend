@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
-import { FaGetPocket } from 'react-icons/fa';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect } from "react";
+import { FaGetPocket } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 import {
   getLatestMusic,
   getTrendingMusic,
-} from '../../../actions/musicActions';
-import style from './Guest.module.css';
-import Link from 'next/link';
-import Loader from '../../Loader/Loader';
+} from "../../../actions/musicActions";
+import style from "./Guest.module.css";
+import Link from "next/link";
+import Loader from "../../Loader/Loader";
 
 const Guest = () => {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const Guest = () => {
   return (
     <div id="features">
       <div className={style.guest}>
-        <div className={[style.guest__chart, style.mobile__chart].join(' ')}>
+        <div className={[style.guest__chart, style.mobile__chart].join(" ")}>
           <div className={style.pricing__body}>
             <h1 className={style.trend__heading}>Latest</h1>
             <hr className="divider" />
@@ -32,9 +32,9 @@ const Guest = () => {
                     className={style.music__cover}
                     style={{
                       backgroundImage: `url(${i.image})`,
-                      backgroundSize: '90px 90px',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat',
+                      backgroundSize: "90px 90px",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
                     }}
                   ></div>
 
@@ -47,11 +47,11 @@ const Guest = () => {
                     href={`/music/${encodeURIComponent(i._id)}`}
                   >
                     <button
-                      style={{ cursor: 'pointer' }}
+                      style={{ cursor: "pointer" }}
                       className={style.music_button}
                     >
                       <FaGetPocket
-                        style={{ color: 'wheat' }}
+                        style={{ color: "wheat" }}
                         className={style.music_icon}
                       />
                     </button>
@@ -78,9 +78,9 @@ const Guest = () => {
                     className={style.music__cover}
                     style={{
                       backgroundImage: `url(${i.image})`,
-                      backgroundSize: '90px 90px',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat',
+                      backgroundSize: "90px 90px",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
                     }}
                   ></div>
 
@@ -92,11 +92,11 @@ const Guest = () => {
                     href={`/music/${encodeURIComponent(i._id)}`}
                   >
                     <button
-                      style={{ cursor: 'pointer' }}
+                      style={{ cursor: "pointer" }}
                       className={style.music_button}
                     >
                       <FaGetPocket
-                        style={{ color: 'wheat' }}
+                        style={{ color: "wheat" }}
                         className={style.music_icon}
                       />
                     </button>

@@ -25,7 +25,7 @@ const History = () => {
     return <Loader loading={true} />;
   }
   if (error) {
-    return <h2 style={{color: 'wheat'}}>No Music Found</h2>
+    return <h2 style={{ color: "wheat" }}>No Music Found</h2>;
   }
 
   return (
