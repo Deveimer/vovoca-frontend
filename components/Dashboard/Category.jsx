@@ -36,6 +36,7 @@ const Category = () => {
     dispatch(resetCategorisedMusic());
   };
 
+  // function called on clicking category card 
   function handleClick(e, category) {
     if (process.browser) {
       if (selected_category.indexOf(category.toLowerCase()) !== -1) {
@@ -57,6 +58,50 @@ const Category = () => {
       }
     }
   }
+
+  // a list of all available categories 
+  const categoryList = [
+    {
+      category: "Hip-Hop",
+      imageURL: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F07%2Fapple-music-rap-life.jpeg%3Fresize%3D1024%2C576&f=1&nofb=1"
+    },
+    {
+      category: "Bass",
+      imageURL: "https://images.pexels.com/photos/2651794/pexels-photo-2651794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    },
+    {
+      category: "Chill",
+      imageURL: "https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    },
+    {
+      category: "Beats",
+      imageURL: "https://www.icmp.ac.uk/sites/default/files/styles/page_background/public/music-production-studio-process-explained-mixing-mastering-songwriting-editing-promoting.jpg?itok=eC1jlQ1J"
+    },
+    {
+      category: "Musical",
+      imageURL: "https://www.incimages.com/uploaded_files/image/1920x1080/getty_491119158_283701.jpg"
+    },
+    {
+      category: "Slow",
+      imageURL: "https://cdn.shopify.com/s/files/1/1728/2157/articles/37.jpg?v=1552935505"
+    },
+    {
+      category: "EDM",
+      imageURL: "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpodcasts.nickware.ru%2Fedm%2Flogo.jpeg&f=1&nofb=1"
+    },
+    {
+      category: "Electric",
+      imageURL: "https://images.pexels.com/photos/144428/pexels-photo-144428.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {
+      category: "vocal",
+      imageURL: "https://www.theeapts.com/blog/wp-content/uploads/sites/3997/2019/10/wpid-microphone2.jpg"
+    },
+    {
+      category: "House",
+      imageURL: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    }
+  ];
 
   return (
     <>
