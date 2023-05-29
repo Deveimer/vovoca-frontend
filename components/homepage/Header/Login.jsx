@@ -38,7 +38,7 @@ const Login = (props) => {
     e.preventDefault();
 
     if (login.email === '' || login.password === '') {
-      toast.error('All feilds are Mandatory', {
+      toast.error('All fields are Mandatory', {
         closeButton: false,
       });
     } else {
