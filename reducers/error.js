@@ -1,8 +1,8 @@
-import { USER_LOGIN_FAILED,LOADING } from '../actions/type';
+import { USER_LOGIN_FAILED, LOADING } from '../actions/type';
 
 const initialState = {
   loading: true,
-  err:null
+  err: null,
 };
 
 export default function ErrorReducer(state = initialState, action) {

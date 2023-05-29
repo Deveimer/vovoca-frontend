@@ -31,7 +31,6 @@
 
 .testimonial__article {
   padding: 1.25rem;
-  height: 21rem;
   border: 1px solid transparent;
   border-radius: 1.25rem;
   background-image: linear-gradient(
@@ -47,12 +46,7 @@
     -4px -4px 15px rgb(195 200 205 / 4%);
   display: flex;
 }
-.developers_article{
-  height: 22rem;
-}
-.contributors_article{
-  height: 7.5rem;
-}
+
 .testimonial__img {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -80,7 +74,7 @@
     0% 0%/200% 200%;
   box-shadow: 4px 4px 18px rgb(0 0 0 / 40%),
     -4px -2px 16px rgb(195 200 205 / 8%);
-  margin: auto;
+  margin: 5%;
   object-fit: cover;
 }
 .testimonial__content > h5 {

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { loginUser } from '../../../actions/authAction';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
-import Router from 'next/router'
+import Router from 'next/router';
 
 const Login = (props) => {
   const dispatch = useDispatch();
@@ -20,14 +20,11 @@ const Login = (props) => {
   };
   const notify = (category) => {
     if (category === 'success') {
-
       toast('Loggedin Successfully', {
         closeButton: false,
         className: style.toast_success_background,
       });
-      Router.push("/dashboard")
-
-
+      Router.push('/dashboard');
     } else {
       console.log(error);
       toast(error.err || 'Something went wrong', {
@@ -47,15 +44,12 @@ const Login = (props) => {
     } else {
       dispatch(loginUser(login.email, login.password)).then((res) => {
         if (res === true) {
-        
           props.onCloseModal();
           notify('success');
         } else {
           notify('error');
         }
       });
-
-     
     }
   };
   return (

@@ -11,12 +11,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { FaPowerOff } from 'react-icons/fa';
 import { IoMdLogIn } from 'react-icons/io';
 import { AiFillHome, AiFillInfoCircle } from 'react-icons/ai';
-import {
-  BsFillPeopleFill,
-  BsFillMusicPlayerFill,
-} from 'react-icons/bs';
+import { BsFillPeopleFill, BsFillMusicPlayerFill } from 'react-icons/bs';
 import { getUserDetails } from '../../actions/authAction';
-
 
 const Navbar = () => {
   const logout = () => {
@@ -153,7 +149,7 @@ const Navbar = () => {
         }}
         closeIcon={closeIcon}
       >
-        <AuthModal />{' '}
+        <AuthModal />
       </Modal>
       <div
         className={
@@ -188,7 +184,6 @@ const Navbar = () => {
             </Link>
             {authenticated.isAuthenticated === true ? (
               <Link scroll={true} href="/dashboard">
-                
                 <button
                   style={{ marginLeft: '25px', padding: '0.4em 1em' }}
                   id="dashboard"
@@ -335,7 +330,6 @@ const Navbar = () => {
                 <span className={style.text_mobile}>About</span>
               </p>
             </Link>
-            
 
             <p
               className={style.navtext}

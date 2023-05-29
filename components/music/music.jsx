@@ -15,7 +15,7 @@ const music = ({ music, history }) => {
           flexDirection: 'column',
           alignContent: 'center',
           color: 'wheat',
-          textAlign: 'center'
+          textAlign: 'center',
         }}
       >
         <img

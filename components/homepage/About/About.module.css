@@ -24,7 +24,6 @@
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -2rem;
 }
 
 .quote{
@@ -64,12 +63,13 @@
   box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
     -4px -4px 15px rgb(195 200 205 / 4%);
 
-  height: 360px;
+  height: 400px;
   width: 400px;
+  display: flex;
+  justify-content: center;
   border-radius: 50%;
-  margin: 0 8em;
-  margin-top: 0.8rem;
-  padding: 2em;
+  margin: 0 5em;
+  padding: 3em;
   display: flex;
   justify-content: center;
   align-items: center;
