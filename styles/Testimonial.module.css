@@ -8,6 +8,7 @@
 
 .testimonial {
   padding: 2rem;
+     
 }
 
 .testimonial__heading {
@@ -19,6 +20,7 @@
 .testimonial__row__1 {
   display: grid;
   grid-template-columns: auto auto auto;
+ 
   grid-template-rows: masonry;
 }
 
@@ -32,21 +34,46 @@
 .testimonial__article {
   padding: 1.25rem;
   border: 1px solid transparent;
+  margin-bottom: 20px;
   border-radius: 1.25rem;
+  height: 280px;
   background-image: linear-gradient(
-      154deg,
-      #3a3e41 0%,
-      #2a2d30 49%,
-      #242628 100%
+      -12deg,
+      #898888 0%,
+      #535353 5%,
+      #5a5858 5%,
+      #3a3e41 15%,
+      #2a2d30 15%,
+      #242628 60%
     ),
     linear-gradient(160deg, #434b54 1%, #2a2c2f 45%, #191b1e 75%);
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
-  box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
-    -4px -4px 15px rgb(195 200 205 / 4%);
+  transition: 1s ease-in-out;
+  /* box-shadow: rgba(169, 169, 171, 0.15) 0px 2px 5px 0px, rgba(210, 205, 205, 0.05) 0px 1px 1px 0px; */
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; */
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; */
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   display: flex;
 }
+.testimonial__article:hover{
+  transform: scale(0.9);
+  /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+  box-shadow: rgba(77, 76, 76, 0.372) 0px 22px 70px 4px;
+  color: #080808;
 
+  background-image: linear-gradient(
+      169deg,
+      #757474 75%,
+      #535353 15%,
+      #4b4a4a 15%,
+      #3a3e41 5%,
+      #2a2d30 5%,
+      #242628 5%
+    ),
+    linear-gradient(30deg, #434b54 , #2a2c2f , #191b1e );
+    
+}
 .testimonial__img {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -77,6 +104,7 @@
   margin: 5%;
   object-fit: cover;
 }
+
 .testimonial__content > h5 {
   color: #d7e1ec;
   line-height: 1.7;
@@ -84,11 +112,11 @@
   letter-spacing: 0;
 }
 
-.testimonial__content > p {
+.testimonial__content  p {
   color: #a0a1ac;
 }
 
-.testimonial__content > span {
+.testimonial__content span {
   color: #d7e1ec;
 }
 
