@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
-import { useRouter } from "next/router";
-import { getSingleMusic } from "../../../actions/musicActions";
-import { useDispatch, useSelector } from "react-redux";
-import Loader from "../../../components/Loader/Loader";
-import style from "../../../styles/singleMusic.module.css";
-import Footer from "../../../components/homepage/Footer/Footer";
-import AudioPlayer from "react-h5-audio-player";
-import "react-h5-audio-player/lib/styles.css";
-import { HiViewList, HiCloudDownload, HiShare } from "react-icons/hi";
-import Link from "next/link";
-import Head from "next/head";
-import axios from "axios";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { getSingleMusic } from '../../../actions/musicActions';
+import { useDispatch, useSelector } from 'react-redux';
+import Loader from '../../../components/Loader/Loader';
+import style from '../../../styles/singleMusic.module.css';
+import Footer from '../../../components/homepage/Footer/Footer';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+import { HiViewList, HiCloudDownload, HiShare } from 'react-icons/hi';
+import Link from 'next/link';
+import Head from 'next/head';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const index = () => {
   const router = useRouter();
@@ -26,15 +26,15 @@ const index = () => {
   const copyLink = () => {
     if (process.browser) {
       var inputc = document.body.insertAdjacentElement(
-        "beforebegin",
-        document.createElement("input")
+        'beforebegin',
+        document.createElement('input')
       );
       inputc.value = window.location.href;
       inputc.focus();
       inputc.select();
-      document.execCommand("copy");
+      document.execCommand('copy');
       inputc.parentNode.removeChild(inputc);
-      toast("Link Copied", {
+      toast('Link Copied', {
         closeButton: false,
         className: style.toast_success_background,
       });
@@ -42,13 +42,13 @@ const index = () => {
   };
   const downloadMusic = async (id) => {
     // const res = await axios.patch(
-    //   `https://vovoca.herokuapp.com/api/music/download/${id}`
+    //   `https://vovoca-backend-deploy.vercel.app/api/music/download/${id}`
     // );
     const link = document.createElement('a');
     link.download = music.name;
     link.href = `data:audio/mp3;base64,${Buffer.from(
       music.audiobuffer.data
-    ).toString("base64")}`;
+    ).toString('base64')}`;
     link.click();
   };
 
@@ -69,7 +69,7 @@ const index = () => {
         <title>VOVOCA | {music.name}</title>
       </Head>
       <div className={style.container}>
-        <input type="text" id="myInput" style={{ visibility: "hidden" }} />
+        <input type="text" id="myInput" style={{ visibility: 'hidden' }} />
         <div className={style.card}>
           <img className={style.background__image} src={music.image}></img>
           <div className={style.buttons}>
@@ -86,10 +86,7 @@ const index = () => {
               <HiCloudDownload />
             </button>
 
-            <button
-              className={style.single_music_button}
-              onClick={copyLink}
-            >
+            <button className={style.single_music_button} onClick={copyLink}>
               <HiShare />
             </button>
           </div>
@@ -109,13 +106,13 @@ const index = () => {
                   style.rhap_containe,
                   style.rhap_controls_section,
                   style.rhap_main_controls_button,
-                ].join(" ")}
+                ].join(' ')}
                 autoPlayAfterSrcChange={false}
                 src={`data:audio/mp3;base64,${Buffer.from(
                   music.audiobuffer?.data
-                ).toString("base64")}`}
+                ).toString('base64')}`}
                 onError={(e) => {
-                  toast("Oops! Something went wrong", {
+                  toast('Oops! Something went wrong', {
                     closeButton: false,
                     className: style.toast_background,
                   });
