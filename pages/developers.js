@@ -1,19 +1,18 @@
-import styles from "../styles/Testimonial.module.css";
-import Head from "next/head";
-import { AiFillLinkedin } from "react-icons/ai";
-import Link from "next/link";
-import Footer from "../components/homepage/Footer/Footer";
-import Loader from "../components/Loader/Loader";
-import useSWR from "swr"
+import styles from '../styles/Testimonial.module.css';
+import Head from 'next/head';
+import { AiFillLinkedin } from 'react-icons/ai';
+import Link from 'next/link';
+import Footer from '../components/homepage/Footer/Footer';
+import Loader from '../components/Loader/Loader';
+import useSWR from 'swr';
 
 async function fetcher(...args) {
-  const res = await fetch(...args)
-  return res.json()
+  const res = await fetch(...args);
+  return res.json();
 }
 
 const developers = () => {
-  const { data } = useSWR('/api/github', fetcher)
-console.log(data);
+  const { data } = useSWR('/api/github', fetcher);
   return (
     <>
       <div>
@@ -31,13 +30,13 @@ console.log(data);
             <h1 className={styles.testimonial__heading}>Developers</h1>
             <div className={styles.testimonial__row__1}>
               <div className={styles.testimonial}>
-                <article className={`${styles.testimonial__article} ${styles.developers_article}`}>
+                <article className={styles.testimonial__article}>
                   <div className={styles.testimonial__content}>
                     <p>
                       Though this is a simple music streaming and downloading
                       website, but BTS it was a roller coaster ride while
                       resolving the bugs and adding features to it, but teamwork
-                      and decidation helped us overcome these problems , and
+                      and dedication helped us overcome these problems , and
                       here we are with all of our hard Work
                     </p>
                     <span>Varun Singh</span>
@@ -54,20 +53,20 @@ console.log(data);
                 <Link scroll={true} href="https://www.linkedin.com/in/v-varun/">
                   <button
                     style={{
-                      width: "100%",
-                      borderTopLeftRadius: "0px",
-                      borderTopRightRadius: "0px",
-                      borderBottomLeftRadius: "1.25rem",
-                      borderBottomRightRadius: "1.25rem",
-                      marginTop: "-5%",
+                      width: '100%',
+                      borderTopLeftRadius: '0px',
+                      borderTopRightRadius: '0px',
+                      borderBottomLeftRadius: '1.25rem',
+                      borderBottomRightRadius: '1.25rem',
+                      marginTop: '-5%',
                     }}
                   >
-                    <AiFillLinkedin style={{ fontSize: "x-large" }} />
+                    <AiFillLinkedin style={{ fontSize: 'x-large' }} />
                   </button>
                 </Link>
               </div>
               <div className={styles.testimonial}>
-                <article className={`${styles.testimonial__article} ${styles.developers_article}`}>
+                <article className={styles.testimonial__article}>
                   <div className={styles.testimonial__content}>
                     <p>
                       The concept was farely new and it was challenging to
@@ -84,9 +83,9 @@ console.log(data);
                     className={styles.developer__img}
                     style={{
                       backgroundImage: `url(https://avatars.githubusercontent.com/u/51090491?v=4)`,
-                      backgroundSize: "90px 90px",
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat",
+                      backgroundSize: '90px 90px',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
                     }}
                   ></div>
                 </article>
@@ -96,20 +95,20 @@ console.log(data);
                 >
                   <button
                     style={{
-                      width: "100%",
-                      borderTopLeftRadius: "0px",
-                      borderTopRightRadius: "0px",
-                      borderBottomLeftRadius: "1.25rem",
-                      borderBottomRightRadius: "1.25rem",
-                      marginTop: "-10%",
+                      width: '100%',
+                      borderTopLeftRadius: '0px',
+                      borderTopRightRadius: '0px',
+                      borderBottomLeftRadius: '1.25rem',
+                      borderBottomRightRadius: '1.25rem',
+                      marginTop: '-10%',
                     }}
                   >
-                    <AiFillLinkedin style={{ fontSize: "x-large" }} />
+                    <AiFillLinkedin style={{ fontSize: 'x-large' }} />
                   </button>
                 </Link>
               </div>
               <div className={styles.testimonial}>
-                <article className={`${styles.testimonial__article} ${styles.developers_article}`}>
+                <article className={styles.testimonial__article}>
                   <div className={styles.testimonial__content}>
                     <p>
                       We all have learnt a lot while completing vovoca. I think
@@ -125,9 +124,9 @@ console.log(data);
                     className={styles.developer__img}
                     style={{
                       backgroundImage: `url(https://media-exp1.licdn.com/dms/image/C5103AQFIQ2yP_StD7g/profile-displayphoto-shrink_800_800/0/1566850251714?e=1640217600&v=beta&t=olTFXy-j2NtqoGnuPoBrvUV5Y1lgSG9kHSAAwKKgZEA)`,
-                      backgroundSize: "90px 90px",
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat",
+                      backgroundSize: '90px 90px',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
                     }}
                   ></div>
                 </article>
@@ -137,41 +136,48 @@ console.log(data);
                 >
                   <button
                     style={{
-                      width: "100%",
-                      borderTopLeftRadius: "0px",
-                      borderTopRightRadius: "0px",
-                      borderBottomLeftRadius: "1.25rem",
-                      borderBottomRightRadius: "1.25rem",
-                      marginTop: "-5%",
+                      width: '100%',
+                      borderTopLeftRadius: '0px',
+                      borderTopRightRadius: '0px',
+                      borderBottomLeftRadius: '1.25rem',
+                      borderBottomRightRadius: '1.25rem',
+                      marginTop: '-5%',
                     }}
                   >
-                    <AiFillLinkedin style={{ fontSize: "x-large" }} />
+                    <AiFillLinkedin style={{ fontSize: 'x-large' }} />
                   </button>
                 </Link>
               </div>
             </div>
-            <h1 className={styles.testimonial__heading} style={{ paddingTop: "3rem", }}>Contributors</h1>
+            <h1
+              className={styles.testimonial__heading}
+              style={{ paddingTop: '3rem' }}
+            >
+              Contributors
+            </h1>
             <div className={styles.testimonial__row__2}>
-            {data ? (
-              data.users.map((user, index) => (
-              <div className={styles.testimonial} key={index}>
-                <article className={`${styles.testimonial__article} ${styles.contributors_article}`}><a target="_blank" rel="" href={user.url}>
-                  <div
-                    className={styles.contributor__img}
-                    style={{
-                      backgroundImage: `url(${user.avatar_url})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat",
-                      backgroundSize: "90px 90px",
-                    }}>
-                  </div></a>
-                </article>
-              </div>
-              ))
+              {data ? (
+                data.users.map((user, index) => (
+                  <div className={styles.testimonial} key={index}>
+                    <article className={styles.testimonial__article}>
+                      <a target="_blank" rel="" href={user.url}>
+                        <div
+                          className={styles.contributor__img}
+                          style={{
+                            backgroundImage: `url(${user.avatar_url})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: '90px 90px',
+                          }}
+                        ></div>
+                      </a>
+                    </article>
+                  </div>
+                ))
               ) : (
-              <Loader loading={true} />
-            )}
+                <Loader loading={true} />
+              )}
             </div>
           </div>
         </div>

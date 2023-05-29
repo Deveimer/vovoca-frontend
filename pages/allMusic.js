@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { getAllMusic } from "../actions/musicActions";
-import style from "../styles/AllMusic.module.css";
-import Footer from "../components/homepage/Footer/Footer";
-import Loader from "../components/Loader/Loader";
-import Music from "../components/music/music";
-import ReactPaginate from "react-paginate";
-import { LOADING } from "../actions/type";
-import Head from "next/head";
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getAllMusic } from '../actions/musicActions';
+import style from '../styles/AllMusic.module.css';
+import Footer from '../components/homepage/Footer/Footer';
+import Loader from '../components/Loader/Loader';
+import Music from '../components/music/music';
+import ReactPaginate from 'react-paginate';
+import { LOADING } from '../actions/type';
+import Head from 'next/head';
 
 const allMusic = () => {
   const music = useSelector((state) => state.music);
@@ -49,15 +49,15 @@ const allMusic = () => {
                 style.pagination
               } /* as this work same as bootstrap class */
               subContainerClassName={[style.pages, style.pagination].join(
-                " "
+                ' '
               )} /* as this work same as bootstrap class */
               activeClassName={style.active}
               pageCount={music.musics.totalPages}
               breakLabel={false}
               marginPagesDisplayed={0}
               pageRangeDisplayed={0}
-              previousLabel={"<"}
-              nextLabel={">"}
+              previousLabel={'<'}
+              nextLabel={'>'}
               onPageChange={(e) => handleChange(e)}
             />
           </div>

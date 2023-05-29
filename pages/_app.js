@@ -1,9 +1,9 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
 import 'react-responsive-modal/styles.css';
 import Navbar from '../components/Navbar/Navbar';
-import { Provider } from 'react-redux'
-import store from '../store'
-import { useMediaQuery } from 'react-responsive'
+import { Provider } from 'react-redux';
+import store from '../store';
+import { useMediaQuery } from 'react-responsive';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import { ToastContainer } from 'react-toastify';
@@ -39,21 +39,21 @@ function MyApp({ Component, pageProps }) {
         </Modal>
       </>) : (<Provider store={store}>
       <ToastContainer
-      position="top-center"
-      autoClose={5000}
-      hideProgressBar={true}
-      newestOnTop
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss={false}
-      draggable={true}
-      pauseOnHover={false}
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={true}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={true}
+        pauseOnHover={false}
       />
-        <Navbar />
-        <ScrollButton/>
+      <Navbar />
+      <ScrollButton />
       <Component {...pageProps} />
     </Provider>)
   )
 }
 
-export default MyApp
+export default MyApp;

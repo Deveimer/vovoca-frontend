@@ -13,9 +13,13 @@ const Footer = () => {
               our project? Feel Free to contact us anytime. We are just a click
               away
             </p>
-            <form action="https://formspree.io/f/xnqlqgza" method="POST" className={style.get__in__touch__form}>
+            <form
+              action="https://formspree.io/f/xnqlqgza"
+              method="POST"
+              className={style.get__in__touch__form}
+            >
               <div className={style.form__row}>
-                <div className={style.inputs} >
+                <div className={style.inputs}>
                   <input
                     className={style.feild__input}
                     type="text"
@@ -30,11 +34,7 @@ const Footer = () => {
                     name="email"
                     required
                   />
-                  <input
-                    type="hidden"
-                    value="Vovoca "
-                    name="from"
-                  />
+                  <input type="hidden" value="Vovoca " name="from" />
                 </div>
                 <div className={style.message}>
                   <textarea
