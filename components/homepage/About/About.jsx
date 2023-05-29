@@ -13,18 +13,14 @@ const About=()=>{
                         <div className={style.feature}>
                             <div className={[style.feature__heading, style.left].join(' ')}>
                                 <h2>Royalty Free</h2>
-                                <p>Enjoy Royalty Free awesome music for free
-                                We provide all of our services for free
-                                Login and use vovoca for free forever</p>
+                                <p>Experience the rhythm, without spending a dime, Unlock endless melodies, vovoca's free for a lifetime!</p>
                             </div>
                         </div>
                         <hr className="divider"></hr>
                         <div className={style.feature}>
                         <div className={[style.feature__heading, style.left].join(' ')}>
                                 <h2>No Credits Required</h2>
-                                <p>You don't even have to pay us or give us credit
-                                for using our music anywhere, in your songs,
-                                videos or an office presentation</p>
+                                <p>Let the melodies soar, no strings attached, Vovoca's music, freely used, without credit or cash.</p>
                             </div>
                         </div>
                     </div>
@@ -35,18 +31,14 @@ const About=()=>{
                     <div className={style.feature}>
                     <div className={[style.feature__heading, style.right].join(' ')}>
                                 <h2>Filter Music</h2>
-                                <p>Login to utilize a complete set of features
-                                of Vovoca. You can then easily filter
-                                our music category wise</p>
+                                <p>Unlock Vovoca's full potential with a single login, Effortlessly browse and filter, music at your command</p>
                             </div>
                         </div>
                         <hr className="divider"></hr>
                         <div className={style.feature}>
                         <div className={[style.feature__heading, style.right].join(' ')}>
                                 <h2>Upload Music</h2>
-                                <p>You can also share your work and talent with the whole
-                                world for free. Sign in and upload your
-                                created music with the world</p>
+                                <p>Unleash your artistry, let your talent shine bright, Share your creations with the world, day or night. Vovoca welcomes your music, for free, with delight</p>
                             </div>
                         </div>
                     </div>

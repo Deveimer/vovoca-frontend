@@ -126,8 +126,7 @@ const Header = () => {
             #Tune your work with Royalty Free Music
           </h1>
           <p className={style.banner__sub__heading}>
-            Welcome to Vovoca, one-stop solution for all your musical needs, we
-            provide royalty-free music so that your creativity never stops.
+          Enter Vovoca's realm, where music knows no bounds, Fuel your creativity with royalty-free sounds. Unleash your imagination, let your creations astound.
           </p>
           {authenticated === true ? (
             <></>

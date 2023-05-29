@@ -9,9 +9,7 @@ const Footer = () => {
           <div className={style.get__in__touch}>
             <h2>Get in Touch</h2>
             <p>
-              Want to work, or collaborate with us or do you have any ideas related to
-              our project? Feel Free to contact us anytime. We are just a click
-              away
+            Join forces with us, let's create something grand, Collaboration awaits, reach out with a click at hand. Share your ideas, let's shape our project, hand in hand.
             </p>
             <form action="https://formspree.io/f/xnqlqgza" method="POST" className={style.get__in__touch__form}>
               <div className={style.form__row}>

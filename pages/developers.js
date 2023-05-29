@@ -34,11 +34,7 @@ console.log(data);
                 <article className={styles.testimonial__article}>
                   <div className={styles.testimonial__content}>
                     <p>
-                    Though this is a simple music streaming and downloading
-                      website, but BTS it was a roller coaster ride while
-                      resolving the bugs and adding features to it, but teamwork
-                      and dedication helped us overcome these problems, and
-                      here we are with all of our hard Work
+                   From humble beginnings to an extraordinary ride, BTS, we conquered bugs and reached new heights. Teamwork and dedication, our driving force with pride, Hard work paid off, now Vovoca stands by your side.
                     </p>
                     <span>Varun Singh</span>
                     <br />
