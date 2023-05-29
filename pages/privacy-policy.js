@@ -34,7 +34,7 @@ const privacyPolicy = () => {
                             <i className="fas fa-plus"></i>
                         </div>
                     </div>
-                    <p id="1b" id="1" className={style.modal__button__para}>
+                    <p id="1" className={style.modal__button__para}>
                         Vovoca is a project under team DevBucket. We have putted our heart and soul in it to bring it to you for free. We our free today because of several open-source technologies out there that we have used all togethor to bring you Vovoca. We therefore aim to bring you vovoca as a open-source program too after completion of all the basic structure and interface. Our backend APIs are currently hosted on heroku and frontend on vercel while in development mode.
                     </p>
                 </div>
