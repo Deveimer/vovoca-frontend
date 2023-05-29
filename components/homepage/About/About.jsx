@@ -24,7 +24,7 @@ const About=()=>{
                                 <h2>No Credits Required</h2>
                                 <p>You dont even have to pay us or give us credit
                                 for using our music anywhere, in your songs,
-                                vidoes or office presentation</p>
+                                videos or office presentation</p>
                             </div>
                         </div>
                     </div>

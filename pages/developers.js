@@ -37,7 +37,7 @@ console.log(data);
                       Though this is a simple music streaming and downloading
                       website, but BTS it was a roller coaster ride while
                       resolving the bugs and adding features to it, but teamwork
-                      and decidation helped us overcome these problems , and
+                      and dedication helped us overcome these problems , and
                       here we are with all of our hard Work
                     </p>
                     <span>Varun Singh</span>
