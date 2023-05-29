@@ -9,6 +9,8 @@ import { Modal } from 'react-responsive-modal';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollButton from '../components/scrollToTop/ScrollButton'
+import privacyPolicy from '../pages/privacy-policy'
+import { useEffect, useState } from 'react';
 
 const Tablet = () => {
   const isTablet = useMediaQuery({ minWidth: 601, maxWidth: 1226 })
@@ -18,13 +20,24 @@ const closeIcon = (
   <svg style={{display:"none"}}>
   </svg>
 );
+
 function MyApp({ Component, pageProps }) {
+  const [isPrivacyPolicy, setIsPrivacyPolicy] = useState(false);
+
+  useEffect(() => {
+    setIsPrivacyPolicy(prev=>{
+      return window.location.pathname === '/privacy-policy'
+    })
+    console.log(window.location.pathname);
+  }, []);
+
   return (
-    Tablet()?(<>
-    <Modal open={true} onClose={false} center closeIcon={closeIcon}>
-<h2>This Web service is not available in Tablet mode :(</h2>
-</Modal>
-    </>) : (<Provider store={store}>
+    Tablet() && !isPrivacyPolicy?
+      (<>
+        <Modal open={true} onClose={false} center closeIcon={closeIcon}>
+          <h2>This Web service is not available in Tablet mode :(</h2>
+        </Modal>
+      </>) : (<Provider store={store}>
       <ToastContainer
       position="top-center"
       autoClose={5000}
@@ -40,7 +53,6 @@ function MyApp({ Component, pageProps }) {
         <ScrollButton/>
       <Component {...pageProps} />
     </Provider>)
-    
   )
 }
 
