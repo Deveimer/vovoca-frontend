@@ -61,7 +61,7 @@ const Profile = () => {
               if='file'
               accept='audio/*'
               className={style.custom_file_input}
-              onChange={(r) => setFile(r.target.files[0])}
+              onChange={r => setFile(r.target.files[0])}
             ></input>
           </>
         ) : (
@@ -72,7 +72,7 @@ const Profile = () => {
               type='file'
               if='file'
               className={style.custom_file_input}
-              onChange={(r) => setFile(r.target.files[0])}
+              onChange={r => setFile(r.target.files[0])}
             ></input>
             <div class='card-subtitle'>click on Next, to get it uploaded</div>
           </>

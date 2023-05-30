@@ -16,7 +16,7 @@ const Trending = () => {
     <div id='container'>
       <h1>Trending Music</h1>
       {trending_music ? (
-        trending_music.map((i,idx) => <Music music={i} key={idx}/>)
+        trending_music.map((i, idx) => <Music music={i} key={idx} />)
       ) : (
         <Loader loading={true} />
       )}
