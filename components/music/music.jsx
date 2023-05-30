@@ -21,9 +21,9 @@ const music = ({ music, history }) => {
         <img
           className={style.image}
           src={music.image}
-          alt="Ran"
-          height="70px"
-          width="70px"
+          alt='Ran'
+          height='70px'
+          width='70px'
         />
         <p style={{ marginBottom: '-2%' }}>{music.name}</p>
       </div>
@@ -38,7 +38,7 @@ const music = ({ music, history }) => {
         src={`data:audio/wav;base64,${Buffer.from(
           music.audiobuffer?.data
         ).toString('base64')}`}
-        onError={(e) => {
+        onError={e => {
           toast('Internal Server Error', {
             closeButton: false,
             className: style.toast_background,

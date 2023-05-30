@@ -11,20 +11,20 @@ import Loader from '../../Loader/Loader';
 
 const Guest = () => {
   const dispatch = useDispatch();
-  const trending_music = useSelector((state) => state.music.trending_music);
-  const latest_music = useSelector((state) => state.music.latest_music);
+  const trending_music = useSelector(state => state.music.trending_music);
+  const latest_music = useSelector(state => state.music.latest_music);
   useEffect(() => {
     dispatch(getTrendingMusic());
     dispatch(getLatestMusic());
   }, []);
 
   return (
-    <div id="features">
+    <div id='features'>
       <div className={style.guest}>
         <div className={[style.guest__chart, style.mobile__chart].join(' ')}>
           <div className={style.pricing__body}>
             <h1 className={style.trend__heading}>Latest</h1>
-            <hr className="divider" />
+            <hr className='divider' />
             {latest_music ? (
               latest_music.slice(0, 3).map((i, index) => (
                 <div className={style.song__box}>
@@ -69,7 +69,7 @@ const Guest = () => {
 
           <div className={style.pricing__body}>
             <h1 className={style.trend__heading}>Trending</h1>
-            <hr className="divider" />
+            <hr className='divider' />
 
             {trending_music ? (
               trending_music.slice(0, 3).map((i, index) => (

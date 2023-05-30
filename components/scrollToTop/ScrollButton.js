@@ -3,7 +3,7 @@ import style from './scrollToTop.module.css';
 import { HiArrowCircleUp } from 'react-icons/hi';
 
 const ScrollButton = () => {
-  const onClick = (e) => {
+  const onClick = e => {
     if (process.browser) {
       window.scrollTo({
         top: 0,
@@ -15,7 +15,7 @@ const ScrollButton = () => {
   const [scrollState, setScrollState] = useState('top');
   useEffect(() => {
     if (process.browser) {
-      const listener = document.addEventListener('scroll', (e) => {
+      const listener = document.addEventListener('scroll', e => {
         var scrolled = document.scrollingElement.scrollTop;
         const btn = document.getElementById('goToTop');
         if (btn) {
@@ -40,7 +40,7 @@ const ScrollButton = () => {
   }, [scrollState]);
 
   return (
-    <div id="goToTop" className={style.button} onClick={() => onClick()}>
+    <div id='goToTop' className={style.button} onClick={() => onClick()}>
       <HiArrowCircleUp />
     </div>
   );

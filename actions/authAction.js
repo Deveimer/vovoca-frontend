@@ -9,7 +9,7 @@ import {
 import setAuthToken from './utils/setAuthToken';
 import cookie from 'js-cookie';
 
-export const loginUser = (email, password) => async (dispatch) => {
+export const loginUser = (email, password) => async dispatch => {
   const config = {
     headers: {
       'Content-Type': 'Application/json',
@@ -58,7 +58,7 @@ export const registerUser = async (username, email, password) => {
   }
 };
 
-export const getUserDetails = () => async (dispatch) => {
+export const getUserDetails = () => async dispatch => {
   if (cookie.get('token')) {
     setAuthToken(cookie.get('token'));
     const res = await axios.get(

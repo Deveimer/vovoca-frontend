@@ -10,14 +10,14 @@ import { LOADING } from '../actions/type';
 import Head from 'next/head';
 
 const allMusic = () => {
-  const music = useSelector((state) => state.music);
-  const auth = useSelector((state) => state.auth);
+  const music = useSelector(state => state.music);
+  const auth = useSelector(state => state.auth);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllMusic());
   }, []);
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     dispatch({ type: LOADING });
     dispatch(getAllMusic(e.selected + 1));
   };
@@ -38,7 +38,7 @@ const allMusic = () => {
       </Head>
       <div className={style.container}>
         {!music.loading ? (
-          music.musics.data?.map((m) => <Music key={m._id} music={m} />)
+          music.musics.data?.map(m => <Music key={m._id} music={m} />)
         ) : (
           <Loader loading={true} />
         )}
@@ -58,7 +58,7 @@ const allMusic = () => {
               pageRangeDisplayed={0}
               previousLabel={'<'}
               nextLabel={'>'}
-              onPageChange={(e) => handleChange(e)}
+              onPageChange={e => handleChange(e)}
             />
           </div>
         ) : (
