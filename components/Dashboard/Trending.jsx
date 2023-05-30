@@ -10,13 +10,13 @@ const Trending = () => {
 
   useEffect(() => {
     dispatch(getTrendingMusic());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div id='container'>
       <h1>Trending Music</h1>
       {trending_music ? (
-        trending_music.map(i => <Music music={i} />)
+        trending_music.map((i,idx) => <Music music={i} key={idx}/>)
       ) : (
         <Loader loading={true} />
       )}

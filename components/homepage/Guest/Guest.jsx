@@ -13,10 +13,11 @@ const Guest = () => {
   const dispatch = useDispatch();
   const trending_music = useSelector(state => state.music.trending_music);
   const latest_music = useSelector(state => state.music.latest_music);
+  
   useEffect(() => {
     dispatch(getTrendingMusic());
     dispatch(getLatestMusic());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div id='features'>
@@ -27,7 +28,7 @@ const Guest = () => {
             <hr className='divider' />
             {latest_music ? (
               latest_music.slice(0, 3).map((i, index) => (
-                <div className={style.song__box}>
+                <div className={style.song__box} key={index}>
                   <div
                     className={style.music__cover}
                     style={{
@@ -73,7 +74,7 @@ const Guest = () => {
 
             {trending_music ? (
               trending_music.slice(0, 3).map((i, index) => (
-                <div className={style.song__box}>
+                <div className={style.song__box} key={index}>
                   <div
                     className={style.music__cover}
                     style={{

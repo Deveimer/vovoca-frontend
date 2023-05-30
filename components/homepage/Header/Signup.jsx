@@ -26,11 +26,6 @@ const Signup = props => {
         closeButton: false,
         className: style.toast_background,
       });
-    } else if (register.password.length < 8 || register.password.length > 16) {
-      toast('Password length should be between 8-16 characters', {
-        closeButton: false,
-        className: style.toast_background,
-      });
     } else {
       const reg = await registerUser(
         register.username,

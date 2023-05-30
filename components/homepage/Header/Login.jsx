@@ -9,7 +9,6 @@ import Router from 'next/router';
 const Login = props => {
   const dispatch = useDispatch();
   const error = useSelector(state => state.error);
-  const authenticate = useSelector(state => state.auth.isAuthenticated);
   const [login, setLogin] = useState({
     email: '',
     password: '',

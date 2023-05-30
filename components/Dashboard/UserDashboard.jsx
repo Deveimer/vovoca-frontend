@@ -24,7 +24,7 @@ const UserDashboard = () => {
         <div className={style.dashnav}>
           <p
             className={style.navtext}
-            onClick={r => {
+            onClick={() => {
               setNav('profile');
               if (process.browser) {
                 window.scrollTo({
@@ -46,7 +46,7 @@ const UserDashboard = () => {
           <hr className='divider'></hr>
           <p
             className={style.navtext}
-            onClick={r => {
+            onClick={() => {
               setNav('category');
               if (process.browser) {
                 window.scrollTo({
@@ -62,7 +62,7 @@ const UserDashboard = () => {
           </p>
           <p
             className={style.navtext}
-            onClick={r => {
+            onClick={() => {
               setNav('trending');
               if (process.browser) {
                 window.scrollTo({
@@ -78,7 +78,7 @@ const UserDashboard = () => {
           </p>
           <p
             className={style.navtext}
-            onClick={r => {
+            onClick={() => {
               setNav('history');
               if (process.browser) {
                 window.scrollTo({
@@ -95,7 +95,7 @@ const UserDashboard = () => {
           <hr className='divider'></hr>
           <p
             className={style.navtext}
-            onClick={r => {
+            onClick={() => {
               setNav('logout');
               if (process.browser) {
                 window.scrollTo({
@@ -117,7 +117,7 @@ const UserDashboard = () => {
         <div className={style.dashnav_mobile}>
           <p
             className={style.navtext}
-            onClick={r => {
+            onClick={() => {
               setNav('profile');
               if (process.browser) {
                 window.scrollTo({
@@ -134,7 +134,7 @@ const UserDashboard = () => {
           </p>
           <p
             className={style.navtext}
-            onClick={r => {
+            onClick={() => {
               setNav('category');
               if (process.browser) {
                 window.scrollTo({
@@ -151,7 +151,7 @@ const UserDashboard = () => {
           </p>
           <p
             className={style.navtext}
-            onClick={r => {
+            onClick={() => {
               setNav('trending');
               if (process.browser) {
                 window.scrollTo({
@@ -170,7 +170,7 @@ const UserDashboard = () => {
 
           <p
             className={style.navtext}
-            onClick={r => {
+            onClick={() => {
               setNav('history');
               if (process.browser) {
                 window.scrollTo({
@@ -190,7 +190,7 @@ const UserDashboard = () => {
           <Link scroll={true} href='/'>
             <p
               className={style.navtext}
-              onClick={r => {
+              onClick={() => {
                 setNav('home');
                 if (process.browser) {
                   window.scrollTo({
@@ -209,7 +209,7 @@ const UserDashboard = () => {
           </Link>
           <p
             className={style.navtext}
-            onClick={r => {
+            onClick={() => {
               setNav('logout');
               if (process.browser) {
                 window.scrollTo({

@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
-    "lint": "eslint .",
-    "dev": "npm run pretty && npm run lint && next dev -p 3001",
+    "lint": "eslint  \"./**/*.{js,jsx,ts,tsx,json}\"",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start"
   },

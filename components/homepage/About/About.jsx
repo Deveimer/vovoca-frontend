@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './About.module.css';
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -30,7 +31,7 @@ const About = () => {
             </div>
           </div>
           <div className={style.vovoca__img}>
-            <img src='https://source.unsplash.com/daily?neon/1200x1200' />
+            <Image src='https://source.unsplash.com/daily?neon/1200x1200' alt='about image'/>
           </div>
           <div className={style.feature__col__2}>
             <div className={style.feature}>

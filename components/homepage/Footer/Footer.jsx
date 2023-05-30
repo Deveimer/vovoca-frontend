@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Footer.module.css';
-import Link from 'next/link';
+
 const Footer = () => {
   return (
     <div className={style.footer}>
@@ -11,7 +11,7 @@ const Footer = () => {
             <p>
             Unlock a world of boundless creativity with our royalty-free music library. Subscribe to our newsletter for weekly updates on fresh tunes, 
             exclusive releases, and behind-the-scenes insights, 
-            empowering your projects with a soundtrack that's truly yours.
+            empowering your projects with a soundtrack that&apos;s truly yours.
             </p>
             <form action="https://formspree.io/f/xnqlqgza" method="POST" className={style.get__in__touch__form}>
               <div className={style.form__row}>
