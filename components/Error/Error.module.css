@@ -1,0 +1,21 @@
+.container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #d7e1ec9a;
+}
+
+.butn {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 1.2rem;
+  width: 20%;
+  border-radius: 0.325em;
+  margin-top: 1rem;
+}
+
+.para{
+    font-size: 1rem;
+}
