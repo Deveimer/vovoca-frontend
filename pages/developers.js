@@ -11,7 +11,7 @@ async function fetcher(...args) {
   return res.json();
 }
 
-const developers = () => {
+const Developers = () => {
   const { data } = useSWR('/api/github', fetcher);
   return (
     <>
@@ -83,7 +83,6 @@ const developers = () => {
                     className={styles.developer__img}
                     style={{
                       backgroundImage: `url(https://avatars.githubusercontent.com/u/51090491?v=4)`,
-                      backgroundSize: '90px 90px',
                       backgroundPosition: 'center',
                       backgroundRepeat: 'no-repeat',
                     }}
@@ -165,7 +164,6 @@ const developers = () => {
                           className={styles.contributor__img}
                           style={{
                             backgroundImage: `url(${user.avatar_url})`,
-                            backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat',
                             backgroundSize: '90px 90px',
@@ -187,4 +185,4 @@ const developers = () => {
   );
 };
 
-export default developers;
+export default Developers;
