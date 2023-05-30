@@ -51,7 +51,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <hr className="divider"></hr>
+            {/* <hr className="divider"></hr>
             <div className={style.feature}>
               <div className={[style.feature__heading, style.left].join(' ')}>
                 <h2>No Credits Required</h2>
@@ -60,12 +60,11 @@ const About = () => {
                   music anywhere, in your songs, vidoes or office presentation
                 </p>
               </div>
-            </div>
-          </div>
-          <div className={style.vovoca__img}>
+            </div> */}
+          {/* <div className={style.vovoca__img}>
             <img src="https://source.unsplash.com/daily?neon/1200x1200" />
-          </div>
-          <div className={style.feature__col__2}>
+          </div> */}
+          {/* <div className={style.feature__col__2}>
             <div className={style.feature}>
               <div className={[style.feature__heading, style.right].join(' ')}>
                 <h2>Filter Music</h2>
@@ -85,10 +84,8 @@ const About = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
-      </div>
-    </div>
   );
 };
 
