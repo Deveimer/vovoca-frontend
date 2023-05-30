@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import style from './Dashboard.module.css';
-import {
-  FaUserAlt,
-  FaPowerOff,
-  FaCrown,
-  FaHistory,
-  FaLayerGroup,
-} from 'react-icons/fa';
+import { FaUserAlt, FaPowerOff, FaCrown, FaHistory, FaLayerGroup } from 'react-icons/fa';
 import { AiFillHome } from 'react-icons/ai';
 import Profile from './Profile';
 import Category from './Category';
@@ -30,12 +24,12 @@ const UserDashboard = () => {
                 window.scrollTo({
                   top: 0,
                   left: 0,
-                  behavior: 'smooth',
+                  behavior: 'smooth'
                 });
                 document.getElementById('container').scrollTo({
                   top: 0,
                   left: 0,
-                  behavior: 'smooth',
+                  behavior: 'smooth'
                 });
               }
             }}
@@ -52,7 +46,7 @@ const UserDashboard = () => {
                 window.scrollTo({
                   top: 0,
                   left: 0,
-                  behavior: 'smooth',
+                  behavior: 'smooth'
                 });
               }
             }}
@@ -68,7 +62,7 @@ const UserDashboard = () => {
                 window.scrollTo({
                   top: 0,
                   left: 0,
-                  behavior: 'smooth',
+                  behavior: 'smooth'
                 });
               }
             }}
@@ -84,7 +78,7 @@ const UserDashboard = () => {
                 window.scrollTo({
                   top: 0,
                   left: 0,
-                  behavior: 'smooth',
+                  behavior: 'smooth'
                 });
               }
             }}
@@ -101,12 +95,12 @@ const UserDashboard = () => {
                 window.scrollTo({
                   top: 0,
                   left: 0,
-                  behavior: 'smooth',
+                  behavior: 'smooth'
                 });
               }
             }}
             style={{
-              color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`,
+              color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`
             }}
           >
             Logout <FaPowerOff />
@@ -123,7 +117,7 @@ const UserDashboard = () => {
                 window.scrollTo({
                   top: 0,
                   left: 0,
-                  behavior: 'smooth',
+                  behavior: 'smooth'
                 });
               }
             }}
@@ -140,7 +134,7 @@ const UserDashboard = () => {
                 window.scrollTo({
                   top: 0,
                   left: 0,
-                  behavior: 'smooth',
+                  behavior: 'smooth'
                 });
               }
             }}
@@ -157,7 +151,7 @@ const UserDashboard = () => {
                 window.scrollTo({
                   top: 0,
                   left: 0,
-                  behavior: 'smooth',
+                  behavior: 'smooth'
                 });
               }
             }}
@@ -176,7 +170,7 @@ const UserDashboard = () => {
                 window.scrollTo({
                   top: 0,
                   left: 0,
-                  behavior: 'smooth',
+                  behavior: 'smooth'
                 });
               }
             }}
@@ -196,7 +190,7 @@ const UserDashboard = () => {
                   window.scrollTo({
                     top: 0,
                     left: 0,
-                    behavior: 'smooth',
+                    behavior: 'smooth'
                   });
                 }
               }}
@@ -215,21 +209,19 @@ const UserDashboard = () => {
                 window.scrollTo({
                   top: 0,
                   left: 0,
-                  behavior: 'smooth',
+                  behavior: 'smooth'
                 });
               }
             }}
             style={{
-              color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`,
+              color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`
             }}
           >
             <FaPowerOff />
             <span className={style.text_mobile}>Logout</span>
           </p>
         </div>
-        <div
-          className={[style.dashcontent, style.dashcontent_mobile].join(' ')}
-        >
+        <div className={[style.dashcontent, style.dashcontent_mobile].join(' ')}>
           {nav === 'profile' && <Profile />}
           {nav === 'trending' && <Trending />}
           {nav === 'category' && <Category />}
@@ -240,9 +232,7 @@ const UserDashboard = () => {
           <br />
           <p style={{ color: 'gray', fontSize: 'x-small' }}>
             © {/* <Link scroll={true} href="https://devbucket.tech/"> */}
-            <span style={{ color: 'rgb(163, 151, 130)', cursor: 'pointer' }}>
-              Devbucket
-            </span>
+            <span style={{ color: 'rgb(163, 151, 130)', cursor: 'pointer' }}>Devbucket</span>
             {/* </Link>{' '} */}
             2021, All rights reserved
           </p>

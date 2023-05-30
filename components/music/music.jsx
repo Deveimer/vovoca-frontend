@@ -15,42 +15,27 @@ const music = ({ music, history }) => {
           flexDirection: 'column',
           alignContent: 'center',
           color: 'wheat',
-          textAlign: 'center',
+          textAlign: 'center'
         }}
       >
-        <img
-          className={style.image}
-          src={music.image}
-          alt="Ran"
-          height="70px"
-          width="70px"
-        />
+        <img className={style.image} src={music.image} alt="Ran" height="70px" width="70px" />
         <p style={{ marginBottom: '-2%' }}>{music.name}</p>
       </div>
       <AudioPlayer
-        className={[
-          style.rhap_containe,
-          style.rhap_controls_section,
-          style.rhap_main_controls_button,
-        ].join(' ')}
+        className={[style.rhap_containe, style.rhap_controls_section, style.rhap_main_controls_button].join(' ')}
         autoPlayAfterSrcChange={false}
         layout={'horizontal'}
-        src={`data:audio/wav;base64,${Buffer.from(
-          music.audiobuffer?.data
-        ).toString('base64')}`}
+        src={`data:audio/wav;base64,${Buffer.from(music.audiobuffer?.data).toString('base64')}`}
         onError={(e) => {
           toast('Internal Server Error', {
             closeButton: false,
-            className: style.toast_background,
+            className: style.toast_background
           });
         }}
       />
       <Link scroll={true} href={`/music/${encodeURIComponent(music._id)}`}>
         <button style={{ cursor: 'pointer' }} className={style.music_button}>
-          <FaGetPocket
-            style={{ color: 'wheat' }}
-            className={style.music_icon}
-          />
+          <FaGetPocket style={{ color: 'wheat' }} className={style.music_icon} />
         </button>
       </Link>
     </div>

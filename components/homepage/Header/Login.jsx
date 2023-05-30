@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import style from './Login.module.css';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { loginUser } from '../../../actions/authAction';
 import { toast } from 'react-toastify';
-import { useDispatch } from 'react-redux';
 import Router from 'next/router';
 
 const Login = (props) => {
   const dispatch = useDispatch();
   const error = useSelector((state) => state.error);
-  const authenticate = useSelector((state) => state.auth.isAuthenticated);
+  useSelector((state) => state.auth.isAuthenticated);
   const [login, setLogin] = useState({
     email: '',
-    password: '',
+    password: ''
   });
   const handleChange = (e) => {
     login[e.target.name] = e.target.value;
@@ -22,14 +21,14 @@ const Login = (props) => {
     if (category === 'success') {
       toast('Loggedin Successfully', {
         closeButton: false,
-        className: style.toast_success_background,
+        className: style.toast_success_background
       });
       Router.push('/dashboard');
     } else {
       console.log(error);
       toast(error.err || 'Something went wrong', {
         closeButton: false,
-        className: style.toast_background,
+        className: style.toast_background
       });
     }
   };
@@ -39,7 +38,7 @@ const Login = (props) => {
 
     if (login.email === '' || login.password === '') {
       toast.error('All fields are Mandatory', {
-        closeButton: false,
+        closeButton: false
       });
     } else {
       dispatch(loginUser(login.email, login.password)).then((res) => {

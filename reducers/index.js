@@ -5,7 +5,7 @@ import errorReducer from './error';
 const reducer = combineReducers({
   music: musicReducer,
   auth: authReducer,
-  error: errorReducer,
+  error: errorReducer
 });
 
 export default reducer;

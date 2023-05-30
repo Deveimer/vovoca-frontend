@@ -5,19 +5,13 @@ import Footer from '../components/homepage/Footer/Footer';
 import Guest from '../components/homepage/Guest/Guest';
 import Header from '../components/homepage/Header/Header';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getAllMusic } from '../actions/musicActions';
 import { links } from '../utils/resources/links';
 
 const HomePage = () => {
   const linkEls = links.map((link, id) => (
-    <link
-      key={id}
-      rel="apple-touch-icon"
-      sizes={link.sizes}
-      href={link.href}
-      type="image/png"
-    />
+    <link key={id} rel="apple-touch-icon" sizes={link.sizes} href={link.href} type="image/png" />
   ));
 
   const dispatch = useDispatch();

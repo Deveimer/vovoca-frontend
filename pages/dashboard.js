@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 const dashboard = () => {
   const authenticated = useSelector((state) => state.auth);
-  var token;
+  let token;
   if (process.browser) {
     token = cookie.get('token');
   }
@@ -16,13 +16,7 @@ const dashboard = () => {
       <Head>
         <title>VOVOCA | Welcome to Dashboard</title>
       </Head>
-      {authenticated.isAuthenticated || token ? (
-        <UserDashboard />
-      ) : process.browser ? (
-        (window.location.href = '/')
-      ) : (
-        ''
-      )}
+      {authenticated.isAuthenticated || token ? <UserDashboard /> : process.browser ? (window.location.href = '/') : ''}
     </div>
   );
 };

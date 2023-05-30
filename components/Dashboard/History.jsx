@@ -33,8 +33,8 @@ const History = () => {
       <h1>Upload History</h1>
       <div className="container">
         {musics && !loading ? (
-          musics.data.map((i) => (
-            <Music music={i} />
+          musics.data.map((i, index) => (
+            <Music key={index} music={i} />
             // <h1>{i.name}</h1>
           )) || <h2>Loading...</h2>
         ) : (
@@ -42,12 +42,8 @@ const History = () => {
         )}
         <div className={style.pagination_container}>
           <ReactPaginate
-            containerClassName={
-              style.pagination
-            } /* as this work same as bootstrap class */
-            subContainerClassName={[style.pages, style.pagination].join(
-              ' '
-            )} /* as this work same as bootstrap class */
+            containerClassName={style.pagination} /* as this work same as bootstrap class */
+            subContainerClassName={[style.pages, style.pagination].join(' ')} /* as this work same as bootstrap class */
             activeClassName={style.active}
             pageCount={musics.totalPages}
             breakLabel={false}

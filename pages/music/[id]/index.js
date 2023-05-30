@@ -10,7 +10,6 @@ import 'react-h5-audio-player/lib/styles.css';
 import { HiViewList, HiCloudDownload, HiShare } from 'react-icons/hi';
 import Link from 'next/link';
 import Head from 'next/head';
-import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -25,10 +24,7 @@ const index = () => {
 
   const copyLink = () => {
     if (process.browser) {
-      var inputc = document.body.insertAdjacentElement(
-        'beforebegin',
-        document.createElement('input')
-      );
+      const inputc = document.body.insertAdjacentElement('beforebegin', document.createElement('input'));
       inputc.value = window.location.href;
       inputc.focus();
       inputc.select();
@@ -36,7 +32,7 @@ const index = () => {
       inputc.parentNode.removeChild(inputc);
       toast('Link Copied', {
         closeButton: false,
-        className: style.toast_success_background,
+        className: style.toast_success_background
       });
     }
   };
@@ -46,13 +42,11 @@ const index = () => {
     // );
     const link = document.createElement('a');
     link.download = music.name;
-    link.href = `data:audio/mp3;base64,${Buffer.from(
-      music.audiobuffer.data
-    ).toString('base64')}`;
+    link.href = `data:audio/mp3;base64,${Buffer.from(music.audiobuffer.data).toString('base64')}`;
     link.click();
   };
 
-  if (!music || loading)
+  if (!music || loading) {
     return (
       <>
         <div className={style.container}>
@@ -61,6 +55,7 @@ const index = () => {
         <Footer />
       </>
     );
+  }
 
   return (
     <>
@@ -79,10 +74,7 @@ const index = () => {
               </button>
             </Link>
 
-            <button
-              className={style.single_music_button}
-              onClick={downloadMusic}
-            >
+            <button className={style.single_music_button} onClick={downloadMusic}>
               <HiCloudDownload />
             </button>
 
@@ -93,28 +85,22 @@ const index = () => {
           <img className={style.image} src={music.image}></img>
           <div className={style.other__images}>
             <div className={style.detes}>
-              <h1 className={style.name}>
-                {music.name.charAt(0).toUpperCase() + music.name.slice(1)}
-              </h1>
+              <h1 className={style.name}>{music.name.charAt(0).toUpperCase() + music.name.slice(1)}</h1>
               <h4 className={style.artist}>
                 Music by: <span>{music.artist}</span>
               </h4>
             </div>
             <div className={style.audio}>
               <AudioPlayer
-                className={[
-                  style.rhap_containe,
-                  style.rhap_controls_section,
-                  style.rhap_main_controls_button,
-                ].join(' ')}
+                className={[style.rhap_containe, style.rhap_controls_section, style.rhap_main_controls_button].join(
+                  ' '
+                )}
                 autoPlayAfterSrcChange={false}
-                src={`data:audio/mp3;base64,${Buffer.from(
-                  music.audiobuffer?.data
-                ).toString('base64')}`}
+                src={`data:audio/mp3;base64,${Buffer.from(music.audiobuffer?.data).toString('base64')}`}
                 onError={(e) => {
                   toast('Oops! Something went wrong', {
                     closeButton: false,
-                    className: style.toast_background,
+                    className: style.toast_background
                   });
                 }}
               />

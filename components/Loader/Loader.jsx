@@ -8,7 +8,7 @@ const Loader = ({ loading }) => {
         justifyContent: 'center',
         zIndex: '1000',
         padding: '50px',
-        alignItems: 'center',
+        alignItems: 'center'
       }}
     >
       <MagicSpinner size={50} color="gray" loading={loading} />

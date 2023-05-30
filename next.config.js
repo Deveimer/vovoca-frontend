@@ -1,11 +1,11 @@
 module.exports = {
-  async redirects() {
+  async redirects () {
     return [
       {
         source: '/dashboard',
         destination: '/',
-        permanent: true,
-      },
+        permanent: true
+      }
     ];
-  },
+  }
 };

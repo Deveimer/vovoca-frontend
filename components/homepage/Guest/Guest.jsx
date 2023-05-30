@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react';
 import { FaGetPocket } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  getLatestMusic,
-  getTrendingMusic,
-} from '../../../actions/musicActions';
+import { getLatestMusic, getTrendingMusic } from '../../../actions/musicActions';
 import style from './Guest.module.css';
 import Link from 'next/link';
 import Loader from '../../Loader/Loader';
@@ -25,42 +22,33 @@ const Guest = () => {
           <div className={style.pricing__body}>
             <h1 className={style.trend__heading}>Latest</h1>
             <hr className="divider" />
-            {latest_music ? (
-              latest_music.slice(0, 3).map((i, index) => (
-                <div className={style.song__box}>
-                  <div
-                    className={style.music__cover}
-                    style={{
-                      backgroundImage: `url(${i.image})`,
-                      backgroundSize: '90px 90px',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat',
-                    }}
-                  ></div>
+            {latest_music
+              ? (
+                latest_music.slice(0, 3).map((i, index) => (
+                  <div className={style.song__box} key={index}>
+                    <div
+                      className={style.music__cover}
+                      style={{
+                        backgroundImage: `url(${i.image})`,
+                        backgroundSize: '90px 90px',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat'
+                      }}
+                    ></div>
 
-                  <p className={style.song__name}>
-                    {i.name.charAt(0).toUpperCase() + i.name.slice(1)}
-                  </p>
+                    <p className={style.song__name}>{i.name.charAt(0).toUpperCase() + i.name.slice(1)}</p>
 
-                  <Link
-                    scroll={true}
-                    href={`/music/${encodeURIComponent(i._id)}`}
-                  >
-                    <button
-                      style={{ cursor: 'pointer' }}
-                      className={style.music_button}
-                    >
-                      <FaGetPocket
-                        style={{ color: 'wheat' }}
-                        className={style.music_icon}
-                      />
-                    </button>
-                  </Link>
-                </div>
-              ))
-            ) : (
-              <Loader loading={true} />
-            )}
+                    <Link scroll={true} href={`/music/${encodeURIComponent(i._id)}`}>
+                      <button style={{ cursor: 'pointer' }} className={style.music_button}>
+                        <FaGetPocket style={{ color: 'wheat' }} className={style.music_icon} />
+                      </button>
+                    </Link>
+                  </div>
+                ))
+              )
+              : (
+                <Loader loading={true} />
+              )}
           </div>
 
           {/* <Link href="/allMusic">
@@ -71,41 +59,32 @@ const Guest = () => {
             <h1 className={style.trend__heading}>Trending</h1>
             <hr className="divider" />
 
-            {trending_music ? (
-              trending_music.slice(0, 3).map((i, index) => (
-                <div className={style.song__box}>
-                  <div
-                    className={style.music__cover}
-                    style={{
-                      backgroundImage: `url(${i.image})`,
-                      backgroundSize: '90px 90px',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat',
-                    }}
-                  ></div>
+            {trending_music
+              ? (
+                trending_music.slice(0, 3).map((i, index) => (
+                  <div className={style.song__box} key={index}>
+                    <div
+                      className={style.music__cover}
+                      style={{
+                        backgroundImage: `url(${i.image})`,
+                        backgroundSize: '90px 90px',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat'
+                      }}
+                    ></div>
 
-                  <p className={style.song__name}>
-                    {i.name.charAt(0).toUpperCase() + i.name.slice(1)}
-                  </p>
-                  <Link
-                    scroll={true}
-                    href={`/music/${encodeURIComponent(i._id)}`}
-                  >
-                    <button
-                      style={{ cursor: 'pointer' }}
-                      className={style.music_button}
-                    >
-                      <FaGetPocket
-                        style={{ color: 'wheat' }}
-                        className={style.music_icon}
-                      />
-                    </button>
-                  </Link>
-                </div>
-              ))
-            ) : (
-              <Loader loading={true} />
-            )}
+                    <p className={style.song__name}>{i.name.charAt(0).toUpperCase() + i.name.slice(1)}</p>
+                    <Link scroll={true} href={`/music/${encodeURIComponent(i._id)}`}>
+                      <button style={{ cursor: 'pointer' }} className={style.music_button}>
+                        <FaGetPocket style={{ color: 'wheat' }} className={style.music_icon} />
+                      </button>
+                    </Link>
+                  </div>
+                ))
+              )
+              : (
+                <Loader loading={true} />
+              )}
           </div>
         </div>
       </div>

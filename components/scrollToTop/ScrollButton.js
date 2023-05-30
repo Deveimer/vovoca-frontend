@@ -8,7 +8,7 @@ const ScrollButton = () => {
       window.scrollTo({
         top: 0,
         left: 0,
-        behavior: 'smooth',
+        behavior: 'smooth'
       });
     }
   };
@@ -16,7 +16,7 @@ const ScrollButton = () => {
   useEffect(() => {
     if (process.browser) {
       const listener = document.addEventListener('scroll', (e) => {
-        var scrolled = document.scrollingElement.scrollTop;
+        const scrolled = document.scrollingElement.scrollTop;
         const btn = document.getElementById('goToTop');
         if (btn) {
           if (scrolled >= 1) {

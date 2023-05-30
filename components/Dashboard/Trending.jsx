@@ -15,11 +15,7 @@ const Trending = () => {
   return (
     <div id="container">
       <h1>Trending Music</h1>
-      {trending_music ? (
-        trending_music.map((i) => <Music music={i} />)
-      ) : (
-        <Loader loading={true} />
-      )}
+      {trending_music ? trending_music.map((i, index) => <Music key={index} music={i} />) : <Loader loading={true} />}
     </div>
   );
 };

@@ -22,7 +22,7 @@ const allMusic = () => {
     dispatch(getAllMusic(e.selected + 1));
   };
 
-  if (!music.musics)
+  if (!music.musics) {
     return (
       <>
         <div className={style.container}>
@@ -31,23 +31,18 @@ const allMusic = () => {
         <Footer />
       </>
     );
+  }
   return (
     <>
       <Head>
         <title>VOVOCA | Royalty Free Music</title>
       </Head>
       <div className={style.container}>
-        {!music.loading ? (
-          music.musics.data?.map((m) => <Music key={m._id} music={m} />)
-        ) : (
-          <Loader loading={true} />
-        )}
+        {!music.loading ? music.musics.data?.map((m) => <Music key={m._id} music={m} />) : <Loader loading={true} />}
         {auth.isAuthenticated ? (
           <div className={style.pagination_container}>
             <ReactPaginate
-              containerClassName={
-                style.pagination
-              } /* as this work same as bootstrap class */
+              containerClassName={style.pagination} /* as this work same as bootstrap class */
               subContainerClassName={[style.pages, style.pagination].join(
                 ' '
               )} /* as this work same as bootstrap class */

@@ -19,12 +19,12 @@ const UploadModal = ({ user, file }) => {
     'house',
     'musical',
     'slow',
-    'vocal',
+    'vocal'
   ]);
 
   const handleSubmit = async () => {
     try {
-      let formdata = new FormData();
+      const formdata = new FormData();
       formdata.append('name', musicName);
       formdata.append('music', file);
       formdata.append('tags', JSON.stringify(tags));
@@ -33,25 +33,22 @@ const UploadModal = ({ user, file }) => {
 
       const config = {
         headers: {
-          'Content-Type': 'multipart/form-data',
-        },
+          'Content-Type': 'multipart/form-data'
+        }
       };
 
-      const res = await Axios.post(
-        'https://vovoca-backend-deploy.vercel.app/api/admin',
-        formdata,
-        config
-      );
-      if (res.status === 200)
+      const res = await Axios.post('https://vovoca-backend-deploy.vercel.app/api/admin', formdata, config);
+      if (res.status === 200) {
         toast('Music Uploaded', {
           closeButton: false,
-          className: style.toast_success_background,
+          className: style.toast_success_background
         });
+      }
     } catch (error) {
       console.log(error);
       toast('Something went wrong', {
         closeButton: false,
-        className: style.toast_background,
+        className: style.toast_background
       });
     }
   };
@@ -67,26 +64,26 @@ const UploadModal = ({ user, file }) => {
             placeholder="Enter Name of Music"
           />
           {/* <input type="text" value={user} disabled /> */}
-          {tags.length >= 3 ? (
-            <></>
-          ) : (
-            <select
-              className={style.options}
-              onChange={(e) => {
-                setTags([...tags, e.target.value]);
-                setList(list.filter((l) => l !== e.target.value));
-              }}
-            >
-              <option default disabled>
+          {tags.length >= 3
+            ? (
+              <></>
+            )
+            : (
+              <select
+                className={style.options}
+                onChange={(e) => {
+                  setTags([...tags, e.target.value]);
+                  setList(list.filter((l) => l !== e.target.value));
+                }}
+              >
+                <option default disabled>
                 Select 3 Tags
-              </option>
-              {list.map((l) => (
-                <option value={l}>
-                  {l.charAt(0).toUpperCase() + l.slice(1)}
                 </option>
-              ))}
-            </select>
-          )}
+                {list.map((l, i) => (
+                  <option key={i} value={l}>{l.charAt(0).toUpperCase() + l.slice(1)}</option>
+                ))}
+              </select>
+            )}
         </div>
       </div>
       <div className={style.subscribe}>
@@ -96,14 +93,15 @@ const UploadModal = ({ user, file }) => {
       </div>
       <div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          {tags.map((res) => (
+          {tags.map((res, i) => (
             <p
+              key={i}
               style={{
                 display: 'flex',
                 alignItems: 'center',
                 color: 'wheat',
                 marginTop: '25px',
-                marginRight: '10px',
+                marginRight: '10px'
               }}
             >
               <AiFillTag />

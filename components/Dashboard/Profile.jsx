@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import style from './Profile.module.css';
-import { FaMusic, FaUpload } from 'react-icons/fa';
+import { FaMusic, FaUpload, FaTimes } from 'react-icons/fa';
 
 import style_modal from '../../styles/Modal.module.css';
 import { Modal } from 'react-responsive-modal';
-import { FaTimes } from 'react-icons/fa';
 import UploadModal from './UploadModal';
 const Profile = () => {
   const [open, setOpen] = React.useState(false);
@@ -26,7 +25,7 @@ const Profile = () => {
         file={file}
         classNames={{
           overlay: style_modal.customOverlay,
-          modal: style_modal.customModal,
+          modal: style_modal.customModal
         }}
         closeIcon={closeIcon}
       >
@@ -37,8 +36,7 @@ const Profile = () => {
       </Modal>
       <h3>
         Hi,&nbsp;
-        {authenticated.data?.username.charAt(0).toUpperCase() +
-          authenticated.data?.username.slice(1)}
+        {authenticated.data?.username.charAt(0).toUpperCase() + authenticated.data?.username.slice(1)}
       </h3>
       <div className={style.profile_component}>
         <div>
@@ -52,45 +50,43 @@ const Profile = () => {
       </div>
 
       <div className={style.upload_box}>
-        {file.length === 0 ? (
-          <>
-            <FaUpload style={{ fontSize: '60px' }} /> <br />
-            <p style={{ color: 'gray' }}>Upload Music (only Audio Files)</p>
-            <input
-              type="file"
-              if="file"
-              accept="audio/*"
-              className={style.custom_file_input}
-              onChange={(r) => setFile(r.target.files[0])}
-            ></input>
-          </>
-        ) : (
-          <>
-            <FaMusic style={{ fontSize: 'xx-large' }} /> <br />
+        {file.length === 0
+          ? (
+            <>
+              <FaUpload style={{ fontSize: '60px' }} /> <br />
+              <p style={{ color: 'gray' }}>Upload Music (only Audio Files)</p>
+              <input
+                type="file"
+                accept="audio/*"
+                className={style.custom_file_input}
+                onChange={(r) => setFile(r.target.files[0])}
+              ></input>
+            </>
+          )
+          : (
+            <>
+              <FaMusic style={{ fontSize: 'xx-large' }} /> <br />
             Music File Choosen<p>[{file.name}]</p>
-            <input
-              type="file"
-              if="file"
-              className={style.custom_file_input}
-              onChange={(r) => setFile(r.target.files[0])}
-            ></input>
-            <div class="card-subtitle">click on Next, to get it uploaded</div>
-          </>
-        )}
+              <input
+                type="file"
+                className={style.custom_file_input}
+                onChange={(r) => setFile(r.target.files[0])}
+              ></input>
+              <div className="card-subtitle">click on Next, to get it uploaded</div>
+            </>
+          )}
       </div>
-      {file.length === 0 ? (
-        <button
-          className={style.upload_button}
-          disabled
-          style={{ opacity: '0.5' }}
-        >
+      {file.length === 0
+        ? (
+          <button className={style.upload_button} disabled style={{ opacity: '0.5' }}>
           No file Chosen
-        </button>
-      ) : (
-        <button className={style.upload_button} onClick={(r) => onOpenModal()}>
+          </button>
+        )
+        : (
+          <button className={style.upload_button} onClick={(r) => onOpenModal()}>
           Next
-        </button>
-      )}
+          </button>
+        )}
     </div>
   );
 };

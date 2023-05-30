@@ -8,7 +8,7 @@ const Signup = (props) => {
     username: '',
     email: '',
     password: '',
-    pass: '',
+    pass: ''
   });
   const handleChange = (e) => {
     register[e.target.name] = e.target.value;
@@ -19,37 +19,25 @@ const Signup = (props) => {
     if (register.email === '' || register.username === '') {
       toast('All feilds are Mandatory', {
         closeButton: false,
-        className: style.toast_background,
+        className: style.toast_background
       });
     } else if (register.password.length < 8 || register.password.length > 16) {
       toast('Password length should be between 8-16 characters', {
         closeButton: false,
-        className: style.toast_background,
-      });
-    } else if (register.password.length < 8 || register.password.length > 16) {
-      toast('Password length should be between 8-16 characters', {
-        closeButton: false,
-        className: style.toast_background,
+        className: style.toast_background
       });
     } else {
-      const reg = await registerUser(
-        register.username,
-        register.email,
-        register.password
-      );
-      if (
-        reg === 'Username already exists' ||
-        reg === 'Email already registered'
-      ) {
+      const reg = await registerUser(register.username, register.email, register.password);
+      if (reg === 'Username already exists' || reg === 'Email already registered') {
         toast(reg, {
           closeButton: false,
-          className: style.toast_background,
+          className: style.toast_background
         });
       } else {
         props.onCloseModal();
         toast('Account Created Successfully, Login to Enter', {
           closeButton: false,
-          className: style.toast_success_background,
+          className: style.toast_success_background
         });
       }
     }

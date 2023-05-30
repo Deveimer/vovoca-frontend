@@ -23,9 +23,8 @@ const testimonial = () => {
                 <div className={styles.testimonial__content}>
                   <span>Making My Life Easier</span>
                   <p>
-                    Loving every bit of Vovoca. Thanks to the website now I can
-                    use and upload these sounds and beats to make songs for my
-                    local dance group
+                    Loving every bit of Vovoca. Thanks to the website now I can use and upload these sounds and beats to
+                    make songs for my local dance group
                   </p>
                   <span>Devansh Kaushik, </span>
                   <br />
@@ -41,9 +40,8 @@ const testimonial = () => {
                 <div className={styles.testimonial__content}>
                   <span>My Reels got more sexy</span>
                   <p>
-                    After recording and editing my IG's reels, hardest part was
-                    to get throught the audio part. Good music wasn't available
-                    anywhere. Vovoca solved both of my problems
+                    After recording and editing my IG&apos;s reels, hardest part was to get throught the audio part. Good
+                    music wasn&apos;t available anywhere. Vovoca solved both of my problems
                   </p>
                   <span>Sheril Sonkar, </span>
                   <br />
@@ -59,9 +57,8 @@ const testimonial = () => {
                 <div className={styles.testimonial__content}>
                   <span>Nice Music for free</span>
                   <p>
-                    Searching music was always a hard job but not anymore I am
-                    more than happy with the filter and sorting feature of
-                    vovoca. It is awesome
+                    Searching music was always a hard job but not anymore I am more than happy with the filter and
+                    sorting feature of vovoca. It is awesome
                   </p>
                   <span>Amolik Vivian, </span>
                   <br />
@@ -77,9 +74,8 @@ const testimonial = () => {
                 <div className={styles.testimonial__content}>
                   <span>Better than Youtube</span>
                   <p>
-                    I'm an artist and I know how hard it is to find a platform
-                    like vovoca where your music finds its right destination
-                    Wishing vovoca more success
+                    I&apos;m an artist and I know how hard it is to find a platform like vovoca where your music finds its
+                    right destination Wishing vovoca more success
                   </p>
                   <span>DJ John</span>
                   <br />
@@ -95,9 +91,8 @@ const testimonial = () => {
                 <div className={styles.testimonial__content}>
                   <span>Literal Chills</span>
                   <p>
-                    All my hard time all these years could have been less hard
-                    only if I would have founded vovoca earlier. It is an
-                    amazing website with just everything I need
+                    All my hard time all these years could have been less hard only if I would have founded vovoca
+                    earlier. It is an amazing website with just everything I need
                   </p>
                   <span>Archit Sharma</span>
                   <br />
@@ -113,9 +108,8 @@ const testimonial = () => {
                 <div className={styles.testimonial__content}>
                   <span>Searching music just got fun</span>
                   <p>
-                    I design music for my company and its always great to find
-                    some motivation. Vovoca gave it to me, that to free. I owe
-                    them a lot for all my music
+                    I design music for my company and its always great to find some motivation. Vovoca gave it to me,
+                    that to free. I owe them a lot for all my music
                   </p>
                   <span>Andy Cortrell, </span>
                   <br />
