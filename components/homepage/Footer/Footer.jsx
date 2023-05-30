@@ -7,50 +7,30 @@ const Footer = () => {
       <div className={style.container}>
         <div className={style.contents}>
           <div className={style.get__in__touch}>
-            <h2>Get in Touch</h2>
+            <h2>Subscribe to Newsletter</h2>
             <p>
-              Want to work, collaborate with us or you have any idea related to
-              our project? Feel Free to contact us anytime. We are just a click
-              away
+            Unlock a world of boundless creativity with our royalty-free music library. Subscribe to our newsletter for weekly updates on fresh tunes, 
+            exclusive releases, and behind-the-scenes insights, 
+            empowering your projects with a soundtrack that's truly yours.
             </p>
-            <form
-              action='https://formspree.io/f/xnqlqgza'
-              method='POST'
-              className={style.get__in__touch__form}
-            >
+            <form action="https://formspree.io/f/xnqlqgza" method="POST" className={style.get__in__touch__form}>
               <div className={style.form__row}>
-                <div className={style.inputs}>
-                  <input
-                    className={style.feild__input}
-                    type='text'
-                    placeholder='Your name*'
-                    name='name'
-                    required
-                  />
+                <div className={style.inputs} >
                   <input
                     className={style.feild__input}
                     type='email'
-                    placeholder='Your email id*'
-                    name='email'
+                    placeholder="Email address*"
+                    name="email"
                     required
                   />
-                  <input type='hidden' value='Vovoca ' name='from' />
-                </div>
-                <div className={style.message}>
-                  <textarea
-                    className={style.mssg__input}
-                    type='text'
-                    placeholder='What you have to say*'
-                    name='message'
-                    required
-                  />
-                </div>
-              </div>
-              <div className={style.subscribe}>
-                <button className={style.subscribe__btn}>Send Mail</button>
+                  <div className={style.subscribe}>
+                  <button className={style.subscribe__btn}>Subscribe</button>
+                  </div>
+                  </div>
               </div>
             </form>
           </div>
+          
           <div className={style.contacts}>
             <div className={style.contact__box}>
               <div className={style.row}>
@@ -80,7 +60,7 @@ const Footer = () => {
                   </table>
                 </div>
               </div>
-              <hr className='divider'></hr>
+              <hr className="divider"></hr>
               <div className={style.rights}>
                 <p>
                   ©{/* <Link scroll={true} href="https://devbucket.tech/"> */}
