@@ -37,7 +37,7 @@ const AuthPopup = ({ isopen }) => {
                 cursor: 'pointer',
                 color: `${method === 'login' ? 'wheat' : 'gray'}`,
               }}
-              onClick={(res) => {
+              onClick={res => {
                 setMethod('login');
               }}
             >
@@ -48,14 +48,14 @@ const AuthPopup = ({ isopen }) => {
                 cursor: 'pointer',
                 color: `${method === 'signup' ? 'wheat' : 'gray'}`,
               }}
-              onClick={(res) => {
+              onClick={res => {
                 setMethod('signup');
               }}
             >
               Signup
             </p>
           </div>
-          <hr className="divider"></hr>
+          <hr className='divider'></hr>
 
           {method === 'login' ? (
             <Login closeModal={onCloseModal} hello={'hello'} />
@@ -63,7 +63,7 @@ const AuthPopup = ({ isopen }) => {
             <Signup />
           )}
           <br />
-          <hr className="divider"></hr>
+          <hr className='divider'></hr>
           {/* By submitting this form, you confirm that you agree to our Terms of Service and Privacy Policy. */}
           <div style={{ textAlign: 'center' }}>
             {method === 'login' ? (
@@ -71,7 +71,7 @@ const AuthPopup = ({ isopen }) => {
                 Don’t have an account?{' '}
                 <span
                   style={{ color: 'wheat', cursor: 'pointer' }}
-                  onClick={(res) => {
+                  onClick={res => {
                     setMethod('signup');
                   }}
                 >
@@ -84,7 +84,7 @@ const AuthPopup = ({ isopen }) => {
                   Already have an account?{' '}
                   <span
                     style={{ color: 'wheat', cursor: 'pointer' }}
-                    onClick={(res) => {
+                    onClick={res => {
                       setMethod('login');
                     }}
                   >
@@ -94,7 +94,7 @@ const AuthPopup = ({ isopen }) => {
 
                 <p style={{ color: 'gray', fontSize: 'x-small' }}>
                   By submitting this form, you confirm that you agree to our{' '}
-                  <a href="/privacy-policy">
+                  <a href='/privacy-policy'>
                     <span style={{ color: 'wheat', cursor: 'pointer' }}>
                       Terms of Service and Privacy Policy
                     </span>

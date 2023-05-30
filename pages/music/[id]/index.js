@@ -21,7 +21,7 @@ const index = () => {
   useEffect(() => {
     dispatch(getSingleMusic(id));
   }, [id]);
-  const { music, loading } = useSelector((state) => state.music);
+  const { music, loading } = useSelector(state => state.music);
 
   const copyLink = () => {
     if (process.browser) {
@@ -40,7 +40,7 @@ const index = () => {
       });
     }
   };
-  const downloadMusic = async (id) => {
+  const downloadMusic = async id => {
     // const res = await axios.patch(
     //   `https://vovoca-backend-deploy.vercel.app/api/music/download/${id}`
     // );
@@ -69,11 +69,11 @@ const index = () => {
         <title>VOVOCA | {music.name}</title>
       </Head>
       <div className={style.container}>
-        <input type="text" id="myInput" style={{ visibility: 'hidden' }} />
+        <input type='text' id='myInput' style={{ visibility: 'hidden' }} />
         <div className={style.card}>
           <img className={style.background__image} src={music.image}></img>
           <div className={style.buttons}>
-            <Link scroll={true} href="/allMusic">
+            <Link scroll={true} href='/allMusic'>
               <button className={style.single_music_button}>
                 <HiViewList />
               </button>
@@ -111,7 +111,7 @@ const index = () => {
                 src={`data:audio/mp3;base64,${Buffer.from(
                   music.audiobuffer?.data
                 ).toString('base64')}`}
-                onError={(e) => {
+                onError={e => {
                   toast('Oops! Something went wrong', {
                     closeButton: false,
                     className: style.toast_background,

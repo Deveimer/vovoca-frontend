@@ -2,7 +2,6 @@ import {
   USER_LOGIN,
   LOADING,
   USER_LOGIN_FAILED,
-  LOAD_USER,
   FETCH_USER,
 } from '../actions/type';
 import cookie from 'js-cookie';

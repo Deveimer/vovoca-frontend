@@ -14,34 +14,34 @@ const Footer = () => {
               away
             </p>
             <form
-              action="https://formspree.io/f/xnqlqgza"
-              method="POST"
+              action='https://formspree.io/f/xnqlqgza'
+              method='POST'
               className={style.get__in__touch__form}
             >
               <div className={style.form__row}>
                 <div className={style.inputs}>
                   <input
                     className={style.feild__input}
-                    type="text"
-                    placeholder="Your name*"
-                    name="name"
+                    type='text'
+                    placeholder='Your name*'
+                    name='name'
                     required
                   />
                   <input
                     className={style.feild__input}
-                    type="email"
-                    placeholder="Your email id*"
-                    name="email"
+                    type='email'
+                    placeholder='Your email id*'
+                    name='email'
                     required
                   />
-                  <input type="hidden" value="Vovoca " name="from" />
+                  <input type='hidden' value='Vovoca ' name='from' />
                 </div>
                 <div className={style.message}>
                   <textarea
                     className={style.mssg__input}
-                    type="text"
-                    placeholder="What you have to say*"
-                    name="message"
+                    type='text'
+                    placeholder='What you have to say*'
+                    name='message'
                     required
                   />
                 </div>
@@ -80,7 +80,7 @@ const Footer = () => {
                   </table>
                 </div>
               </div>
-              <hr className="divider"></hr>
+              <hr className='divider'></hr>
               <div className={style.rights}>
                 <p>
                   ©{/* <Link scroll={true} href="https://devbucket.tech/"> */}

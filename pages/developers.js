@@ -20,10 +20,10 @@ const developers = () => {
           <Head>
             <title>VOVOCA | Team</title>
             <link
-              rel="stylesheet"
-              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-              integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-              crossOrigin="anonymous"
+              rel='stylesheet'
+              href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
+              integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=='
+              crossOrigin='anonymous'
             />
           </Head>
           <div className={styles.container}>
@@ -50,7 +50,7 @@ const developers = () => {
                     }}
                   ></div>
                 </article>
-                <Link scroll={true} href="https://www.linkedin.com/in/v-varun/">
+                <Link scroll={true} href='https://www.linkedin.com/in/v-varun/'>
                   <button
                     style={{
                       width: '100%',
@@ -91,7 +91,7 @@ const developers = () => {
                 </article>
                 <Link
                   scroll={true}
-                  href="https://www.linkedin.com/in/prakhar-pandey-a307b7191/"
+                  href='https://www.linkedin.com/in/prakhar-pandey-a307b7191/'
                 >
                   <button
                     style={{
@@ -132,7 +132,7 @@ const developers = () => {
                 </article>
                 <Link
                   scroll={true}
-                  href="https://www.linkedin.com/in/kaustubhai/"
+                  href='https://www.linkedin.com/in/kaustubhai/'
                 >
                   <button
                     style={{
@@ -160,7 +160,7 @@ const developers = () => {
                 data.users.map((user, index) => (
                   <div className={styles.testimonial} key={index}>
                     <article className={styles.testimonial__article}>
-                      <a target="_blank" rel="" href={user.url}>
+                      <a target='_blank' rel='' href={user.url}>
                         <div
                           className={styles.contributor__img}
                           style={{
