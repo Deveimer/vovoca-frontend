@@ -182,6 +182,9 @@ const Navbar = () => {
             <Link scroll={true} href="/developers">
               <li className={style.list__items}>Team</li>
             </Link>
+            <Link scroll={true} href="/#contactus">
+              <li className={style.list__items}>Contact Us</li>
+            </Link>
             {authenticated.isAuthenticated === true ? (
               <Link scroll={true} href="/dashboard">
                 <button

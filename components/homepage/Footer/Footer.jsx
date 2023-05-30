@@ -6,7 +6,7 @@ const Footer = () => {
     <div className={style.footer}>
       <div className={style.container}>
         <div className={style.contents}>
-          <div className={style.get__in__touch}>
+          <div className={style.get__in__touch} id='contactus'>
             <h2>Get in Touch</h2>
             <p>
               Want to work, collaborate with us or you have any idea related to
@@ -32,6 +32,7 @@ const Footer = () => {
                     type="email"
                     placeholder="Your email id*"
                     name="email"
+                    pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
                     required
                   />
                   <input type="hidden" value="Vovoca " name="from" />
