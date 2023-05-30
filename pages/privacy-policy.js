@@ -43,7 +43,7 @@ const privacyPolicy = () => {
                 <i className='fas fa-plus'></i>
               </div>
             </div>
-            <p id='1b' id='1' className={style.modal__button__para}>
+            <p id='1' className={style.modal__button__para}>
               Vovoca is a project under team DevBucket. We have putted our heart
               and soul in it to bring it to you for free. We our free today
               because of several open-source technologies out there that we have

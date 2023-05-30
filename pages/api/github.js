@@ -1,6 +1,6 @@
 const { Octokit } = require('@octokit/rest');
 
-export default async (req, res) => {
+const getContributors = async (req, res) => {
   try {
     const octokit = new Octokit({
       baseUrl: 'https://api.github.com',
@@ -24,3 +24,5 @@ export default async (req, res) => {
     console.error(error);
   }
 };
+
+export default getContributors;

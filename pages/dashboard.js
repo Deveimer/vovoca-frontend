@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import cookie from 'js-cookie';
 import Head from 'next/head';
 
-const dashboard = () => {
+const Dashboard = () => {
   const authenticated = useSelector(state => state.auth);
   var token;
   if (process.browser) {
@@ -27,4 +27,4 @@ const dashboard = () => {
   );
 };
 
-export default dashboard;
+export default Dashboard;
