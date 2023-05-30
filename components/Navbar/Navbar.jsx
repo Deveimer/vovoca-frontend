@@ -171,7 +171,6 @@ const Navbar = () => {
         <Link scroll={true} href="/">
           <div className={style.neon}>VOVOCA</div>
         </Link>
-        <p style={{color:'white'}}>menu</p>
         <div className={style.nav__bar}>
           <ul className={style.nav__items}>
             <Link scroll={true} href="/">
