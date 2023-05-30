@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import style from './Navbar.module.css';
 import { Modal } from 'react-responsive-modal';
 import { FaTimes, FaUserCircle, FaCode } from 'react-icons/fa';
+import {BsThreeDotsVertical} from 'react-icons/bs';
+import {ImCross} from 'react-icons/im';
 import Login from '../homepage/Header/Login';
 import style_modal from '../../styles/Modal.module.css';
 import cookie from 'js-cookie';
@@ -29,6 +31,10 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const authenticated = useSelector((state) => state.auth);
   const [scrollState, setScrollState] = useState('top');
+  const [active, setActive] = useState(false);
+  const toogleMenu = () => {
+    setActive(!active);
+  }
   useEffect(() => {
     const listener = document.addEventListener('scroll', (e) => {
       var scrolled = document.scrollingElement.scrollTop;
@@ -165,6 +171,7 @@ const Navbar = () => {
         <Link scroll={true} href="/">
           <div className={style.neon}>VOVOCA</div>
         </Link>
+        <p style={{color:'white'}}>menu</p>
         <div className={style.nav__bar}>
           <ul className={style.nav__items}>
             <Link scroll={true} href="/">
@@ -231,6 +238,7 @@ const Navbar = () => {
             <Link scroll={true} href="/">
               <div className={style.neon}>VOVOCA</div>
             </Link>
+            
           </div>
           <div className={style.dashnav_mobile}>
             <Link scroll={true} href="/allMusic">
@@ -282,11 +290,35 @@ const Navbar = () => {
       ) : (
         <>
           <div className={style.mobile__header}>
+            <section style={{
+              display:'flex', 
+              flexDirection:'row', 
+              alignItems:'center', 
+              justifyContent:'space-evenly',
+              width:'50rem'}}>
             <Link scroll={true} href="/">
-              <div className={style.neon}>VOVOCA</div>
+                <div className={style.neon}>VOVOCA</div>
             </Link>
+             {
+                active ? <ImCross height={20} width={20} color='white' onClick={toogleMenu}/>
+                : <BsThreeDotsVertical height={20} width={20} color='white' onClick={toogleMenu}/>
+             } 
+            </section>
           </div>
-          <div className={style.dashnav_mobile}>
+          <div 
+          className='dashnav_mobile'
+          style={{
+            display:active?'flex':'none',
+            flexDirection:'column',
+            alignItems:'center',
+            justifyContent:'center',
+            marginInline:10,
+            borderRadius:20,
+            paddingBottom:30,
+            marginTop:20,
+            backgroundImage: 'linear-gradient(135deg, #3a3e41 0%, #2a2d30 49%, #242628 100%),linear-gradient(139deg, #fff6c6 1%, #2a2c2f 45%, #a19e7d 75%)',
+            boxShadow: '1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%), -4px -4px 15px rgb(195 200 205 / 4%)'
+            }}>
             <Link scroll={true} href="/testimonial">
               <p
                 className={style.navtext}
