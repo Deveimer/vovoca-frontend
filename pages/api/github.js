@@ -8,12 +8,15 @@ const getContributors = async (req, res) => {
 
     octokit.rest.repos
       .listContributors({
-        owner: 'varun-singhh',
-        repo: 'vovoca',
+        owner: 'Deveimer',
+        repo: 'vovoca-frontend',
       })
       .then(({ data }) => {
         const usersList = data.map(src => {
-          return { avatar_url: src.avatar_url, url: src.html_url };
+          return {
+            avatar_url: src.avatar_url,
+            url: src.html_url,
+          };
         });
 
         return res.status(200).json({
