@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import Router from 'next/router';
 const Header = () => {
-  const authenticated = useSelector((state) => state.auth.isAuthenticated);
+  const authenticated = useSelector(state => state.auth.isAuthenticated);
   const [open, setOpen] = React.useState(false);
 
   const onOpenModal = () => setOpen(true);
@@ -33,7 +33,7 @@ const Header = () => {
               }`,
               paddingBottom: '5px',
             }}
-            onClick={(res) => {
+            onClick={res => {
               setMethod('login');
             }}
           >
@@ -48,22 +48,22 @@ const Header = () => {
               }`,
               paddingBottom: '5px',
             }}
-            onClick={(res) => {
+            onClick={res => {
               setMethod('signup');
             }}
           >
             Signup
           </p>
         </div>
-        <hr className="divider"></hr>
+        <hr className='divider'></hr>
 
         {method === 'login' ? (
-          <Login oncloseModal={onCloseModal} hello="hello" />
+          <Login oncloseModal={onCloseModal} hello='hello' />
         ) : (
           <Signup />
         )}
         <br />
-        <hr className="divider"></hr>
+        <hr className='divider'></hr>
         {/* By submitting this form, you confirm that you agree to our Terms of Service and Privacy Policy. */}
         <div style={{ textAlign: 'center' }}>
           {method === 'login' ? (
@@ -71,7 +71,7 @@ const Header = () => {
               Don’t have an account?{' '}
               <span
                 style={{ color: 'wheat', cursor: 'pointer' }}
-                onClick={(res) => {
+                onClick={res => {
                   setMethod('signup');
                 }}
               >
@@ -84,7 +84,7 @@ const Header = () => {
                 Already have an account?{' '}
                 <span
                   style={{ color: 'wheat', cursor: 'pointer' }}
-                  onClick={(res) => {
+                  onClick={res => {
                     setMethod('login');
                   }}
                 >
@@ -94,7 +94,7 @@ const Header = () => {
 
               <p style={{ color: 'gray', fontSize: 'x-small' }}>
                 By submitting this form, you confirm that you agree to our{' '}
-                <a href="/privacy-policy">
+                <a href='/privacy-policy'>
                   <span style={{ color: 'wheat', cursor: 'pointer' }}>
                     Terms of Service and Privacy Policy
                   </span>
@@ -141,30 +141,30 @@ const Header = () => {
             </button>
           )}
         </div>
-        <img src="./static/saly.png" className={style.banner__image} />
+        <img src='./static/saly.png' className={style.banner__image} />
       </div>
 
       <div className={style.header}>
-        <svg className={style.image__svg} viewBox="0 0 1920 792" fill="none">
+        <svg className={style.image__svg} viewBox='0 0 1920 792' fill='none'>
           <path
-            opacity="0.05"
-            d="M1245 671.5H0V792H1920V0.5H1450C1392.01 0.5 1345 47.5101 1345 105.5V571.5C1345 626.728 1300.23 671.5 1245 671.5Z"
-            fill="white"
+            opacity='0.05'
+            d='M1245 671.5H0V792H1920V0.5H1450C1392.01 0.5 1345 47.5101 1345 105.5V571.5C1345 626.728 1300.23 671.5 1245 671.5Z'
+            fill='white'
           ></path>
-          <circle cx="509" cy="121" r="18" fill="#00FFFF"></circle>
-          <circle cx="367.5" cy="138.5" r="9.5" fill="#FF6600"></circle>
-          <circle cx="526.5" cy="431.5" r="6.5" fill="#FEC763"></circle>
+          <circle cx='509' cy='121' r='18' fill='#00FFFF'></circle>
+          <circle cx='367.5' cy='138.5' r='9.5' fill='#FF6600'></circle>
+          <circle cx='526.5' cy='431.5' r='6.5' fill='#FEC763'></circle>
           <defs>
             <linearGradient
-              id="paint0_linear"
-              x1="-30.2098"
-              y1="414"
-              x2="1076.2"
-              y2="412.898"
-              gradientUnits="userSpaceOnUse"
+              id='paint0_linear'
+              x1='-30.2098'
+              y1='414'
+              x2='1076.2'
+              y2='412.898'
+              gradientUnits='userSpaceOnUse'
             >
-              <stop offset="0" stopColor="#323436"></stop>
-              <stop offset="1" stopColor="#02B8A2"></stop>
+              <stop offset='0' stopColor='#323436'></stop>
+              <stop offset='1' stopColor='#02B8A2'></stop>
             </linearGradient>
           </defs>
         </svg>

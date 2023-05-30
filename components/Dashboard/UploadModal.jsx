@@ -61,10 +61,10 @@ const UploadModal = ({ user, file }) => {
         <h2 style={{ color: 'wheat' }}>Upload Music</h2>
         <div className={style.inputs}>
           <input
-            type="text"
+            type='text'
             value={musicName}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Enter Name of Music"
+            onChange={e => setName(e.target.value)}
+            placeholder='Enter Name of Music'
           />
           {/* <input type="text" value={user} disabled /> */}
           {tags.length >= 3 ? (
@@ -72,15 +72,15 @@ const UploadModal = ({ user, file }) => {
           ) : (
             <select
               className={style.options}
-              onChange={(e) => {
+              onChange={e => {
                 setTags([...tags, e.target.value]);
-                setList(list.filter((l) => l !== e.target.value));
+                setList(list.filter(l => l !== e.target.value));
               }}
             >
               <option default disabled>
                 Select 3 Tags
               </option>
-              {list.map((l) => (
+              {list.map(l => (
                 <option value={l}>
                   {l.charAt(0).toUpperCase() + l.slice(1)}
                 </option>
@@ -96,7 +96,7 @@ const UploadModal = ({ user, file }) => {
       </div>
       <div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          {tags.map((res) => (
+          {tags.map(res => (
             <p
               style={{
                 display: 'flex',

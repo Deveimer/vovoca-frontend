@@ -5,7 +5,7 @@ import cookie from 'js-cookie';
 import Head from 'next/head';
 
 const dashboard = () => {
-  const authenticated = useSelector((state) => state.auth);
+  const authenticated = useSelector(state => state.auth);
   var token;
   if (process.browser) {
     token = cookie.get('token');

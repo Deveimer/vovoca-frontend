@@ -24,7 +24,7 @@ const UserDashboard = () => {
         <div className={style.dashnav}>
           <p
             className={style.navtext}
-            onClick={(r) => {
+            onClick={r => {
               setNav('profile');
               if (process.browser) {
                 window.scrollTo({
@@ -43,10 +43,10 @@ const UserDashboard = () => {
           >
             Profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FaUserAlt />{' '}
           </p>
-          <hr className="divider"></hr>
+          <hr className='divider'></hr>
           <p
             className={style.navtext}
-            onClick={(r) => {
+            onClick={r => {
               setNav('category');
               if (process.browser) {
                 window.scrollTo({
@@ -62,7 +62,7 @@ const UserDashboard = () => {
           </p>
           <p
             className={style.navtext}
-            onClick={(r) => {
+            onClick={r => {
               setNav('trending');
               if (process.browser) {
                 window.scrollTo({
@@ -78,7 +78,7 @@ const UserDashboard = () => {
           </p>
           <p
             className={style.navtext}
-            onClick={(r) => {
+            onClick={r => {
               setNav('history');
               if (process.browser) {
                 window.scrollTo({
@@ -92,10 +92,10 @@ const UserDashboard = () => {
           >
             Uploads &nbsp; <FaHistory />
           </p>
-          <hr className="divider"></hr>
+          <hr className='divider'></hr>
           <p
             className={style.navtext}
-            onClick={(r) => {
+            onClick={r => {
               setNav('logout');
               if (process.browser) {
                 window.scrollTo({
@@ -117,7 +117,7 @@ const UserDashboard = () => {
         <div className={style.dashnav_mobile}>
           <p
             className={style.navtext}
-            onClick={(r) => {
+            onClick={r => {
               setNav('profile');
               if (process.browser) {
                 window.scrollTo({
@@ -134,7 +134,7 @@ const UserDashboard = () => {
           </p>
           <p
             className={style.navtext}
-            onClick={(r) => {
+            onClick={r => {
               setNav('category');
               if (process.browser) {
                 window.scrollTo({
@@ -151,7 +151,7 @@ const UserDashboard = () => {
           </p>
           <p
             className={style.navtext}
-            onClick={(r) => {
+            onClick={r => {
               setNav('trending');
               if (process.browser) {
                 window.scrollTo({
@@ -170,7 +170,7 @@ const UserDashboard = () => {
 
           <p
             className={style.navtext}
-            onClick={(r) => {
+            onClick={r => {
               setNav('history');
               if (process.browser) {
                 window.scrollTo({
@@ -187,10 +187,10 @@ const UserDashboard = () => {
             <FaHistory />
             <span className={style.text_mobile}>History</span>
           </p>
-          <Link scroll={true} href="/">
+          <Link scroll={true} href='/'>
             <p
               className={style.navtext}
-              onClick={(r) => {
+              onClick={r => {
                 setNav('home');
                 if (process.browser) {
                   window.scrollTo({
@@ -209,7 +209,7 @@ const UserDashboard = () => {
           </Link>
           <p
             className={style.navtext}
-            onClick={(r) => {
+            onClick={r => {
               setNav('logout');
               if (process.browser) {
                 window.scrollTo({
@@ -236,7 +236,7 @@ const UserDashboard = () => {
           {nav === 'history' && <History />}
           {nav === 'logout' && <Logout />}
           <br />
-          <hr className="divider"></hr>
+          <hr className='divider'></hr>
           <br />
           <p style={{ color: 'gray', fontSize: 'x-small' }}>
             © {/* <Link scroll={true} href="https://devbucket.tech/"> */}

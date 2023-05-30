@@ -13,10 +13,10 @@ const HomePage = () => {
   const linkEls = links.map((link, id) => (
     <link
       key={id}
-      rel="apple-touch-icon"
+      rel='apple-touch-icon'
       sizes={link.sizes}
       href={link.href}
-      type="image/png"
+      type='image/png'
     />
   ));
 
@@ -28,10 +28,10 @@ const HomePage = () => {
     <div>
       <Head>
         {linkEls}
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#ffffff" />
+        <link rel='manifest' href='/manifest.json' />
+        <meta name='msapplication-TileColor' content='#ffffff' />
+        <meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
+        <meta name='theme-color' content='#ffffff' />
         <title>VOVOCA | Home</title>
       </Head>
       <Header />

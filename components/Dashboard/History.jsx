@@ -12,11 +12,11 @@ const History = () => {
   useEffect(() => {
     dispatch(getUploadedMusic());
   }, []);
-  const musics = useSelector((state) => state.music.uploaded);
-  const loading = useSelector((state) => state.music.loading);
-  const error = useSelector((state) => state.music.error);
+  const musics = useSelector(state => state.music.uploaded);
+  const loading = useSelector(state => state.music.loading);
+  const error = useSelector(state => state.music.error);
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     dispatch({ type: LOADING });
     dispatch(getUploadedMusic(e.selected + 1));
   };
@@ -29,11 +29,11 @@ const History = () => {
   }
 
   return (
-    <div id="container">
+    <div id='container'>
       <h1>Upload History</h1>
-      <div className="container">
+      <div className='container'>
         {musics && !loading ? (
-          musics.data.map((i) => (
+          musics.data.map(i => (
             <Music music={i} />
             // <h1>{i.name}</h1>
           )) || <h2>Loading...</h2>
@@ -55,7 +55,7 @@ const History = () => {
             pageRangeDisplayed={0}
             previousLabel={'<'}
             nextLabel={'>'}
-            onPageChange={(e) => handleChange(e)}
+            onPageChange={e => handleChange(e)}
           />
         </div>
       </div>

@@ -9,10 +9,10 @@ const testimonial = () => {
         <Head>
           <title>VOVOCA | Testimonial</title>
           <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-            crossOrigin="anonymous"
+            rel='stylesheet'
+            href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
+            integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=='
+            crossOrigin='anonymous'
           />
         </Head>
         <div className={styles.container}>
@@ -32,7 +32,7 @@ const testimonial = () => {
                   <span>DNRevolution</span>
                 </div>
                 <div className={styles.testimonial__img}>
-                  <img src="/android-icon-36x36.png" />
+                  <img src='/android-icon-36x36.png' />
                 </div>
               </article>
             </div>
@@ -50,7 +50,7 @@ const testimonial = () => {
                   <span>IG Influencer</span>
                 </div>
                 <div className={styles.testimonial__img}>
-                  <img src="/android-icon-36x36.png" />
+                  <img src='/android-icon-36x36.png' />
                 </div>
               </article>
             </div>
@@ -68,7 +68,7 @@ const testimonial = () => {
                   <span>ChaiWala</span>
                 </div>
                 <div className={styles.testimonial__img}>
-                  <img src="/android-icon-36x36.png" />
+                  <img src='/android-icon-36x36.png' />
                 </div>
               </article>
             </div>
@@ -86,7 +86,7 @@ const testimonial = () => {
                   <span>Ahuja Music</span>
                 </div>
                 <div className={styles.testimonial__img}>
-                  <img src="/android-icon-36x36.png" />
+                  <img src='/android-icon-36x36.png' />
                 </div>
               </article>
             </div>
@@ -104,7 +104,7 @@ const testimonial = () => {
                   <span>Head, ACM-JUIT</span>
                 </div>
                 <div className={styles.testimonial__img}>
-                  <img src="/android-icon-36x36.png" />
+                  <img src='/android-icon-36x36.png' />
                 </div>
               </article>
             </div>
@@ -122,7 +122,7 @@ const testimonial = () => {
                   <span>Tayio.ai</span>
                 </div>
                 <div className={styles.testimonial__img}>
-                  <img src="/android-icon-36x36.png" />
+                  <img src='/android-icon-36x36.png' />
                 </div>
               </article>
             </div>
