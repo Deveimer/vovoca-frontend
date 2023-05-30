@@ -231,7 +231,7 @@ const Navbar = () => {
             <Link scroll={true} href='/allMusic'>
               <p
                 className={style.navtext}
-                onClick={() =>  setNav('category')}
+                onClick={() => setNav('category')}
                 style={{ color: `${nav === 'category' ? 'wheat' : 'gray'}` }}
               >
                 <BsFillMusicPlayerFill />
@@ -241,7 +241,7 @@ const Navbar = () => {
             <Link scroll={true} href='/'>
               <p
                 className={style.navtext}
-                onClick={() =>  setNav('trending')}
+                onClick={() => setNav('trending')}
                 style={{ color: `${nav === 'trending' ? 'wheat' : 'gray'}` }}
               >
                 {' '}
@@ -252,7 +252,7 @@ const Navbar = () => {
             <Link scroll={true} href='/dashboard'>
               <p
                 className={style.navtext}
-                onClick={() =>  setNav('history')}
+                onClick={() => setNav('history')}
                 style={{ color: `${nav === 'history' ? 'wheat' : 'gray'}` }}
               >
                 {' '}
@@ -263,7 +263,7 @@ const Navbar = () => {
             </Link>
             <p
               className={style.navtext}
-              onClick={() =>  {
+              onClick={() => {
                 setNav('logout');
                 logout();
               }}
@@ -287,7 +287,7 @@ const Navbar = () => {
             <Link scroll={true} href='/testimonial'>
               <p
                 className={style.navtext}
-                onClick={() =>  setNav('testimonial')}
+                onClick={() => setNav('testimonial')}
                 style={{ color: `${nav === 'testimonial' ? 'wheat' : 'gray'}` }}
               >
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -298,7 +298,7 @@ const Navbar = () => {
             <Link scroll={true} href='/developers'>
               <p
                 className={style.navtext}
-                onClick={() =>  setNav('history')}
+                onClick={() => setNav('history')}
                 style={{ color: `${nav === 'history' ? 'wheat' : 'gray'}` }}
               >
                 {' '}
@@ -310,7 +310,7 @@ const Navbar = () => {
             <Link scroll={true} href='/'>
               <p
                 className={style.navtext}
-                onClick={() =>  setNav('home')}
+                onClick={() => setNav('home')}
                 style={{ color: `${nav === 'home' ? 'wheat' : 'gray'}` }}
               >
                 {' '}
@@ -321,7 +321,7 @@ const Navbar = () => {
             <Link scroll={true} href='/#about'>
               <p
                 className={style.navtext}
-                onClick={() =>  setNav('about')}
+                onClick={() => setNav('about')}
                 style={{ color: `${nav === 'about' ? 'wheat' : 'gray'}` }}
               >
                 {' '}
@@ -333,7 +333,7 @@ const Navbar = () => {
 
             <p
               className={style.navtext}
-              onClick={() =>  {
+              onClick={() => {
                 setNav('logout');
                 onOpenModal();
               }}
