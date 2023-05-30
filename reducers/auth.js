@@ -4,8 +4,8 @@ import {
   USER_LOGIN_FAILED,
   LOAD_USER,
   FETCH_USER,
-} from "../actions/type";
-import cookie from 'js-cookie'
+} from '../actions/type';
+import cookie from 'js-cookie';
 
 const initialState = {
   isAuthenticated: false,
@@ -21,7 +21,7 @@ export default function AuthReducer(state = initialState, action) {
         loading: true,
       };
     case USER_LOGIN:
-      cookie.set("token", action.payload.token);
+      cookie.set('token', action.payload.token);
       return {
         ...state,
         isAuthenticated: true,
@@ -42,10 +42,10 @@ export default function AuthReducer(state = initialState, action) {
         ...state,
         isAuthenticated: true,
         loading: !state.loading,
-        token: cookie.get("token"),
+        token: cookie.get('token'),
         data: action.payload,
       };
     default:
       return state;
   }
-};
+}

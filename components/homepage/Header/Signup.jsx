@@ -38,15 +38,14 @@ const Signup = (props) => {
         register.password
       );
       if (
-        (reg === 'Username already exists' ||
-          reg === 'Email already registered')
+        reg === 'Username already exists' ||
+        reg === 'Email already registered'
       ) {
         toast(reg, {
           closeButton: false,
           className: style.toast_background,
         });
       } else {
-        
         props.onCloseModal();
         toast('Account Created Successfully, Login to Enter', {
           closeButton: false,

@@ -35,7 +35,11 @@ const Profile = () => {
         </i>
         <UploadModal file={file} user={authenticated.data?.username} />
       </Modal>
-      <h3>Hi, {authenticated.data?.username.charAt(0).toUpperCase() + authenticated.data?.username.slice(1)}</h3>
+      <h3>
+        Hi,&nbsp;
+        {authenticated.data?.username.charAt(0).toUpperCase() +
+          authenticated.data?.username.slice(1)}
+      </h3>
       <div className={style.profile_component}>
         <div>
           <p style={{ color: 'wheat' }}>Username:</p>

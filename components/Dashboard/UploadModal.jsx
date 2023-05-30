@@ -38,7 +38,7 @@ const UploadModal = ({ user, file }) => {
       };
 
       const res = await Axios.post(
-        'https://vovoca.herokuapp.com/api/admin',
+        'https://vovoca-backend-deploy.vercel.app/api/admin',
         formdata,
         config
       );
