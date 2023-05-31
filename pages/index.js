@@ -5,7 +5,7 @@ import Footer from '../components/homepage/Footer/Footer';
 import Guest from '../components/homepage/Guest/Guest';
 import Header from '../components/homepage/Header/Header';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getAllMusic } from '../actions/musicActions';
 import { links } from '../utils/resources/links';
 
@@ -23,7 +23,7 @@ const HomePage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllMusic());
-  }, []);
+  }, [dispatch]);
   return (
     <div>
       <Head>

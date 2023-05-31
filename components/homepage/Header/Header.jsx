@@ -5,9 +5,8 @@ import { Modal } from 'react-responsive-modal';
 import Login from './Login';
 import style_modal from '../../../styles/Modal.module.css';
 import Signup from './Signup';
-import Link from 'next/link';
 import { useSelector } from 'react-redux';
-import Router from 'next/router';
+
 const Header = () => {
   const authenticated = useSelector(state => state.auth.isAuthenticated);
   const [open, setOpen] = React.useState(false);
@@ -33,7 +32,7 @@ const Header = () => {
               }`,
               paddingBottom: '5px',
             }}
-            onClick={res => {
+            onClick={() => {
               setMethod('login');
             }}
           >
@@ -48,7 +47,7 @@ const Header = () => {
               }`,
               paddingBottom: '5px',
             }}
-            onClick={res => {
+            onClick={() => {
               setMethod('signup');
             }}
           >
@@ -71,7 +70,7 @@ const Header = () => {
               Don’t have an account?{' '}
               <span
                 style={{ color: 'wheat', cursor: 'pointer' }}
-                onClick={res => {
+                onClick={() => {
                   setMethod('signup');
                 }}
               >
@@ -84,7 +83,7 @@ const Header = () => {
                 Already have an account?{' '}
                 <span
                   style={{ color: 'wheat', cursor: 'pointer' }}
-                  onClick={res => {
+                  onClick={() => {
                     setMethod('login');
                   }}
                 >
@@ -141,7 +140,11 @@ const Header = () => {
             </button>
           )}
         </div>
-        <img src='./static/saly.png' className={style.banner__image} />
+        <img
+          src='./static/saly.png'
+          className={style.banner__image}
+          alt='banner-image'
+        />
       </div>
 
       <div className={style.header}>

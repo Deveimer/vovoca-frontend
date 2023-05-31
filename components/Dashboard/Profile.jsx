@@ -87,7 +87,7 @@ const Profile = () => {
           No file Chosen
         </button>
       ) : (
-        <button className={style.upload_button} onClick={r => onOpenModal()}>
+        <button className={style.upload_button} onClick={() => onOpenModal()}>
           Next
         </button>
       )}

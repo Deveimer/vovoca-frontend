@@ -48,7 +48,7 @@
 
 .get__in__touch {
   position: relative;
-  width: 80%;
+  width: 78%;
   padding-top: 15px;
   margin-left: 5%;
   margin-bottom: 30px;
@@ -64,7 +64,7 @@
 }
 
 .get__in__touch > p {
-  line-height: 1.65;
+  line-height: 2;
   margin-top: -2%;
   color: #d7e1ec;
   width: 92%;
@@ -103,7 +103,7 @@
 }
 .inputs > input {
   outline: none;
-  width: 92%;
+  width: 65%;
   height: calc(1.74em + 2rem + 2px);
   padding: 1rem 1.25rem;
   font-size: 0.9375rem;
@@ -162,6 +162,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 
 .get__the__app {
   padding-right: 20px;
@@ -268,7 +269,11 @@
 }
 
 .subscribe__btn {
-  position: relative;
+  position: absolute;
+  top: 78%;
+  left: 65%;
+  padding-top: 13px;
+  padding-bottom: 13px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -294,7 +299,7 @@
     -4px -2px 16px rgb(195 200 205 / 8%);
   transition: 0.5s ease-in-out;
   padding: 0.6875rem 2.5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.7;
   border-radius: 0.625rem;
   cursor: pointer;
@@ -378,6 +383,13 @@
     padding: 4%;
     margin-top: 3%;
     border-radius: 0.325rem;
+    position: absolute;
+    top: 81%;
+    font-size: 10px;
+    width: 25%;
+    left: 67%;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .get__the__app > h4,
   .contact__details > h4 {

@@ -6,7 +6,7 @@ import cookie from 'js-cookie';
 import { toast } from 'react-toastify';
 import { AiFillTag } from 'react-icons/ai';
 
-const UploadModal = ({ user, file }) => {
+const UploadModal = ({ file }) => {
   const [musicName, setName] = useState('');
   const [tags, setTags] = useState([]);
   const [list, setList] = useState([
@@ -80,8 +80,8 @@ const UploadModal = ({ user, file }) => {
               <option default disabled>
                 Select 3 Tags
               </option>
-              {list.map(l => (
-                <option value={l}>
+              {list.map((l, i) => (
+                <option value={l} key={i}>
                   {l.charAt(0).toUpperCase() + l.slice(1)}
                 </option>
               ))}
@@ -96,7 +96,7 @@ const UploadModal = ({ user, file }) => {
       </div>
       <div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          {tags.map(res => (
+          {tags.map((res, i) => (
             <p
               style={{
                 display: 'flex',
@@ -105,6 +105,7 @@ const UploadModal = ({ user, file }) => {
                 marginTop: '25px',
                 marginRight: '10px',
               }}
+              key={i}
             >
               <AiFillTag />
               &nbsp;

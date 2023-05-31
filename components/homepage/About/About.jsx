@@ -30,7 +30,10 @@ const About = () => {
             </div>
           </div>
           <div className={style.vovoca__img}>
-            <img src='https://source.unsplash.com/daily?neon/1200x1200' />
+            <img
+              src='https://source.unsplash.com/daily?neon/1200x1200'
+              alt='about image'
+            />
           </div>
           <div className={style.feature__col__2}>
             <div className={style.feature}>

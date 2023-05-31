@@ -9,13 +9,13 @@ import ReactPaginate from 'react-paginate';
 import { LOADING } from '../actions/type';
 import Head from 'next/head';
 
-const allMusic = () => {
+const AllMusic = () => {
   const music = useSelector(state => state.music);
   const auth = useSelector(state => state.auth);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllMusic());
-  }, []);
+  }, [dispatch]);
 
   const handleChange = e => {
     dispatch({ type: LOADING });
@@ -71,4 +71,4 @@ const allMusic = () => {
   );
 };
 
-export default allMusic;
+export default AllMusic;

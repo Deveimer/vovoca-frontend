@@ -11,7 +11,7 @@ const History = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getUploadedMusic());
-  }, []);
+  }, [dispatch]);
   const musics = useSelector(state => state.music.uploaded);
   const loading = useSelector(state => state.music.loading);
   const error = useSelector(state => state.music.error);
@@ -33,8 +33,8 @@ const History = () => {
       <h1>Upload History</h1>
       <div className='container'>
         {musics && !loading ? (
-          musics.data.map(i => (
-            <Music music={i} />
+          musics.data.map((i, idx) => (
+            <Music music={i} key={idx} />
             // <h1>{i.name}</h1>
           )) || <h2>Loading...</h2>
         ) : (

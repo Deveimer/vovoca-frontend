@@ -11,7 +11,7 @@ const Logout = () => {
   return (
     <div>
       <h1>Are you sure ?</h1>
-      <button onClick={() => logout()}>Yes I'm</button>
+      <button onClick={() => logout()}>Yes I&apos;m</button>
       <br />
     </div>
   );

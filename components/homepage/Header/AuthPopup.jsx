@@ -4,7 +4,7 @@ import { Modal } from 'react-responsive-modal';
 import Login from './Login';
 import style_modal from '../../../styles/Modal.module.css';
 import Signup from './Signup';
-import Link from 'next/link';
+
 const AuthPopup = ({ isopen }) => {
   const [open, setOpen] = useState(isopen);
 
@@ -37,7 +37,7 @@ const AuthPopup = ({ isopen }) => {
                 cursor: 'pointer',
                 color: `${method === 'login' ? 'wheat' : 'gray'}`,
               }}
-              onClick={res => {
+              onClick={() => {
                 setMethod('login');
               }}
             >
@@ -48,7 +48,7 @@ const AuthPopup = ({ isopen }) => {
                 cursor: 'pointer',
                 color: `${method === 'signup' ? 'wheat' : 'gray'}`,
               }}
-              onClick={res => {
+              onClick={() => {
                 setMethod('signup');
               }}
             >
@@ -71,7 +71,7 @@ const AuthPopup = ({ isopen }) => {
                 Don’t have an account?{' '}
                 <span
                   style={{ color: 'wheat', cursor: 'pointer' }}
-                  onClick={res => {
+                  onClick={() => {
                     setMethod('signup');
                   }}
                 >
@@ -84,7 +84,7 @@ const AuthPopup = ({ isopen }) => {
                   Already have an account?{' '}
                   <span
                     style={{ color: 'wheat', cursor: 'pointer' }}
-                    onClick={res => {
+                    onClick={() => {
                       setMethod('login');
                     }}
                   >

@@ -1,6 +1,5 @@
 import axios from 'axios';
 import cookie from 'js-cookie';
-import { toast } from 'react-toastify';
 import {
   GET_MUSIC,
   LOADING,
