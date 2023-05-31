@@ -11,7 +11,7 @@ const Loader = ({ loading }) => {
         alignItems: 'center',
       }}
     >
-      <MagicSpinner size={50} color="gray" loading={loading} />
+      <MagicSpinner size={50} color='gray' loading={loading} />
     </div>
   );
 };

@@ -9,6 +9,7 @@ import {
 } from '../../actions/musicActions';
 import ReactPaginate from 'react-paginate';
 import styles from '../../styles/AllMusic.module.css';
+import CategoryCard from './CategoryCard';
 
 const Category = () => {
   const selected_category = [];
@@ -16,18 +17,17 @@ const Category = () => {
   const [selected, setSelected] = useState([]);
 
   const dispatch = useDispatch();
-  const categorised_music = useSelector(
-    (state) => state.music.categorised_music
-  );
-  const totalPages = useSelector((state) => state.music.totalPages);
+  const categorised_music = useSelector(state => state.music.categorised_music);
+  const totalPages = useSelector(state => state.music.totalPages);
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     dispatch(getCategorisedMusic(selected, e.selected + 1));
   };
 
   async function getCategories() {
     setCategory_search(1);
     setSelected(selected_category);
+
     dispatch(getCategorisedMusic(selected_category));
   }
 
@@ -36,7 +36,7 @@ const Category = () => {
     dispatch(resetCategorisedMusic());
   };
 
-  // function called on clicking category card 
+  // function called on clicking category card
   function handleClick(e, category) {
     if (process.browser) {
       if (selected_category.indexOf(category.toLowerCase()) !== -1) {
@@ -59,59 +59,69 @@ const Category = () => {
     }
   }
 
-  // a list of all available categories 
+  // a list of all available categories
   const categoryList = [
     {
-      category: "Hip-Hop",
-      imageURL: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F07%2Fapple-music-rap-life.jpeg%3Fresize%3D1024%2C576&f=1&nofb=1"
+      category: 'Hip-Hop',
+      imageURL:
+        'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F07%2Fapple-music-rap-life.jpeg%3Fresize%3D1024%2C576&f=1&nofb=1',
     },
     {
-      category: "Bass",
-      imageURL: "https://images.pexels.com/photos/2651794/pexels-photo-2651794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      category: 'Bass',
+      imageURL:
+        'https://images.pexels.com/photos/2651794/pexels-photo-2651794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     },
     {
-      category: "Chill",
-      imageURL: "https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      category: 'Chill',
+      imageURL:
+        'https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     },
     {
-      category: "Beats",
-      imageURL: "https://www.icmp.ac.uk/sites/default/files/styles/page_background/public/music-production-studio-process-explained-mixing-mastering-songwriting-editing-promoting.jpg?itok=eC1jlQ1J"
+      category: 'Beats',
+      imageURL:
+        'https://www.icmp.ac.uk/sites/default/files/styles/page_background/public/music-production-studio-process-explained-mixing-mastering-songwriting-editing-promoting.jpg?itok=eC1jlQ1J',
     },
     {
-      category: "Musical",
-      imageURL: "https://www.incimages.com/uploaded_files/image/1920x1080/getty_491119158_283701.jpg"
+      category: 'Musical',
+      imageURL:
+        'https://www.incimages.com/uploaded_files/image/1920x1080/getty_491119158_283701.jpg',
     },
     {
-      category: "Slow",
-      imageURL: "https://cdn.shopify.com/s/files/1/1728/2157/articles/37.jpg?v=1552935505"
+      category: 'Slow',
+      imageURL:
+        'https://cdn.shopify.com/s/files/1/1728/2157/articles/37.jpg?v=1552935505',
     },
     {
-      category: "EDM",
-      imageURL: "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpodcasts.nickware.ru%2Fedm%2Flogo.jpeg&f=1&nofb=1"
+      category: 'EDM',
+      imageURL:
+        'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpodcasts.nickware.ru%2Fedm%2Flogo.jpeg&f=1&nofb=1',
     },
     {
-      category: "Electric",
-      imageURL: "https://images.pexels.com/photos/144428/pexels-photo-144428.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      category: 'Electric',
+      imageURL:
+        'https://images.pexels.com/photos/144428/pexels-photo-144428.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     },
     {
-      category: "vocal",
-      imageURL: "https://www.theeapts.com/blog/wp-content/uploads/sites/3997/2019/10/wpid-microphone2.jpg"
+      category: 'vocal',
+      imageURL:
+        'https://iconcollective.edu/wp-content/uploads/Girl-in-Vocal-Booth-Doing-Best-Vocal-Warm-Ups.jpg',
     },
     {
-      category: "House",
-      imageURL: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    }
+      category: 'House',
+      imageURL:
+        'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    },
   ];
 
   return (
     <>
       {category_search === 1 ? (
-        <div id="container">
+        <div id='container'>
           <h1>Top Searches</h1>
 
           {categorised_music ? (
             categorised_music &&
-            categorised_music?.map((i) => <Music music={i} />)
+            categorised_music?.map((i, idx) => <Music music={i} key={idx} />)
           ) : (
             <Loader />
           )}
@@ -131,7 +141,7 @@ const Category = () => {
                 pageRangeDisplayed={0}
                 previousLabel={'<'}
                 nextLabel={'>'}
-                onPageChange={(e) => handleChange(e)}
+                onPageChange={e => handleChange(e)}
               />
             </div>
           )}
@@ -144,149 +154,28 @@ const Category = () => {
           <h1>Select Categories</h1>
           <div className={style.category}>
             <div className={style.container}>
+              {/* return categorycard components for each category */}
               <div className={style.row}>
-                <div className={style.category__card}>
-                  <div
-                    id="1"
-                    className={style.category__card__icon}
-                    style={{
-                      backgroundImage: `url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F07%2Fapple-music-rap-life.jpeg%3Fresize%3D1024%2C576&f=1&nofb=1)`,
-                    }}
-                    onClick={(e) => handleClick(e.target.id, 'Hip-Hop')}
-                  >
-                    <div className={style.heading}>
-                      <h3>Hip-Hop</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className={style.category__card}>
-                  <div
-                    id="2"
-                    className={style.category__card__icon}
-                    style={{
-                      backgroundImage: `url(https://images.pexels.com/photos/2651794/pexels-photo-2651794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)`,
-                    }}
-                    onClick={(e) => handleClick(e.target.id, 'Bass')}
-                  >
-                    <div className={style.heading}>
-                      <h3>Bass</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className={style.category__card}>
-                  <div
-                    id="3"
-                    className={style.category__card__icon}
-                    style={{
-                      backgroundImage: `url(https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)`,
-                    }}
-                    onClick={(e) => handleClick(e.target.id, 'Chill')}
-                  >
-                    <div className={style.heading}>
-                      <h3>Chill</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className={style.category__card}>
-                  <div
-                    id="4"
-                    className={style.category__card__icon}
-                    style={{
-                      backgroundImage: `url(https://www.icmp.ac.uk/sites/default/files/styles/page_background/public/music-production-studio-process-explained-mixing-mastering-songwriting-editing-promoting.jpg?itok=eC1jlQ1J)`,
-                    }}
-                    onClick={(e) => handleClick(e.target.id, 'Beats')}
-                  >
-                    <div className={style.heading}>
-                      <h3>Beats</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className={style.category__card}>
-                  <div
-                    id="5"
-                    className={style.category__card__icon}
-                    style={{
-                      backgroundImage: `url(https://www.incimages.com/uploaded_files/image/1920x1080/getty_491119158_283701.jpg)`,
-                    }}
-                    onClick={(e) => handleClick(e.target.id, 'Musical')}
-                  >
-                    <div className={style.heading}>
-                      <h3>Musical</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className={style.category__card}>
-                  <div
-                    id="6"
-                    className={style.category__card__icon}
-                    style={{
-                      backgroundImage: `url(https://cdn.shopify.com/s/files/1/1728/2157/articles/37.jpg?v=1552935505)`,
-                    }}
-                    onClick={(e) => handleClick(e.target.id, 'Slow')}
-                  >
-                    <div className={style.heading}>
-                      <h3>Slow</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className={style.category__card}>
-                  <div
-                    id="7"
-                    className={style.category__card__icon}
-                    style={{
-                      backgroundImage: `url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpodcasts.nickware.ru%2Fedm%2Flogo.jpeg&f=1&nofb=1")`,
-                    }}
-                    onClick={(e) => handleClick(e.target.id, 'EDM')}
-                  >
-                    <div className={style.heading}>
-                      <h3>EDM</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className={style.category__card}>
-                  <div
-                    id="8"
-                    className={style.category__card__icon}
-                    style={{
-                      backgroundImage: `url(https://images.pexels.com/photos/144428/pexels-photo-144428.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)`,
-                    }}
-                    onClick={(e) => handleClick(e.target.id, 'Electric')}
-                  >
-                    <div className={style.heading}>
-                      <h3>Electric</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className={style.category__card}>
-                  <div
-                    id="9"
-                    className={style.category__card__icon}
-                    style={{
-                      backgroundImage: `url(https://www.theeapts.com/blog/wp-content/uploads/sites/3997/2019/10/wpid-microphone2.jpg)`,
-                    }}
-                    onClick={(e) => handleClick(e.target.id, 'Vocal')}
-                  >
-                    <div className={style.heading}>
-                      <h3>Vocal</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className={style.category__card}>
-                  <div
-                    id="10"
-                    className={style.category__card__icon}
-                    style={{
-                      backgroundImage: `url(https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)`,
-                    }}
-                    onClick={(e) => handleClick(e.target.id, 'House')}
-                  >
-                    <h3>House</h3>
-                  </div>
-                </div>
+                {categoryList.map((categoryObj, index) => (
+                  <CategoryCard
+                    id={index}
+                    musicCategory={categoryObj.category}
+                    imageURL={categoryObj.imageURL}
+                    handleClick={handleClick}
+                    key={index}
+                  />
+                ))}
               </div>
             </div>
             <div className={style.search_btn}>
-              <button onClick={() => getCategories()}>Search</button>
+              <button
+                onClick={() => {
+                  console.log(getCategories());
+                  getCategories();
+                }}
+              >
+                Search
+              </button>
             </div>
           </div>
         </>

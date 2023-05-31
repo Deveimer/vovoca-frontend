@@ -1,6 +1,5 @@
 import axios from 'axios';
 import cookie from 'js-cookie';
-import { toast } from 'react-toastify';
 import {
   GET_MUSIC,
   LOADING,
@@ -14,7 +13,7 @@ import {
 } from './type';
 import setAuthToken from './utils/setAuthToken';
 
-export const getAllMusic = (page) => async (dispatch) => {
+export const getAllMusic = page => async dispatch => {
   try {
     dispatch({ type: LOADING });
     const res = await axios.get(
@@ -29,7 +28,7 @@ export const getAllMusic = (page) => async (dispatch) => {
   }
 };
 
-export const getSingleMusic = (id) => async (dispatch) => {
+export const getSingleMusic = id => async dispatch => {
   try {
     dispatch({ type: LOADING });
     const res = await axios.get(
@@ -44,7 +43,7 @@ export const getSingleMusic = (id) => async (dispatch) => {
   }
 };
 
-export const getTrendingMusic = () => async (dispatch) => {
+export const getTrendingMusic = () => async dispatch => {
   try {
     dispatch({ type: LOADING });
     const res = await axios.get(
@@ -59,7 +58,7 @@ export const getTrendingMusic = () => async (dispatch) => {
   }
 };
 
-export const getLatestMusic = () => async (dispatch) => {
+export const getLatestMusic = () => async dispatch => {
   try {
     dispatch({ type: LOADING });
     const res = await axios.get(
@@ -77,7 +76,7 @@ export const getLatestMusic = () => async (dispatch) => {
 
 export const getUploadedMusic =
   (page = 1) =>
-  async (dispatch) => {
+  async dispatch => {
     try {
       setAuthToken(cookie.get('token'));
       const res = await axios.get(
@@ -95,7 +94,7 @@ export const getUploadedMusic =
   };
 
 export const getCategorisedMusic =
-  (selected_category, page) => async (dispatch) => {
+  (selected_category, page) => async dispatch => {
     try {
       const res = await axios.get(
         `https://vovoca-backend-deploy.vercel.app/api/music/?category=${selected_category.join(
@@ -111,7 +110,7 @@ export const getCategorisedMusic =
     }
   };
 
-export const resetCategorisedMusic = () => async (dispatch) => {
+export const resetCategorisedMusic = () => async dispatch => {
   dispatch({
     type: RESET_CATEGORISED_MUSIC,
   });

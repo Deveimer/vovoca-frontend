@@ -11,7 +11,7 @@ async function fetcher(...args) {
   return res.json();
 }
 
-const developers = () => {
+const Developers = () => {
   const { data } = useSWR('/api/github', fetcher);
   return (
     <>
@@ -20,10 +20,10 @@ const developers = () => {
           <Head>
             <title>VOVOCA | Team</title>
             <link
-              rel="stylesheet"
-              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-              integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-              crossOrigin="anonymous"
+              rel='stylesheet'
+              href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
+              integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=='
+              crossOrigin='anonymous'
             />
           </Head>
           <div className={styles.container}>
@@ -54,7 +54,7 @@ VOVOCA-5
                     }}
                   ></div>
                 </article>
-                <Link scroll={true} href="https://www.linkedin.com/in/v-varun/">
+                <Link scroll={true} href='https://www.linkedin.com/in/v-varun/'>
                   <button
                     style={{
                       width: '100%',
@@ -87,7 +87,6 @@ VOVOCA-5
                     className={styles.developer__img}
                     style={{
                       backgroundImage: `url(https://avatars.githubusercontent.com/u/51090491?v=4)`,
-                      backgroundSize: '90px 90px',
                       backgroundPosition: 'center',
                       backgroundRepeat: 'no-repeat',
                     }}
@@ -95,7 +94,7 @@ VOVOCA-5
                 </article>
                 <Link
                   scroll={true}
-                  href="https://www.linkedin.com/in/prakhar-pandey-a307b7191/"
+                  href='https://www.linkedin.com/in/prakhar-pandey-a307b7191/'
                 >
                   <button
                     style={{
@@ -136,7 +135,7 @@ VOVOCA-5
                 </article>
                 <Link
                   scroll={true}
-                  href="https://www.linkedin.com/in/kaustubhai/"
+                  href='https://www.linkedin.com/in/kaustubhai/'
                 >
                   <button
                     style={{
@@ -164,12 +163,11 @@ VOVOCA-5
                 data.users.map((user, index) => (
                   <div className={styles.testimonial} key={index}>
                     <article className={styles.testimonial__article}>
-                      <a target="_blank" rel="" href={user.url}>
+                      <a target='_blank' rel='' href={user.url}>
                         <div
                           className={styles.contributor__img}
                           style={{
                             backgroundImage: `url(${user.avatar_url})`,
-                            backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat',
                             backgroundSize: '90px 90px',
@@ -191,4 +189,4 @@ VOVOCA-5
   );
 };
 
-export default developers;
+export default Developers;

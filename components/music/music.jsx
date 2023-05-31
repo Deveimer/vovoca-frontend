@@ -5,8 +5,9 @@ import style from './MusicCard.module.css';
 import { toast } from 'react-toastify';
 import { FaGetPocket } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
 
-const music = ({ music, history }) => {
+const music = ({ music }) => {
   return (
     <div className={style.row}>
       <div
@@ -18,12 +19,12 @@ const music = ({ music, history }) => {
           textAlign: 'center',
         }}
       >
-        <img
+        <Image
           className={style.image}
           src={music.image}
-          alt="Ran"
-          height="70px"
-          width="70px"
+          alt='Ran'
+          height='70px'
+          width='70px'
         />
         <p style={{ marginBottom: '-2%' }}>{music.name}</p>
       </div>
@@ -38,7 +39,7 @@ const music = ({ music, history }) => {
         src={`data:audio/wav;base64,${Buffer.from(
           music.audiobuffer?.data
         ).toString('base64')}`}
-        onError={(e) => {
+        onError={() => {
           toast('Internal Server Error', {
             closeButton: false,
             className: style.toast_background,

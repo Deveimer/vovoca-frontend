@@ -6,17 +6,17 @@ import Loader from '../Loader/Loader';
 
 const Trending = () => {
   const dispatch = useDispatch();
-  const trending_music = useSelector((state) => state.music.trending_music);
+  const trending_music = useSelector(state => state.music.trending_music);
 
   useEffect(() => {
     dispatch(getTrendingMusic());
-  }, []);
+  }, [dispatch]);
 
   return (
-    <div id="container">
+    <div id='container'>
       <h1>Trending Music</h1>
       {trending_music ? (
-        trending_music.map((i) => <Music music={i} />)
+        trending_music.map((i, idx) => <Music music={i} key={idx} />)
       ) : (
         <Loader loading={true} />
       )}

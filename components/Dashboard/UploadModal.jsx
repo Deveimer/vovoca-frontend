@@ -6,7 +6,7 @@ import cookie from 'js-cookie';
 import { toast } from 'react-toastify';
 import { AiFillTag } from 'react-icons/ai';
 
-const UploadModal = ({ user, file }) => {
+const UploadModal = ({ file }) => {
   const [musicName, setName] = useState('');
   const [tags, setTags] = useState([]);
   const [list, setList] = useState([
@@ -61,10 +61,10 @@ const UploadModal = ({ user, file }) => {
         <h2 style={{ color: 'wheat' }}>Upload Music</h2>
         <div className={style.inputs}>
           <input
-            type="text"
+            type='text'
             value={musicName}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Enter Name of Music"
+            onChange={e => setName(e.target.value)}
+            placeholder='Enter Name of Music'
           />
           {/* <input type="text" value={user} disabled /> */}
           {tags.length >= 3 ? (
@@ -72,16 +72,16 @@ const UploadModal = ({ user, file }) => {
           ) : (
             <select
               className={style.options}
-              onChange={(e) => {
+              onChange={e => {
                 setTags([...tags, e.target.value]);
-                setList(list.filter((l) => l !== e.target.value));
+                setList(list.filter(l => l !== e.target.value));
               }}
             >
               <option default disabled>
                 Select 3 Tags
               </option>
-              {list.map((l) => (
-                <option value={l}>
+              {list.map((l, i) => (
+                <option value={l} key={i}>
                   {l.charAt(0).toUpperCase() + l.slice(1)}
                 </option>
               ))}
@@ -96,7 +96,7 @@ const UploadModal = ({ user, file }) => {
       </div>
       <div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          {tags.map((res) => (
+          {tags.map((res, i) => (
             <p
               style={{
                 display: 'flex',
@@ -105,6 +105,7 @@ const UploadModal = ({ user, file }) => {
                 marginTop: '25px',
                 marginRight: '10px',
               }}
+              key={i}
             >
               <AiFillTag />
               &nbsp;

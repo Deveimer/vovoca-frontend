@@ -4,7 +4,7 @@ import Footer from '../components/homepage/Footer/Footer';
 import style from '../styles/PrivacyPolicy.module.css';
 
 const privacyPolicy = () => {
-  const maximiseInfo = (num) => {
+  const maximiseInfo = num => {
     if (process.browser) {
       const paraNum = document.getElementById(num);
       const paraNum1 = document.getElementById(1);
@@ -73,10 +73,10 @@ Thank you for choosing Vovoca, and we appreciate your understanding and support 
         <Head>
           <title>VOVOCA | Privacy Policy</title>
           <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-            crossorigin="anonymous"
+            rel='stylesheet'
+            href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
+            integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=='
+            crossorigin='anonymous'
           />
         </Head>
         <div className={style.app}>
@@ -90,10 +90,10 @@ Thank you for choosing Vovoca, and we appreciate your understanding and support 
                 }}
                 className={style.toggle__button}
               >
-                <i className="fas fa-plus"></i>
+                <i className='fas fa-plus'></i>
               </div>
             </div>
-            <p id="1b" id="1" className={style.modal__button__para}>
+            <p id='1' className={style.modal__button__para}>
               Vovoca is a project under team DevBucket. We have putted our heart
               and soul in it to bring it to you for free. We our free today
               because of several open-source technologies out there that we have
@@ -107,18 +107,18 @@ Thank you for choosing Vovoca, and we appreciate your understanding and support 
             <div className={style.modal__button__info}>
               <h4>User Data Security</h4>
               <div
-                id="2b"
+                id='2b'
                 onClick={() => {
                   maximiseInfo('2');
                 }}
                 className={style.toggle__button}
               >
-                <i className="fas fa-plus"></i>
+                <i className='fas fa-plus'></i>
               </div>
 Development
             </div>
             <p
-              id="2"
+              id='2'
               className={[style.modal__button__para, style.none].join(' ')}
             >
               We are more than aware of your private data. We have taken care of
@@ -135,17 +135,17 @@ Development
             <div className={style.modal__button__info}>
               <h4>Database Policy</h4>
               <div
-                id="3b"
+                id='3b'
                 onClick={() => {
                   maximiseInfo('3');
                 }}
                 className={style.toggle__button}
               >
-                <i className="fas fa-plus"></i>
+                <i className='fas fa-plus'></i>
               </div>
             </div>
             <p
-              id="3"
+              id='3'
               className={[style.modal__button__para, style.none].join(' ')}
             >
               We have used most secured and open sourced programs to host our

@@ -3,9 +3,10 @@ import style from './About.module.css';
 
 const About = () => {
   return (
-    <div id="about" className={style.about}>
+    <div id='about' className={style.about}>
       <div className={style.container}>
         <h2>Welcome to Vovoca</h2>
+ VOVOCA-5
         <hr className="divider-main"></hr>
                 <div className={style.features}>
                     <div className={style.feature__col__1}>
@@ -48,20 +49,36 @@ const About = () => {
                         </div>
                     </div>
                 </div>
+
+        <hr className='divider-main'></hr>
+        <div className={style.features}>
+          <div className={style.feature__col__1}>
+            <div className={style.feature}>
+              <div className={[style.feature__heading, style.left].join(' ')}>
+                <h2>Royalty Free</h2>
+                <p>
+                  Enjoy Royalty Free awesome music for free We provide all of
+                  our services free Login and use vovoca for free forever
+                </p>
+              </div>
+ Development
             </div>
-            <hr className="divider"></hr>
+            <hr className='divider'></hr>
             <div className={style.feature}>
               <div className={[style.feature__heading, style.left].join(' ')}>
                 <h2>No Credits Required</h2>
                 <p>
                   You dont even have to pay us or give us credit for using our
-                  music anywhere, in your songs, vidoes or office presentation
+                  music anywhere, in your songs, videos or office presentation
                 </p>
               </div>
             </div>
           </div>
           <div className={style.vovoca__img}>
-            <img src="https://source.unsplash.com/daily?neon/1200x1200" />
+            <img
+              src='https://source.unsplash.com/daily?neon/1200x1200'
+              alt='about image'
+            />
           </div>
           <div className={style.feature__col__2}>
             <div className={style.feature}>
@@ -73,7 +90,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <hr className="divider"></hr>
+            <hr className='divider'></hr>
             <div className={style.feature}>
               <div className={[style.feature__heading, style.right].join(' ')}>
                 <h2>Upload Music</h2>

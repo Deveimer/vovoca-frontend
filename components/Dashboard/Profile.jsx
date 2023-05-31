@@ -14,11 +14,11 @@ const Profile = () => {
   const onCloseModal = () => setOpen(false);
   const closeIcon = <svg style={{ display: 'none' }}></svg>;
 
-  const authenticated = useSelector((state) => state.auth);
+  const authenticated = useSelector(state => state.auth);
   const [file, setFile] = useState([]);
 
   return (
-    <div id="container">
+    <div id='container'>
       <Modal
         open={open}
         onClose={onCloseModal}
@@ -57,11 +57,11 @@ const Profile = () => {
             <FaUpload style={{ fontSize: '60px' }} /> <br />
             <p style={{ color: 'gray' }}>Upload Music (only Audio Files)</p>
             <input
-              type="file"
-              if="file"
-              accept="audio/*"
+              type='file'
+              if='file'
+              accept='audio/*'
               className={style.custom_file_input}
-              onChange={(r) => setFile(r.target.files[0])}
+              onChange={r => setFile(r.target.files[0])}
             ></input>
           </>
         ) : (
@@ -69,12 +69,12 @@ const Profile = () => {
             <FaMusic style={{ fontSize: 'xx-large' }} /> <br />
             Music File Choosen<p>[{file.name}]</p>
             <input
-              type="file"
-              if="file"
+              type='file'
+              if='file'
               className={style.custom_file_input}
-              onChange={(r) => setFile(r.target.files[0])}
+              onChange={r => setFile(r.target.files[0])}
             ></input>
-            <div class="card-subtitle">click on Next, to get it uploaded</div>
+            <div class='card-subtitle'>click on Next, to get it uploaded</div>
           </>
         )}
       </div>
@@ -87,7 +87,7 @@ const Profile = () => {
           No file Chosen
         </button>
       ) : (
-        <button className={style.upload_button} onClick={(r) => onOpenModal()}>
+        <button className={style.upload_button} onClick={() => onOpenModal()}>
           Next
         </button>
       )}

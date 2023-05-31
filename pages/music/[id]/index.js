@@ -10,18 +10,18 @@ import 'react-h5-audio-player/lib/styles.css';
 import { HiViewList, HiCloudDownload, HiShare } from 'react-icons/hi';
 import Link from 'next/link';
 import Head from 'next/head';
-import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Image from 'next/image';
 
-const index = () => {
+const Index = () => {
   const router = useRouter();
   const { id } = router.query;
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSingleMusic(id));
-  }, [id]);
-  const { music, loading } = useSelector((state) => state.music);
+  }, [dispatch, id]);
+  const { music, loading } = useSelector(state => state.music);
 
   const copyLink = () => {
     if (process.browser) {
@@ -40,7 +40,7 @@ const index = () => {
       });
     }
   };
-  const downloadMusic = async (id) => {
+  const downloadMusic = async () => {
     // const res = await axios.patch(
     //   `https://vovoca-backend-deploy.vercel.app/api/music/download/${id}`
     // );
@@ -69,11 +69,11 @@ const index = () => {
         <title>VOVOCA | {music.name}</title>
       </Head>
       <div className={style.container}>
-        <input type="text" id="myInput" style={{ visibility: 'hidden' }} />
+        <input type='text' id='myInput' style={{ visibility: 'hidden' }} />
         <div className={style.card}>
-          <img className={style.background__image} src={music.image}></img>
+          <Image className={style.background__image} src={music.image} alt='' />
           <div className={style.buttons}>
-            <Link scroll={true} href="/allMusic">
+            <Link scroll={true} href='/allMusic'>
               <button className={style.single_music_button}>
                 <HiViewList />
               </button>
@@ -90,7 +90,7 @@ const index = () => {
               <HiShare />
             </button>
           </div>
-          <img className={style.image} src={music.image}></img>
+          <Image className={style.image} src={music.image} alt='' />
           <div className={style.other__images}>
             <div className={style.detes}>
               <h1 className={style.name}>
@@ -111,7 +111,7 @@ const index = () => {
                 src={`data:audio/mp3;base64,${Buffer.from(
                   music.audiobuffer?.data
                 ).toString('base64')}`}
-                onError={(e) => {
+                onError={() => {
                   toast('Oops! Something went wrong', {
                     closeButton: false,
                     className: style.toast_background,
@@ -127,4 +127,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

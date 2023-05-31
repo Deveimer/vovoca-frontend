@@ -3,26 +3,21 @@ import style from './Login.module.css';
 import { registerUser } from '../../../actions/authAction';
 import { toast } from 'react-toastify';
 
-const Signup = (props) => {
+const Signup = props => {
   const [register, setRegister] = useState({
     username: '',
     email: '',
     password: '',
     pass: '',
   });
-  const handleChange = (e) => {
+  const handleChange = e => {
     register[e.target.name] = e.target.value;
     setRegister(register);
   };
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     if (register.email === '' || register.username === '') {
       toast('All feilds are Mandatory', {
-        closeButton: false,
-        className: style.toast_background,
-      });
-    } else if (register.password.length < 8 || register.password.length > 16) {
-      toast('Password length should be between 8-16 characters', {
         closeButton: false,
         className: style.toast_background,
       });
@@ -62,33 +57,33 @@ const Signup = (props) => {
           <div className={style.inputs}>
             <input
               className={style.feild__input}
-              type="text"
-              placeholder="username*"
-              name="username"
+              type='text'
+              placeholder='username*'
+              name='username'
               required
               onChange={handleChange}
             />
             <input
               className={style.feild__input}
-              type="email"
-              placeholder="your email id*"
-              name="email"
+              type='email'
+              placeholder='your email id*'
+              name='email'
               required
               onChange={handleChange}
             />
             <input
               className={style.feild__input}
-              type="password"
-              placeholder="Your password*"
-              name="password"
+              type='password'
+              placeholder='Your password*'
+              name='password'
               required
               onChange={handleChange}
             />
             <input
               className={style.feild__input}
-              type="password"
-              placeholder="confirm password*"
-              name="pass"
+              type='password'
+              placeholder='confirm password*'
+              name='pass'
               required
               onChange={handleChange}
             />

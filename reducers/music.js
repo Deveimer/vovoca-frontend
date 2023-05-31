@@ -1,4 +1,3 @@
-import { FaAcquisitionsIncorporated } from 'react-icons/fa';
 import {
   GET_MUSIC,
   GET_MUSIC_SINGLE,
