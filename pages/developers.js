@@ -1,4 +1,4 @@
-import styles from '../styles/Testimonial.module.css';
+import styles from '../styles/Developer.module.css';
 import Head from 'next/head';
 import { AiFillLinkedin } from 'react-icons/ai';
 import Link from 'next/link';

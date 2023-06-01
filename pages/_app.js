@@ -12,7 +12,7 @@ import ScrollButton from '../components/scrollToTop/ScrollButton';
 
 const Tablet = () => {
   const isTablet = useMediaQuery({ minWidth: 601, maxWidth: 1226 });
-  return isTablet;
+  return isTablet && false;
 };
 const closeIcon = <svg style={{ display: 'none' }}></svg>;
 function MyApp({ Component, pageProps }) {
