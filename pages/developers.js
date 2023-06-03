@@ -33,7 +33,7 @@ const Developers = () => {
                 <article className={styles.testimonial__article}>
                   <div className={styles.testimonial__content}>
                     <p>
-VOVOCA-5
+
                    From humble beginnings to an extraordinary ride, BTS, we conquered bugs and reached new heights. Teamwork and dedication, our driving force with pride, Hard work paid off, now Vovoca stands by your side.
 
                       Though this is a simple music streaming and downloading
@@ -41,7 +41,7 @@ VOVOCA-5
                       resolving the bugs and adding features to it, but teamwork
                       and dedication helped us overcome these problems , and
                       here we are with all of our hard Work
- Development
+ 
                     </p>
                     <span>Varun Singh</span>
                     <br />
