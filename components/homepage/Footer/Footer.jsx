@@ -9,7 +9,7 @@ const Footer = () => {
           <div className={style.get__in__touch}>
             <h2>Subscribe to Newsletter</h2>
             <p>
- VOVOCA-5
+ 
             Join forces with us, let's create something grand, Collaboration awaits, reach out with a click at hand. Share your ideas, let's shape our project, hand in hand.
 
               Unlock a world of boundless creativity with our royalty-free music
@@ -17,7 +17,7 @@ const Footer = () => {
               tunes, exclusive releases, and behind-the-scenes insights,
               empowering your projects with a soundtrack that&apos;s truly
               yours.
- Development
+ 
             </p>
             <form
               action='https://formspree.io/f/xnqlqgza'
