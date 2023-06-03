@@ -331,6 +331,7 @@ const Navbar = () => {
               </p>
             </Link>
 
+            <Link scroll={true} href='/developers'>
             <p
               className={style.navtext}
               onClick={() => {
@@ -342,9 +343,10 @@ const Navbar = () => {
               }}
             >
               &nbsp;
-              <IoMdLogIn />
-              <span className={style.text_mobile}>Login</span>
+               <IoMdLogIn />
+               <span className={style.text_mobile}>Login</span>              
             </p>
+            </Link>            
           </div>
         </>
       )}

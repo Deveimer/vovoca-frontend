@@ -112,10 +112,12 @@
     justify-content: space-between;
     align-items: flex-end;
     position: fixed;
+    
     bottom: 0px;
-    left: 0;
+    /* left: 0; */
     text-align: center;
-    padding: 1.875rem 1.25rem;
+    padding: 1.9rem 1.5rem;
+    
     border: 1px solid transparent;
     border-radius: 0.25rem;
     background-image: linear-gradient(
