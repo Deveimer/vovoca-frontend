@@ -7,7 +7,11 @@
     "dev": "next dev -p 3001",
 
     "build": "next build",
-    "start": "next  start"
+
+   
+    "start": "next start",
+    "prepare": "husky install"
+
   },
   "dependencies": {
     "@octokit/rest": "^18.12.0",
@@ -34,9 +38,14 @@
     "redux-thunk": "^2.3.0",
     "swr": "^1.0.1"
   },
-  "description": "[![Forks][forks-shield]][forks-url]\r [![Stargazers][stars-shield]][stars-url]\r [![Issues][issues-shield]][issues-url]\r [![MIT License][license-shield]][license-url]",
-  "main": "next.config.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+
+
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-next": "^13.4.4",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0"
+  }
+
 }
