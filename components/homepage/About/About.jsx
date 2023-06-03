@@ -20,13 +20,13 @@ const About = () => {
                         <div className={style.feature}>
                         <div className={[style.feature__heading, style.left].join(' ')}>
                                 <h2>No Credits Required</h2>
- VOVOCA-5
+
                                 <p>Let the melodies soar, no strings attached, Vovoca's music, freely used, without credit or cash.</p>
 
                                 <p>You dont even have to pay us or give us credit
                                 for using our music anywhere, in your songs,
                                 videos or office presentation</p>
- Development
+ 
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ const About = () => {
                   our services free Login and use vovoca for free forever
                 </p>
               </div>
- Development
+ 
             </div>
             <hr className='divider'></hr>
             <div className={style.feature}>
