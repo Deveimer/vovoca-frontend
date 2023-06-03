@@ -6,7 +6,6 @@ import Image from 'next/image';
 const testimonial = () => {
   return (
     <>
- VOVOCA-5
     <div className={styles.testimonials}>
       <Head>
         <title>VOVOCA | Testimonial</title>
@@ -273,7 +272,6 @@ const testimonial = () => {
                 </div>
               </article>
             </div>
- Development
           </div>
         </div>
       </div>
