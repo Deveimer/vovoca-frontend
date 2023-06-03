@@ -17,7 +17,7 @@ const privacyPolicy = () => {
     }
   };
 
- VOVOCA-5
+ 
     return (
         <>
         <div className={style.container}>
@@ -115,7 +115,7 @@ Thank you for choosing Vovoca, and we appreciate your understanding and support 
               >
                 <i className='fas fa-plus'></i>
               </div>
-Development
+
             </div>
             <p
               id='2'
