@@ -13,10 +13,9 @@ import { useRouter } from 'next/router';
 
 // takes router as argument to get path or page name
 const Tablet = Router => {
-  console.log(Router.pathname=="/developers");
   const isTablet = useMediaQuery({ minWidth: 601, maxWidth: 1226 });
   // only allows /developers route in tablet mode.
-  return isTablet && !(Router.pathname == "/developers");
+  return isTablet && !(Router.pathname == '/developers');
 };
 const closeIcon = <svg style={{ display: 'none' }}></svg>;
 
