@@ -3,7 +3,6 @@
   padding-right: 4rem;
   padding-left: 4rem;
   margin-bottom: 3em;
-  /* height: 100vh; */
 }
 
 .testimonial {
@@ -50,10 +49,6 @@
     linear-gradient(160deg, #434b54 1%, #2a2c2f 45%, #191b1e 75%);
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
- 
-  /* box-shadow: rgba(169, 169, 171, 0.15) 0px 2px 5px 0px, rgba(210, 205, 205, 0.05) 0px 1px 1px 0px; */
-  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; */
-  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; */
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   display: flex;
 }
@@ -97,7 +92,7 @@
   letter-spacing: 0;
 }
 
-.testimonial__content  p {
+.testimonial__content > p {
   color: #a0a1ac;
 }
 
@@ -118,9 +113,6 @@
   .testimonial{
     padding: 1em;
   }
-  /* .testimonial__row__2 {
-    display: block;
-  } */
   .testimonial__content > p {
     width: 105%;
     margin-top: 5px;
