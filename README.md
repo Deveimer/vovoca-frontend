@@ -91,7 +91,6 @@ If you made up you mind to contribute the fork the repository and star it, and t
 
 ### Varun Singh | Maintainer | discord: username: v-varun#4539  
 
-Staging deployments can be seen using this link [vovoca-staging](https://vovoca-frontend-deploy-4yl1ue967-varun-singhh.vercel.app)   
 Production deployments can be seen using this link [vovoca-production](https://vovoca-frontend-deploy.vercel.app)
 
 # ✨Our Contributors
