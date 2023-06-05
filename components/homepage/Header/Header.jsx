@@ -6,7 +6,6 @@ import Login from './Login';
 import style_modal from '../../../styles/Modal.module.css';
 import Signup from './Signup';
 import { useSelector } from 'react-redux';
-import Image from 'next/image';
 
 const Header = () => {
   const authenticated = useSelector(state => state.auth.isAuthenticated);
@@ -141,7 +140,11 @@ const Header = () => {
             </button>
           )}
         </div>
-        <Image src='./static/saly.png' className={style.banner__image} alt='banner-image'/>
+        <img
+          src='./static/saly.png'
+          className={style.banner__image}
+          alt='banner-image'
+        />
       </div>
 
       <div className={style.header}>

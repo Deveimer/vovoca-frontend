@@ -13,7 +13,7 @@ const Guest = () => {
   const dispatch = useDispatch();
   const trending_music = useSelector(state => state.music.trending_music);
   const latest_music = useSelector(state => state.music.latest_music);
-  
+
   useEffect(() => {
     dispatch(getTrendingMusic());
     dispatch(getLatestMusic());

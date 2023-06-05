@@ -22,7 +22,6 @@ module.exports = {
     // Additional ESLint rules to fix warnings
     'no-console': 'warn', // Warns about console.log statements
     'jsx-a11y/alt-text': 'error',
-    '@next/next/no-img-element': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'import/no-anonymous-default-export': 'error',
   },

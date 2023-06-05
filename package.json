@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
-    "lint": "eslint  \"./**/*.{js,jsx,ts,tsx,json}\"",
-    "dev": "next dev -p 3001",
+    "lint": "eslint  \"./**/*.{js,jsx,ts,tsx}\"",
+    "dev": "npm run lint && npm run pretty && next dev -p 3001",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@octokit/rest": "^18.12.0",
@@ -37,6 +38,7 @@
     "eslint": "^8.41.0",
     "eslint-config-next": "^13.4.4",
     "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0"
   }
 }

@@ -80,7 +80,7 @@ const UploadModal = ({ file }) => {
               <option default disabled>
                 Select 3 Tags
               </option>
-              {list.map((l,i) => (
+              {list.map((l, i) => (
                 <option value={l} key={i}>
                   {l.charAt(0).toUpperCase() + l.slice(1)}
                 </option>
@@ -96,7 +96,7 @@ const UploadModal = ({ file }) => {
       </div>
       <div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          {tags.map((res,i) => (
+          {tags.map((res, i) => (
             <p
               style={{
                 display: 'flex',

@@ -9,28 +9,34 @@ const Footer = () => {
           <div className={style.get__in__touch}>
             <h2>Subscribe to Newsletter</h2>
             <p>
-            Unlock a world of boundless creativity with our royalty-free music library. Subscribe to our newsletter for weekly updates on fresh tunes, 
-            exclusive releases, and behind-the-scenes insights, 
-            empowering your projects with a soundtrack that&apos;s truly yours.
+              Unlock a world of boundless creativity with our royalty-free music
+              library. Subscribe to our newsletter for weekly updates on fresh
+              tunes, exclusive releases, and behind-the-scenes insights,
+              empowering your projects with a soundtrack that&apos;s truly
+              yours.
             </p>
-            <form action="https://formspree.io/f/xnqlqgza" method="POST" className={style.get__in__touch__form}>
+            <form
+              action='https://formspree.io/f/xnqlqgza'
+              method='POST'
+              className={style.get__in__touch__form}
+            >
               <div className={style.form__row}>
-                <div className={style.inputs} >
+                <div className={style.inputs}>
                   <input
                     className={style.feild__input}
                     type='email'
-                    placeholder="Email address*"
-                    name="email"
+                    placeholder='Email address*'
+                    name='email'
                     required
                   />
                   <div className={style.subscribe}>
-                  <button className={style.subscribe__btn}>Subscribe</button>
+                    <button className={style.subscribe__btn}>Subscribe</button>
                   </div>
-                  </div>
+                </div>
               </div>
             </form>
           </div>
-          
+
           <div className={style.contacts}>
             <div className={style.contact__box}>
               <div className={style.row}>
@@ -60,7 +66,7 @@ const Footer = () => {
                   </table>
                 </div>
               </div>
-              <hr className="divider"></hr>
+              <hr className='divider'></hr>
               <div className={style.rights}>
                 <p>
                   ©{/* <Link scroll={true} href="https://devbucket.tech/"> */}

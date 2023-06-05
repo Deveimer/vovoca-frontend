@@ -33,8 +33,8 @@ const History = () => {
       <h1>Upload History</h1>
       <div className='container'>
         {musics && !loading ? (
-          musics.data.map((i,idx)=> (
-            <Music music={i} key={idx}/>
+          musics.data.map((i, idx) => (
+            <Music music={i} key={idx} />
             // <h1>{i.name}</h1>
           )) || <h2>Loading...</h2>
         ) : (
