@@ -10,7 +10,7 @@ import Signup from '../homepage/Header/Signup';
 import { useSelector, useDispatch } from 'react-redux';
 import { FaPowerOff } from 'react-icons/fa';
 import { IoMdLogIn } from 'react-icons/io';
-import { AiFillHome, AiFillInfoCircle } from 'react-icons/ai';
+import {AiFillHome, AiFillInfoCircle, AiFillPhone } from 'react-icons/ai';
 import { BsFillPeopleFill, BsFillMusicPlayerFill } from 'react-icons/bs';
 import { getUserDetails } from '../../actions/authAction';
 
@@ -293,7 +293,7 @@ const Navbar = () => {
                 onClick={() => setNav('testimonial')}
                 style={{ color: `${nav === 'testimonial' ? 'wheat' : 'gray'}` }}
               >
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <BsFillPeopleFill />
                 <span className={style.text_mobile}>Testimonial</span>
               </p>
@@ -305,7 +305,7 @@ const Navbar = () => {
                 style={{ color: `${nav === 'history' ? 'wheat' : 'gray'}` }}
               >
                 {' '}
-                &nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <FaCode />
                 <span className={style.text_mobile}>Team</span>
               </p>
@@ -317,6 +317,7 @@ const Navbar = () => {
                 style={{ color: `${nav === 'home' ? 'wheat' : 'gray'}` }}
               >
                 {' '}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <AiFillHome />
                 <span className={style.text_mobile}>Home</span>
               </p>
@@ -328,9 +329,22 @@ const Navbar = () => {
                 style={{ color: `${nav === 'about' ? 'wheat' : 'gray'}` }}
               >
                 {' '}
-                &nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                 <AiFillInfoCircle />
                 <span className={style.text_mobile}>About</span>
+              </p>
+            </Link>
+            <Link scroll={true} href='/#contactus'>
+              <p
+                className={style.navtext}
+                onClick={() => setNav('contactus')}
+                style={{ color: `${nav === 'contactus' ? 'wheat' : 'gray'}` }}
+              >
+                {' '}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <AiFillPhone />
+                <span className={style.text_mobile}>Contact</span>
               </p>
             </Link>
 
