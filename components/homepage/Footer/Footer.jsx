@@ -3,7 +3,7 @@ import style from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <div className={style.footer}>
+    <div className={style.footer} id="contactus">
       <div className={style.container}>
         <div className={style.contents}>
           <div className={style.get__in__touch}>
@@ -27,6 +27,7 @@ const Footer = () => {
                     type='email'
                     placeholder='Email address*'
                     name='email'
+                    pattern="[a-zA-Z0-9]+@[a-z]+[.][a-z]\.[a-z]{2,3}"
                     required
                   />
                   <div className={style.subscribe}>
