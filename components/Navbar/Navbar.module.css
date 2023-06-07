@@ -28,12 +28,12 @@
   list-style: none;
   display: flex;
   position: relative;
+  gap: 20px;
   z-index: 2;
 }
 .list__items {
   cursor: pointer;
   padding: 7px;
-  margin-left: 30px;
   font-weight: 500;
   color: #d7e1ec9a;
   transition: width 1ms ease-in-out, border-bottom 1s;
@@ -78,7 +78,8 @@
 .mobile__header,.dashnav_mobile {
   display: none;
 }
-@media only screen and (max-width: 775px) {
+
+@media only screen and (max-width: 760px) {
   .navbar__box {
     display: none;
   }
@@ -174,7 +175,7 @@
     padding-left: 1rem;
   }
   .nav__items {
-    display: flex;
     justify-content: space-between;
+    gap: 0px;
   }
 }

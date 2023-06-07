@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import style from './Navbar.module.css';
 import { Modal } from 'react-responsive-modal';
-import {
-  FaTimes,
-  FaUserCircle,
-  FaCode,
-  FaBars,
-  FaPowerOff,
-} from 'react-icons/fa';
+import { FaTimes, FaUserCircle, FaCode, FaPowerOff } from 'react-icons/fa';
 import Login from '../homepage/Header/Login';
 import style_modal from '../../styles/Modal.module.css';
 import cookie from 'js-cookie';
@@ -190,9 +184,9 @@ const Navbar = () => {
               <li className={style.list__items}>Team</li>
             </Link>
             {authenticated.isAuthenticated === true ? (
-              <Link scroll={true} href='/dashboard'>
+              <Link scroll={true} href='/dashboard' classNames={style.list__items}>
                 <button
-                  style={{ marginLeft: '25px', padding: '0.4em 1em' }}
+                  style={{ padding: '0.4em 1em' }}
                   id='dashboard'
                 >
                   <p
