@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import style from './Navbar.module.css';
 import { Modal } from 'react-responsive-modal';
-import { FaTimes, FaUserCircle, FaCode } from 'react-icons/fa';
+import {
+  FaTimes,
+  FaUserCircle,
+  FaCode,
+  FaBars,
+  FaPowerOff,
+} from 'react-icons/fa';
 import Login from '../homepage/Header/Login';
 import style_modal from '../../styles/Modal.module.css';
 import cookie from 'js-cookie';
 import Link from 'next/link';
 import Signup from '../homepage/Header/Signup';
 import { useSelector, useDispatch } from 'react-redux';
-import { FaPowerOff } from 'react-icons/fa';
 import { IoMdLogIn } from 'react-icons/io';
 import { AiFillHome, AiFillInfoCircle } from 'react-icons/ai';
 import { BsFillPeopleFill, BsFillMusicPlayerFill } from 'react-icons/bs';
@@ -159,7 +164,9 @@ const Navbar = () => {
         }
       >
         <Link scroll={true} href='/'>
-          <div className={style.neon}>VOVOCA</div>
+          <div className={style.neon__container}>
+            <span className={style.neon}>VOVOCA</span>
+          </div>
         </Link>
         <div className={style.nav__bar}>
           <ul className={style.nav__items}>
