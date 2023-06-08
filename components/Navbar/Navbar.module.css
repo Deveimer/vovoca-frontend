@@ -164,3 +164,10 @@
     color: #ebc886;
   }
 }
+
+/* Navbar rules for Tablet Mode */
+@media only screen and ( max-width: 898px) {
+  .dashboard__icon {
+    display: none;
+  }
+} 

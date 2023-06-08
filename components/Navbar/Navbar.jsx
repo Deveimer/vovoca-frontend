@@ -197,6 +197,10 @@ const Navbar = () => {
                       alignItems: 'center',
                     }}
                   >
+                    <FaUserCircle
+                      className={style.dashboard__icon}
+                      style={{ marginRight: '10px' }}
+                    />
                     Dashboard
                   </p>
                 </button>
