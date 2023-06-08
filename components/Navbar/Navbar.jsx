@@ -332,21 +332,21 @@ const Navbar = () => {
             </Link>
 
             <Link scroll={true} href='/developers'>
-            <p
-              className={style.navtext}
-              onClick={() => {
-                setNav('logout');
-                onOpenModal();
-              }}
-              style={{
-                color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`,
-              }}
-            >
-              &nbsp;
-               <IoMdLogIn />
-               <span className={style.text_mobile}>Login</span>              
-            </p>
-            </Link>            
+              <p
+                className={style.navtext}
+                onClick={() => {
+                  setNav('logout');
+                  onOpenModal();
+                }}
+                style={{
+                  color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`,
+                }}
+              >
+                &nbsp;
+                <IoMdLogIn />
+                <span className={style.text_mobile}>Login</span>
+              </p>
+            </Link>
           </div>
         </>
       )}
