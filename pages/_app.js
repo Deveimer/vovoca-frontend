@@ -9,14 +9,21 @@ import { Modal } from 'react-responsive-modal';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollButton from '../components/scrollToTop/ScrollButton';
+import { useRouter } from 'next/router';
 
-const Tablet = () => {
+// takes router as argument to get path or page name
+const Tablet = Router => {
   const isTablet = useMediaQuery({ minWidth: 601, maxWidth: 1226 });
-  return isTablet;
+  // only allows /developers route in tablet mode.
+  return isTablet && !(Router.pathname == '/developers');
 };
 const closeIcon = <svg style={{ display: 'none' }}></svg>;
+
 function MyApp({ Component, pageProps }) {
-  return Tablet() ? (
+  // useRouter for passing router object to tablet function on render.
+  const router = useRouter();
+
+  return Tablet(router) ? (
     <>
       <Modal open={true} onClose={false} center closeIcon={closeIcon}>
         <h2>This Web service is not available in Tablet mode :(</h2>

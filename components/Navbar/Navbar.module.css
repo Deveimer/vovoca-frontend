@@ -4,9 +4,14 @@
   font-size: 2vw;
   line-height: 2vw;
   text-shadow: 0 0 1vw #4ce2ec;
-  padding-top: 1.1em;
-  margin-left: 5%;
   cursor: pointer;
+  margin-left: 1rem;
+}
+
+.neon__container {
+  display:flex;
+  align-items: center;
+  height: 100%;
 }
 
 .neon {
@@ -14,17 +19,21 @@
   -moz-animation: neon 5s ease infinite;
   -webkit-animation: neon 5s ease infinite;
 }
+
+.nav__bar {
+  margin-right: 1rem;
+}
+
 .nav__items {
   list-style: none;
   display: flex;
-  margin: 30px;
   position: relative;
+  gap: 20px;
   z-index: 2;
 }
 .list__items {
   cursor: pointer;
   padding: 7px;
-  margin-left: 30px;
   font-weight: 500;
   color: #d7e1ec9a;
   transition: width 1ms ease-in-out, border-bottom 1s;
@@ -57,10 +66,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 75px !important;
+  /* height: 75px !important; */
   z-index: 100;
-  padding-top: 51px;
-  padding-bottom: 51px;
+  /* padding-top: 51px; */
+  /* padding-bottom: 51px; */
 }
 .scroll__header .neon{
   padding-top: unset;
@@ -69,12 +78,8 @@
 .mobile__header,.dashnav_mobile {
   display: none;
 }
-@media  (max-width: 1300px) {
-  .neon{
-    padding-top: 1.5em;
-  }
-}
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 760px) {
   .navbar__box {
     display: none;
   }
@@ -159,3 +164,10 @@
     color: #ebc886;
   }
 }
+
+/* Navbar rules for Tablet Mode */
+@media only screen and ( max-width: 898px) {
+  .dashboard__icon {
+    display: none;
+  }
+} 

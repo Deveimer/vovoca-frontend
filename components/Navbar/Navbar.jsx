@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import style from './Navbar.module.css';
 import { Modal } from 'react-responsive-modal';
-import { FaTimes, FaUserCircle, FaCode } from 'react-icons/fa';
+import { FaTimes, FaUserCircle, FaCode, FaPowerOff } from 'react-icons/fa';
 import Login from '../homepage/Header/Login';
 import style_modal from '../../styles/Modal.module.css';
 import cookie from 'js-cookie';
 import Link from 'next/link';
 import Signup from '../homepage/Header/Signup';
 import { useSelector, useDispatch } from 'react-redux';
-import { FaPowerOff } from 'react-icons/fa';
 import { IoMdLogIn } from 'react-icons/io';
 import { AiFillHome, AiFillInfoCircle } from 'react-icons/ai';
 import { BsFillPeopleFill, BsFillMusicPlayerFill } from 'react-icons/bs';
@@ -159,13 +158,12 @@ const Navbar = () => {
         }
       >
         <Link scroll={true} href='/'>
-          <div className={style.neon}>VOVOCA</div>
+          <div className={style.neon__container}>
+            <span className={style.neon}>VOVOCA</span>
+          </div>
         </Link>
         <div className={style.nav__bar}>
           <ul className={style.nav__items}>
-            <Link scroll={true} href='/'>
-              <li className={style.list__items}>Home</li>
-            </Link>
             <Link scroll={true} href='/#about'>
               <li className={style.list__items}>About us</li>
             </Link>
@@ -183,11 +181,12 @@ const Navbar = () => {
               <li className={style.list__items}>Team</li>
             </Link>
             {authenticated.isAuthenticated === true ? (
-              <Link scroll={true} href='/dashboard'>
-                <button
-                  style={{ marginLeft: '25px', padding: '0.4em 1em' }}
-                  id='dashboard'
-                >
+              <Link
+                scroll={true}
+                href='/dashboard'
+                classNames={style.list__items}
+              >
+                <button style={{ padding: '0.4em 1em' }} id='dashboard'>
                   <p
                     htmlFor='dashboard'
                     style={{
@@ -198,7 +197,10 @@ const Navbar = () => {
                       alignItems: 'center',
                     }}
                   >
-                    <FaUserCircle style={{ marginRight: '10px' }} />
+                    <FaUserCircle
+                      className={style.dashboard__icon}
+                      style={{ marginRight: '10px' }}
+                    />
                     Dashboard
                   </p>
                 </button>
