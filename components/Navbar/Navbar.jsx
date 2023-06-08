@@ -164,9 +164,6 @@ const Navbar = () => {
         </Link>
         <div className={style.nav__bar}>
           <ul className={style.nav__items}>
-            <Link scroll={true} href='/'>
-              <li className={style.list__items}>Home</li>
-            </Link>
             <Link scroll={true} href='/#about'>
               <li className={style.list__items}>About us</li>
             </Link>
@@ -184,11 +181,12 @@ const Navbar = () => {
               <li className={style.list__items}>Team</li>
             </Link>
             {authenticated.isAuthenticated === true ? (
-              <Link scroll={true} href='/dashboard' classNames={style.list__items}>
-                <button
-                  style={{ padding: '0.4em 1em' }}
-                  id='dashboard'
-                >
+              <Link
+                scroll={true}
+                href='/dashboard'
+                classNames={style.list__items}
+              >
+                <button style={{ padding: '0.4em 1em' }} id='dashboard'>
                   <p
                     htmlFor='dashboard'
                     style={{
@@ -199,7 +197,6 @@ const Navbar = () => {
                       alignItems: 'center',
                     }}
                   >
-                    <FaUserCircle style={{ marginRight: '10px' }} />
                     Dashboard
                   </p>
                 </button>
