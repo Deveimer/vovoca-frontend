@@ -9,11 +9,15 @@ const Footer = () => {
           <div className={style.get__in__touch}>
             <h2>Subscribe to Newsletter</h2>
             <p>
+ 
+            Join forces with us, let's create something grand, Collaboration awaits, reach out with a click at hand. Share your ideas, let's shape our project, hand in hand.
+
               Unlock a world of boundless creativity with our royalty-free music
               library. Subscribe to our newsletter for weekly updates on fresh
               tunes, exclusive releases, and behind-the-scenes insights,
               empowering your projects with a soundtrack that&apos;s truly
               yours.
+ 
             </p>
             <form
               action='https://formspree.io/f/xnqlqgza'
