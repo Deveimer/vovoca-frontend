@@ -1,10 +1,11 @@
-import styles from '../styles/Testimonial.module.css';
+import styles from '../styles/developers.module.css';
 import Head from 'next/head';
 import { AiFillLinkedin } from 'react-icons/ai';
 import Link from 'next/link';
 import Footer from '../components/homepage/Footer/Footer';
 import Loader from '../components/Loader/Loader';
 import useSWR from 'swr';
+import Image from 'next/image';
 
 async function fetcher(...args) {
   const res = await fetch(...args);
@@ -28,7 +29,12 @@ const Developers = () => {
           </Head>
           <div className={styles.container}>
             <h1 className={styles.testimonial__heading}>Developers</h1>
-            <div className={styles.testimonial__row__1}>
+
+
+            {/* <div className={styles.testimonial__row__1}>
+
+
+
               <div className={styles.testimonial}>
                 <article className={styles.testimonial__article}>
                   <div className={styles.testimonial__content}>
@@ -65,6 +71,10 @@ const Developers = () => {
                   </button>
                 </Link>
               </div>
+
+
+
+
               <div className={styles.testimonial}>
                 <article className={styles.testimonial__article}>
                   <div className={styles.testimonial__content}>
@@ -147,7 +157,127 @@ const Developers = () => {
                   </button>
                 </Link>
               </div>
+            </div> */}
+
+
+            <div className={styles.devcontainer}>
+              <div className={styles.box}>
+                <div
+                  className={styles.img_box}
+                  title="Varun Singh"
+                  data-author="Developer, Vovoca"
+                >
+                  <Image src="/images/pic1.jpg" alt="Image description" width={500} height={300} />
+
+                </div>
+                <div className={styles.content}>
+                  <h2>Varun Singh</h2>
+                  <h3>Developer, Vovoca</h3>
+                  <p>
+                    Though this is a simple music streaming and downloading
+                    website, but BTS it was a roller coaster ride while
+                    resolving the bugs and adding features to it, but teamwork
+                    and dedication helped us overcome these problems , and
+                    here we are with all of our hard Work <lorme7 />
+                  </p>
+                  <Link scroll={true} href='https://www.linkedin.com/in/v-varun/'>
+                    <button
+                      style={{
+                        width: '100%',
+                        borderTopLeftRadius: '0px',
+                        borderTopRightRadius: '0px',
+                        borderBottomLeftRadius: '1.25rem',
+                        borderBottomRightRadius: '1.25rem',
+                        marginTop: '0%',
+                      }}
+                    >
+                      <AiFillLinkedin style={{ fontSize: 'x-large' }} />
+                    </button>
+                  </Link>
+                </div>
+              </div>
+
+{/* card2 */}
+              <div className={styles.box}>
+                <div
+                  className={styles.img_box}
+                  title="Kaustubh Mishra"
+                  data-author="Developer, Vovoca"
+                >
+                  <Image src="/images/pic3.jpg" alt="Image description" width={500} height={300} />
+
+                </div>
+                <div className={styles.content}>
+                  <h2>Kaustubh Mishra</h2>
+                  <h3>Developer, Vovoca</h3>
+                  <p>
+                  We all have learnt a lot while completing vovoca. I think
+                      hardest part for all of us was shifting from react to next
+                      as it is fairly new and none of us had used before.
+                      Overall, voovca came out to be of great success <lorme7 />
+                  </p>
+                  <Link scroll={true} href='https://www.linkedin.com/in/kaustubhai/'>
+                    <button
+                      style={{
+                        width: '100%',
+                        borderTopLeftRadius: '0px',
+                        borderTopRightRadius: '0px',
+                        borderBottomLeftRadius: '1.25rem',
+                        borderBottomRightRadius: '1.25rem',
+                        marginTop: '0%',
+                      }}
+                    >
+                      <AiFillLinkedin style={{ fontSize: 'x-large' }} />
+                    </button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* card3 */}
+              
+              <div className={styles.box}>
+                <div
+                  className={styles.img_box}
+                  title="Prakhar Pandey"
+                  data-author="Developer, Vovoca"
+                >
+                  <Image src="/images/pic2.jpg" alt="Image description" width={500} height={300} />
+
+                </div>
+                <div className={styles.content}>
+                  <h2>Prakhar Pandey</h2>
+                  <h3>Developer, Vovoca</h3>
+                  <p>
+                  The concept was farely new and it was challenging to
+                      forsee the design of our website as such websites are not
+                      in huge quantities on the web, however, we worked hard as
+                      a team and coded vovoca as beautiful as we can. I hope you
+                      all will love vovoca too. <lorme7 />
+                  </p>
+                  <Link scroll={true} href='https://www.linkedin.com/in/prakhar-pandey-a307b7191/'>
+                    <button
+                      style={{
+                        width: '100%',
+                        borderTopLeftRadius: '0px',
+                        borderTopRightRadius: '0px',
+                        borderBottomLeftRadius: '1.25rem',
+                        borderBottomRightRadius: '1.25rem',
+                        marginTop: '0%',
+                      }}
+                    >
+                      <AiFillLinkedin style={{ fontSize: 'x-large' }} />
+                    </button>
+                  </Link>
+                </div>
+              </div>
+              
+              
+              
+
             </div>
+
+
+
             <h1
               className={styles.testimonial__heading}
               style={{ paddingTop: '3rem' }}
