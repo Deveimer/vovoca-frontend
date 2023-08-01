@@ -143,12 +143,15 @@
       justify-content: flex-start !important;
       margin-bottom: -6% !important;
       align-items: center;
-      width: 50%;
+      /* width: 50%; */
   }
   .dashcontent_mobile {
     height: fit-content;
     min-width: 100%;
     border-radius: 0.55rem;
+  }
+  .Navbar_navtext__MGXcv{
+    padding-bottom: 18px;
   }
 }
   @keyframes neon {

@@ -232,7 +232,7 @@ const Navbar = () => {
               <p
                 className={style.navtext}
                 onClick={() => setNav('category')}
-                style={{ color: `${nav === 'category' ? 'wheat' : 'gray'}` }}
+                style={{ color: `${nav === 'category' ? 'wheat' : 'gray'}`}}
               >
                 <BsFillMusicPlayerFill />
                 <span className={style.text_mobile}>All Music</span>
@@ -339,6 +339,7 @@ const Navbar = () => {
               }}
               style={{
                 color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`,
+                paddingBottom: "18px", 
               }}
             >
               &nbsp;
