@@ -5,6 +5,7 @@
       rgba(255, 255, 255, 0) 100%
     ),
     linear-gradient(180deg, #26282a 0%, #212325 100%);
+    padding: 4px;
 }
 
 .container {
@@ -115,7 +116,7 @@
   border: 1px solid transparent;
   border-radius: 0.625rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  margin-bottom: 2%;
+  /* margin-bottom: 2%; */
 }
 .inputs > input {
   background-image: linear-gradient(166deg, #2c2d2f 0% 100%),
